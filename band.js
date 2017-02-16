@@ -266,14 +266,14 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#000',
 				strokeStyle: '#000',
 				x: x, y: y,
-				width: 44 * seatScale, height: 44 * seatScale,
+				width: 46 * seatScale, height: 46 * seatScale,
 				angle: -1 * t
 			});
 			$('canvas').drawRect({
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
-				x: x + Math.sin(t), y: y + Math.cos(t),
-				width: 44 * seatScale - 10, height: 44 * seatScale - 10,
+				x: x + Math.sin(t) * 2, y: y + Math.cos(t) * 2,
+				width: 46 * seatScale - 10, height: 46 * seatScale - 10,
 				angle: -1 * t
 			});
 			$('canvas').drawText({
@@ -322,14 +322,14 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#CCC',
 				strokeStyle: '#CCC',
 				x: x, y: y,
-				width: 44 * seatScale, height: 44 * seatScale,
+				width: 46 * seatScale, height: 46 * seatScale,
 				angle: -1 * t
 			});
 			$('#guide_canvas').drawRect({
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				x: x, y: y,
-				width: 44 * seatScale - 10, height: 44 * seatScale - 10,
+				width: 46 * seatScale - 10, height: 46 * seatScale - 10,
 				angle: -1 * t
 			});
 		}
