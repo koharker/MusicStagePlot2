@@ -272,8 +272,8 @@ function drawChairXY(x, y, t, n, a, chair) {
 			$('canvas').drawRect({
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
-				x: x, y: y,
-				width: 44 * seatScale - 6, height: 44 * seatScale - 6,
+				x: x + 10, y: y + 10,
+				width: 44 * seatScale - 10, height: 44 * seatScale - 10,
 				angle: -1 * t
 			});
 			$('canvas').drawText({
@@ -328,8 +328,8 @@ function drawChairXY(x, y, t, n, a, chair) {
 			$('#guide_canvas').drawRect({
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
-				x: x, y: y,
-				width: 44 * seatScale - 6, height: 44 * seatScale - 6,
+				x: x +10, y: y + 10,
+				width: 44 * seatScale - 10, height: 44 * seatScale - 10,
 				angle: -1 * t
 			});
 		}
