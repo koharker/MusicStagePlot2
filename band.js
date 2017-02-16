@@ -35,7 +35,8 @@ $(document).ready(function() {
 	});
 	$('#fileinput').change(loadChartFile);
 	$('#reset').click(reset);
-	$('#guide_canvas').dblclick(clickChart);
+	$('#guide_canvas').click(clickChart);
+	$('#guide_canvas').dblclick(dblClickChart);
 	$('#chknumbers').change(function() {
 		setRestartCheckbox();
 		drawChart();
@@ -214,43 +215,99 @@ function drawChairXY(x, y, t, n, a, chair) {
 	// The black borders don't work in old Firefoxen.
 	// So fake it by drawing two rectangles
 	if(chair.enabled) {
-		$('canvas').drawRect({
-			fillStyle: '#000',
-			strokeStyle: '#000',
-			x: x, y: y,
-			width: 40 * seatScale, height: 40 * seatScale,
-			angle: -1 * t
-		});
-		$('canvas').drawRect({
-			fillStyle: '#fff',
-			strokeStyle: '#fff',
-			x: x, y: y,
-			width: 40 * seatScale - 4, height: 40 * seatScale - 4,
-			angle: -1 * t
-		});
-		$('canvas').drawText({
-			fillStyle: '#000',
-			strokeStyle: '#fff',
-			strokeWidth: 5,
-			x: x, y: y,
-			text: chair.label === false ? a + n : chair.label,
-			font: 'normal ' + fontSize + 'pt Verdana, sans-serif'
-		});
+		if(chair.shape === "sqr"){
+			$('canvas').drawArc({
+				radius: 20 * seatScale,
+				fillStyle: '#000',
+				strokeStyle: '#000',
+				strokeWidth: 5,
+				x: x, y: y
+			});
+			/*$('canvas').drawRect({
+				fillStyle: '#000',
+				strokeStyle: '#000',
+				x: x, y: y,
+				width: 40 * seatScale, height: 40 * seatScale,
+				angle: -1 * t
+			});*/
+			$('canvas').drawArc({
+				radius: 20 * seatScale - 4,
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				x: x, y: y
+			});
+			/*$('canvas').drawRect({
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				x: x, y: y,
+				width: 40 * seatScale - 4, height: 40 * seatScale - 4,
+				angle: -1 * t
+			});*/
+			$('canvas').drawText({
+				fillStyle: '#000',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				x: x, y: y,
+				text: chair.label === false ? a + n : chair.label,
+				font: 'normal ' + fontSize + 'pt Verdana, sans-serif'
+			});
+		} else if(chair.shape === "circ"){
+			$('canvas').drawArc({
+				radius: 20 * seatScale,
+				fillStyle: '#000',
+				strokeStyle: '#000',
+				strokeWidth: 5,
+				x: x, y: y
+			});
+			$('canvas').drawArc({
+				radius: 20 * seatScale - 4,
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				x: x, y: y
+			});
+			$('canvas').drawText({
+				fillStyle: '#000',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				x: x, y: y,
+				text: chair.label === false ? a + n : chair.label,
+				font: 'normal ' + fontSize + 'pt Verdana, sans-serif'
+			});
+		}
 	} else {
-		$('#guide_canvas').drawRect({
-			fillStyle: '#CCC',
-			strokeStyle: '#CCC',
-			x: x, y: y,
-			width: 40 * seatScale, height: 40 * seatScale,
-			angle: -1 * t
-		});
-		$('#guide_canvas').drawRect({
-			fillStyle: '#fff',
-			strokeStyle: '#fff',
-			x: x, y: y,
-			width: 40 * seatScale - 4, height: 40 * seatScale - 4,
-			angle: -1 * t
-		});
+		if(chair.shape === "sqr"){
+			$('#guide_canvas').drawRect({
+				fillStyle: '#CCC',
+				strokeStyle: '#CCC',
+				x: x, y: y,
+				width: 40 * seatScale, height: 40 * seatScale,
+				angle: -1 * t
+			});
+			$('#guide_canvas').drawRect({
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				x: x, y: y,
+				width: 40 * seatScale - 4, height: 40 * seatScale - 4,
+				angle: -1 * t
+			});
+		} else if (chair.shape === "circ") {
+			$('#guide_canvas').drawArc({
+				radius: 20 * seatScale,
+				fillStyle: '#CCC',
+				strokeStyle: '#CCC',
+				strokeWidth: 5,
+				x: x, y: y
+			});
+			$('#guide_canvas').drawArc({
+				radius: 20 * seatScale - 4,
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				x: x, y: y
+			});
+		}
 	}
 	//console.log(x + ' ' + y + ' ' + t);
 }
@@ -318,6 +375,31 @@ function clickChart(e) {
 	}
 }
 
+// Add double click
+function dblClickChart(e) {
+	var canvas = $('#guide_canvas');
+	var scale = 1050 / canvas.width();
+	var x = (e.pageX - canvas.offset().left) * scale;
+	var y = (e.pageY - canvas.offset().top) * scale;
+	for(var row in rows) {
+		for(var c in chairs[row]) {
+			var chair = chairs[row][c];
+			if(chair.x > x - 18 && chair.x < x + 18 && chair.y > y - 18 && chair.y < y + 18 ) {
+				if (chair.shape === "sqr"){
+					chair.shape === "circ"
+				} else if(chair.shape === "circ"){
+					chair.shape = "sqr"
+				}
+				drawChart();
+				break;
+			}
+		}
+	}
+}
+
+
+
+
 function readInputs() {
 	rows = [];
 	for(var i = maxRows - 1; i >= 0; i--) {
@@ -330,7 +412,8 @@ function readInputs() {
 		if(!chairs[i] || chairs[i].length != val) {
 			chairs[i] = [];
 			for(var j = 0; j < val; j ++) {
-				chairs[i][j] = { enabled: true, x: 0, y: 0, label: false, fontSize: false };
+				chairs[i][j] = { enabled: true, x: 0, y: 0, label: false, fontSize: false, shape: "sqr" }; // Add "type"
+
 			}
 		}
 		if(!stands[i] || stands[i].length != val * 2 - 1) {
@@ -637,7 +720,7 @@ function decode(code) {
 			$('#row' + (i/2+1)).val(val);
 			chairs[i/2] = [];
 			for(var j = 0; j < parseInt(val, 10); j++) {
-				chairs[i/2][j] = { enabled: true, x: 0, y: 0, label: false, fontSize: false };
+				chairs[i/2][j] = { enabled: true, x: 0, y: 0, label: false, fontSize: false, shape: "sqr" };
 			}
 		}
 	}
