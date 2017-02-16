@@ -216,6 +216,28 @@ function drawChairXY(x, y, t, n, a, chair) {
 	// So fake it by drawing two rectangles
 	if(chair.enabled) {
 		if(chair.shape === "sqr"){
+			
+			
+			
+			$('canvas').drawArc({
+				radius: 20 * seatScale,
+				fillStyle: '#000',
+				strokeStyle: '#000',
+				strokeWidth: 5,
+				x: x + Math.sin(t) * 60, y: y + Math.cos(t) * 60
+			});
+			$('canvas').drawArc({
+				radius: 20 * seatScale - 3,
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				x: x + Math.sin(t) * 60, y: y + Math.cos(t) * 60
+			});
+			
+			
+			
+			
+			
 			$('canvas').drawRect({
 				fillStyle: '#000',
 				strokeStyle: '#000',
@@ -230,6 +252,29 @@ function drawChairXY(x, y, t, n, a, chair) {
 				width: 40 * seatScale - 4, height: 40 * seatScale - 4,
 				angle: -1 * t
 			});
+			
+			
+			
+			$('canvas').drawArc({
+				radius: 20 * seatScale,
+				fillStyle: '#000',
+				strokeStyle: '#000',
+				strokeWidth: 5,
+				x: x - Math.sin(t) * 60, y: y - Math.cos(t) * 60
+			});
+			$('canvas').drawArc({
+				radius: 20 * seatScale - 3,
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				x: x - Math.sin(t) * 60, y: y - Math.cos(t) * 60
+			});
+			
+			
+			
+			
+			
+			
 			$('canvas').drawText({
 				fillStyle: '#000',
 				strokeStyle: '#fff',
