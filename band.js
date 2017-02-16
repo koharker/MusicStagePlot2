@@ -284,6 +284,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				text: chair.label === false ? a + n : chair.label,
 				font: 'normal ' + fontSize + 'pt Verdana, sans-serif'
 			});
+		}
 		
 	} else {
 		if(chair.shape === "sqr"){
@@ -331,6 +332,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				width: 40 * seatScale - 6, height: 40 * seatScale - 6,
 				angle: -1 * t
 			});
+		}
 	}
 	//console.log(x + ' ' + y + ' ' + t);
 }
@@ -415,6 +417,7 @@ function dblClickChart(e) {
 					chair.shape = "cello"
 				} else if(chair.shape === "cello"){
 					chair.shape = "sqr"
+				}
 				drawChart();
 				break;
 			}
