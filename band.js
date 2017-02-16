@@ -35,7 +35,7 @@ $(document).ready(function() {
 	});
 	$('#fileinput').change(loadChartFile);
 	$('#reset').click(reset);
-	$('#guide_canvas').fsgclick(clickChart);
+	$('#guide_canvas').dblclick(clickChart);
 	$('#chknumbers').change(function() {
 		setRestartCheckbox();
 		drawChart();
@@ -80,7 +80,7 @@ $(document).ready(function() {
 	});
 	$('#btnlabeldone').click(editLabelsDone);
 
-	$('#code').click(function () {
+	$('#code').dblclick(function () {
 		$(this).select();
 	});
 	$('#help').click(closeHelp);
