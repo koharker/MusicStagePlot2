@@ -211,7 +211,7 @@ function drawChair(r, t, n, a, chair) {
 function drawChairXY(x, y, t, n, a, chair) {
 	chair.x = x;
 	chair.y = y;
-	var vcOffsetX = centerX - Math.sin(t) * (chair.r - 20)
+	var vcOffsetX = centerX - Math.sin(t) * (chair.r)
 	var fontSize = (chair.fontSize ? chair.fontSize : 1) * Math.round((a ? 14 : 16) * seatScale);
 	// The black borders don't work in old Firefoxen.
 	// So fake it by drawing two rectangles
