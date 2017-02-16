@@ -266,14 +266,14 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#000',
 				strokeStyle: '#000',
 				x: x, y: y,
-				width: 42 * seatScale, height: 42 * seatScale,
+				width: 44 * seatScale, height: 44 * seatScale,
 				angle: -1 * t
 			});
 			$('canvas').drawRect({
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				x: x, y: y,
-				width: 40 * seatScale - 6, height: 40 * seatScale - 6,
+				width: 44 * seatScale - 6, height: 44 * seatScale - 6,
 				angle: -1 * t
 			});
 			$('canvas').drawText({
@@ -322,14 +322,14 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#CCC',
 				strokeStyle: '#CCC',
 				x: x, y: y,
-				width: 42 * seatScale, height: 42 * seatScale,
+				width: 44 * seatScale, height: 44 * seatScale,
 				angle: -1 * t
 			});
 			$('#guide_canvas').drawRect({
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				x: x, y: y,
-				width: 40 * seatScale - 6, height: 40 * seatScale - 6,
+				width: 44 * seatScale - 6, height: 44 * seatScale - 6,
 				angle: -1 * t
 			});
 		}
@@ -402,7 +402,6 @@ function clickChart(e) {
 
 // Add double click
 function dblClickChart(e) {
-	alert("you hit double rainbow!!!!!11!!!");
 	var canvas = $('#guide_canvas');
 	var scale = 1050 / canvas.width();
 	var x = (e.pageX - canvas.offset().left) * scale;
