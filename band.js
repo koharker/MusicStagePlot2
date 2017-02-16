@@ -247,7 +247,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				x: x, y: y
 			});
 			$('canvas').drawArc({
-				radius: 20 * seatScale - 4,
+				radius: 20 * seatScale - 3,
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				strokeWidth: 5,
@@ -261,7 +261,30 @@ function drawChairXY(x, y, t, n, a, chair) {
 				text: chair.label === false ? a + n : chair.label,
 				font: 'normal ' + fontSize + 'pt Verdana, sans-serif'
 			});
-		}
+		} else if(chair.shape === "cello") {
+			$('canvas').drawRect({
+				fillStyle: '#000',
+				strokeStyle: '#000',
+				x: x, y: y,
+				width: 42 * seatScale, height: 42 * seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawRect({
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				x: x, y: y,
+				width: 40 * seatScale - 6, height: 40 * seatScale - 6,
+				angle: -1 * t
+			});
+			$('canvas').drawText({
+				fillStyle: '#000',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				x: x, y: y,
+				text: chair.label === false ? a + n : chair.label,
+				font: 'normal ' + fontSize + 'pt Verdana, sans-serif'
+			});
+		
 	} else {
 		if(chair.shape === "sqr"){
 			$('#guide_canvas').drawRect({
@@ -287,13 +310,27 @@ function drawChairXY(x, y, t, n, a, chair) {
 				x: x, y: y
 			});
 			$('#guide_canvas').drawArc({
-				radius: 20 * seatScale - 4,
+				radius: 20 * seatScale - 3,
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				strokeWidth: 5,
 				x: x, y: y
 			});
-		}
+		} else if (chair.shape === "cello") {
+			$('#guide_canvas').drawRect({
+				fillStyle: '#CCC',
+				strokeStyle: '#CCC',
+				x: x, y: y,
+				width: 42 * seatScale, height: 42 * seatScale,
+				angle: -1 * t
+			});
+			$('#guide_canvas').drawRect({
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				x: x, y: y,
+				width: 40 * seatScale - 6, height: 40 * seatScale - 6,
+				angle: -1 * t
+			});
 	}
 	//console.log(x + ' ' + y + ' ' + t);
 }
@@ -375,8 +412,9 @@ function dblClickChart(e) {
 				if (chair.shape === "sqr"){
 					chair.shape = "circ"
 				} else if(chair.shape === "circ"){
+					chair.shape = "cello"
+				} else if(chair.shape === "cello"){
 					chair.shape = "sqr"
-				}
 				drawChart();
 				break;
 			}
