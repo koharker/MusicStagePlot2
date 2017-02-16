@@ -386,7 +386,7 @@ function dblClickChart(e) {
 			var chair = chairs[row][c];
 			if(chair.x > x - 18 && chair.x < x + 18 && chair.y > y - 18 && chair.y < y + 18 ) {
 				if (chair.shape === "sqr"){
-					chair.shape === "circ"
+					chair.shape = "circ"
 				} else if(chair.shape === "circ"){
 					chair.shape = "sqr"
 				}
