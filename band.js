@@ -35,7 +35,7 @@ $(document).ready(function() {
 	});
 	$('#fileinput').change(loadChartFile);
 	$('#reset').click(reset);
-	$('#guide_canvas').click(clickChart);
+	$('#guide_canvas').dblclick(clickChart);
 	$('#chknumbers').change(function() {
 		setRestartCheckbox();
 		drawChart();
