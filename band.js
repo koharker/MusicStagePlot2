@@ -211,6 +211,7 @@ function drawChair(r, t, n, a, chair) {
 function drawChairXY(x, y, t, n, a, chair) {
 	chair.x = x;
 	chair.y = y;
+	var vcOffsetX = centerX - Math.sin(t) * (chair.r - 20)
 	var fontSize = (chair.fontSize ? chair.fontSize : 1) * Math.round((a ? 14 : 16) * seatScale);
 	// The black borders don't work in old Firefoxen.
 	// So fake it by drawing two rectangles
@@ -265,7 +266,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 			$('canvas').drawRect({
 				fillStyle: '#000',
 				strokeStyle: '#000',
-				x: x, y: y,
+				x: vcOffsetX, y: y,
 				width: 44 * seatScale, height: 44 * seatScale,
 				angle: -1 * t
 			});
@@ -328,7 +329,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 			$('#guide_canvas').drawRect({
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
-				x: x +10, y: y + 10,
+				x: vcOffsetX, y: y + 10,
 				width: 44 * seatScale - 10, height: 44 * seatScale - 10,
 				angle: -1 * t
 			});
