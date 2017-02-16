@@ -216,34 +216,20 @@ function drawChairXY(x, y, t, n, a, chair) {
 	// So fake it by drawing two rectangles
 	if(chair.enabled) {
 		if(chair.shape === "sqr"){
-			$('canvas').drawArc({
-				radius: 20 * seatScale,
-				fillStyle: '#000',
-				strokeStyle: '#000',
-				strokeWidth: 5,
-				x: x, y: y
-			});
-			/*$('canvas').drawRect({
+			$('canvas').drawRect({
 				fillStyle: '#000',
 				strokeStyle: '#000',
 				x: x, y: y,
 				width: 40 * seatScale, height: 40 * seatScale,
 				angle: -1 * t
-			});*/
-			$('canvas').drawArc({
-				radius: 20 * seatScale - 4,
-				fillStyle: '#fff',
-				strokeStyle: '#fff',
-				strokeWidth: 5,
-				x: x, y: y
 			});
-			/*$('canvas').drawRect({
+			$('canvas').drawRect({
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				x: x, y: y,
 				width: 40 * seatScale - 4, height: 40 * seatScale - 4,
 				angle: -1 * t
-			});*/
+			});
 			$('canvas').drawText({
 				fillStyle: '#000',
 				strokeStyle: '#fff',
@@ -377,6 +363,7 @@ function clickChart(e) {
 
 // Add double click
 function dblClickChart(e) {
+	alert("you hit double rainbow!!!!!11!!!");
 	var canvas = $('#guide_canvas');
 	var scale = 1050 / canvas.width();
 	var x = (e.pageX - canvas.offset().left) * scale;
