@@ -224,14 +224,14 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#000',
 				strokeStyle: '#000',
 				strokeWidth: 5,
-				x: x + Math.sin(t) * 40, y: y + Math.cos(t) * 40
+				x: x + Math.sin(t) * 20, y: y + Math.cos(t) * 20
 			});
 			$('canvas').drawArc({
-				radius: 20 * seatScale - 3,
+				radius: 20 * seatScale - 2,
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				strokeWidth: 5,
-				x: x + Math.sin(t) * 40, y: y + Math.cos(t) * 40
+				x: x + Math.sin(t) * 20, y: y + Math.cos(t) * 20
 			});
 			
 			
@@ -241,14 +241,14 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#000',
 				strokeStyle: '#000',
 				strokeWidth: 5,
-				x: x - Math.sin(t) * 40, y: y - Math.cos(t) * 40
+				x: x - Math.sin(t) * 10, y: y - Math.cos(t) * 10
 			});
 			$('canvas').drawArc({
-				radius: 20 * seatScale - 3,
+				radius: 20 * seatScale - 2,
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				strokeWidth: 5,
-				x: x - Math.sin(t) * 40, y: y - Math.cos(t) * 40
+				x: x - Math.sin(t) * 10, y: y - Math.cos(t) * 10
 			});
 			
 			
