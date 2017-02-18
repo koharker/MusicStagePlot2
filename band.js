@@ -224,7 +224,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#000',
 				strokeStyle: '#000',
 				strokeWidth: 5,
-				width: 46 * seatScale - 10, height: 46 * seatScale - 10,
+				width: 46 * seatScale - 10, height: 20 * seatScale - 10,
 				x: x + Math.sin(t) * 30, y: y + Math.cos(t) * 30
 			});
 			$('canvas').drawArc({
@@ -262,7 +262,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				width: 40 * seatScale, height: 40 * seatScale,
 				angle: -1 * t
 			});
-			$('canvas').drawRect({
+			//$('canvas').drawRect({
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				x: x, y: y,
