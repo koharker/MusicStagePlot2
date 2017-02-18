@@ -223,7 +223,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#000',
 				strokeStyle: '#000',
 				strokeWidth: 5,
-				width: 38 * seatScale, height: 10 * seatScale,
+				width: 36 * seatScale, height: 10 * seatScale,
 				x: x + Math.sin(t) * 8 * seatScale, y: y + Math.cos(t) * 8 * seatScale,
 				angle: -1 * t
 			});
@@ -231,7 +231,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				strokeWidth: 5,
-				width: 38 * seatScale - 4, height: 10 * seatScale - 4 ,
+				width: 36 * seatScale - 4, height: 10 * seatScale - 4 ,
 				x: x + Math.sin(t) * 8 * seatScale, y: y + Math.cos(t) * 8 * seatScale,
 				angle: -1 * t
 			});
@@ -264,16 +264,16 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#000',
 				strokeStyle: '#000',
 				strokeWidth: 5,
-				width: 38 * seatScale, height: 10 * seatScale,
-				x: x - Math.sin(t) * 8, y: y - Math.cos(t) * 8,
+				width: 36 * seatScale, height: 10 * seatScale,
+				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
 				angle: -1 * t
 			});
 			$('canvas').drawEllipse({
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				strokeWidth: 5,
-				width: 38 * seatScale - 4, height: 10 * seatScale - 4 ,
-				x: x - Math.sin(t) * 8, y: y - Math.cos(t) * 8,
+				width: 36 * seatScale - 4, height: 10 * seatScale - 4 ,
+				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
 				angle: -1 * t
 			});
 			
