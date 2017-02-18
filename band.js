@@ -261,7 +261,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				width: 40 * seatScale, height: 40 * seatScale,
 				angle: -1 * t
 			});
-			//$('canvas').drawRect({
+			$('canvas').drawRect({
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				x: x, y: y,
