@@ -219,20 +219,19 @@ function drawChairXY(x, y, t, n, a, chair) {
 			
 			
 			
-			$('canvas').drawArc({
-				// radius: 19 * seatScale,
+			$('canvas').drawEllipse({
 				fillStyle: '#000',
 				strokeStyle: '#000',
 				strokeWidth: 5,
-				width: 46 * seatScale - 10, height: 20 * seatScale - 10,
-				x: x + Math.sin(t) * 30, y: y + Math.cos(t) * 30
+				width: 40 * seatScale, height: 10 * seatScale,
+				x: x + Math.sin(t) * 20, y: y + Math.cos(t) * 20
 			});
 			$('canvas').drawArc({
-				radius: 19 * seatScale - 2,
-				fillStyle: '#fff',
-				strokeStyle: '#fff',
+				fillStyle: '#000',
+				strokeStyle: '#000',
 				strokeWidth: 5,
-				x: x + Math.sin(t) * 30, y: y + Math.cos(t) * 30
+				width: 40 * seatScale - 2, height: 10 * seatScale -2 ,
+				x: x + Math.sin(t) * 20, y: y + Math.cos(t) * 20
 			});
 			
 			
