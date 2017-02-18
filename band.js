@@ -220,10 +220,11 @@ function drawChairXY(x, y, t, n, a, chair) {
 			
 			
 			$('canvas').drawArc({
-				radius: 19 * seatScale,
+				// radius: 19 * seatScale,
 				fillStyle: '#000',
 				strokeStyle: '#000',
 				strokeWidth: 5,
+				width: 46 * seatScale - 10, height: 46 * seatScale - 10,
 				x: x + Math.sin(t) * 30, y: y + Math.cos(t) * 30
 			});
 			$('canvas').drawArc({
