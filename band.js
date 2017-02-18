@@ -223,7 +223,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#000',
 				strokeStyle: '#000',
 				strokeWidth: 5,
-				width: 36 * seatScale, height: 10 * seatScale,
+				width: 38 * seatScale, height: 10 * seatScale,
 				x: x + Math.sin(t) * 8 * seatScale, y: y + Math.cos(t) * 8 * seatScale,
 				angle: -1 * t
 			});
@@ -231,7 +231,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				strokeWidth: 5,
-				width: 36 * seatScale - 4, height: 10 * seatScale - 4 ,
+				width: 38 * seatScale - 4, height: 10 * seatScale - 4 ,
 				x: x + Math.sin(t) * 8 * seatScale, y: y + Math.cos(t) * 8 * seatScale,
 				angle: -1 * t
 			});
@@ -254,7 +254,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				x: x, y: y,
-				width: 40 * seatScale - 4, height: 16 * seatScale +2,
+				width: 40 * seatScale - 4, height: 16 * seatScale +seatScale,
 				angle: -1 * t
 			});
 			
@@ -264,7 +264,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#000',
 				strokeStyle: '#000',
 				strokeWidth: 5,
-				width: 36 * seatScale, height: 10 * seatScale,
+				width: 38 * seatScale, height: 10 * seatScale,
 				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
 				angle: -1 * t
 			});
@@ -272,7 +272,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				strokeWidth: 5,
-				width: 36 * seatScale - 4, height: 10 * seatScale - 4 ,
+				width: 38 * seatScale - 4, height: 10 * seatScale - 4 ,
 				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
 				angle: -1 * t
 			});
@@ -336,6 +336,61 @@ function drawChairXY(x, y, t, n, a, chair) {
 				text: chair.label === false ? a + n : chair.label,
 				font: 'normal ' + fontSize + 'pt Verdana, sans-serif'
 			});
+		} else if(chair.shape === "snare") {
+			$('canvas').drawEllipse({
+				fillStyle: '#000',
+				strokeStyle: '#000',
+				strokeWidth: 5,
+				width: 38 * seatScale, height: 10 * seatScale,
+				x: x + Math.sin(t) * 8 * seatScale, y: y + Math.cos(t) * 8 * seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawEllipse({
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				width: 38 * seatScale - 4, height: 10 * seatScale - 4 ,
+				x: x + Math.sin(t) * 8 * seatScale, y: y + Math.cos(t) * 8 * seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawRect({
+				fillStyle: '#000',
+				strokeStyle: '#000',
+				x: x, y: y,
+				width: 40 * seatScale, height: 16 * seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawRect({
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				x: x, y: y,
+				width: 40 * seatScale - 4, height: 16 * seatScale +seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawEllipse({
+				fillStyle: '#000',
+				strokeStyle: '#000',
+				strokeWidth: 5,
+				width: 38 * seatScale, height: 10 * seatScale,
+				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawEllipse({
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				width: 38 * seatScale - 4, height: 10 * seatScale - 4 ,
+				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawText({
+				fillStyle: '#000',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				x: x, y: y,
+				text: chair.label === false ? a + n : chair.label,
+				font: 'normal ' + fontSize + 'pt Verdana, sans-serif'
+			});
 		}
 		
 	} else {
@@ -382,6 +437,53 @@ function drawChairXY(x, y, t, n, a, chair) {
 				strokeStyle: '#fff',
 				x: x, y: y,
 				width: 46 * seatScale - 10, height: 46 * seatScale - 10,
+				angle: -1 * t
+			});
+		} else if (chair.shape === "snare") {
+			$('canvas').drawEllipse({
+				fillStyle: '#CCC',
+				strokeStyle: '#CCC',
+				strokeWidth: 5,
+				width: 38 * seatScale, height: 10 * seatScale,
+				x: x + Math.sin(t) * 8 * seatScale, y: y + Math.cos(t) * 8 * seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawEllipse({
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				width: 38 * seatScale - 4, height: 10 * seatScale - 4 ,
+				x: x + Math.sin(t) * 8 * seatScale, y: y + Math.cos(t) * 8 * seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawRect({
+				fillStyle: '#CCC',
+				strokeStyle: '#CCC',
+				x: x, y: y,
+				width: 40 * seatScale, height: 16 * seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawRect({
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				x: x, y: y,
+				width: 40 * seatScale - 4, height: 16 * seatScale +seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawEllipse({
+				fillStyle: '#CCC',
+				strokeStyle: '#CCC',
+				strokeWidth: 5,
+				width: 38 * seatScale, height: 10 * seatScale,
+				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawEllipse({
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				width: 38 * seatScale - 4, height: 10 * seatScale - 4 ,
+				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
 				angle: -1 * t
 			});
 		}
@@ -467,6 +569,8 @@ function dblClickChart(e) {
 				} else if(chair.shape === "circ"){
 					chair.shape = "cello"
 				} else if(chair.shape === "cello"){
+					chair.shape = "snare"
+				} else if(chair.shape === "snare"){
 					chair.shape = "sqr"
 				}
 				drawChart();
