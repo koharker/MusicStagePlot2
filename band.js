@@ -131,6 +131,7 @@ function drawChart() {
 				var t = 0;
 				if (chairs[row][i].shape === "cello") {
 					vc ++;
+					console.log(vc);
 				};
 /*				for (var j = 0; j < row[rows]; j++) {
 					if (chairs[row][j].shape === "cello") {
