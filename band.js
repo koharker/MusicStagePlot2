@@ -139,7 +139,7 @@ function drawChart() {
 				};*/
 				if(rows[row] > 1)
 					//adjust for cello spacing here
-					var t = -1 * (-1 * (arc_length - vc * 10) / 2 + angle_step * i);
+					var t = -1 * (-1 * arc_length / 2 + angle_step * i);
 				// Hide the arc under disabled chairs
 				if(!chairs[row][i].enabled) {
 					$('canvas').drawArc({
