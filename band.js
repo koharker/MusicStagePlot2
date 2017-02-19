@@ -584,7 +584,7 @@ function updateChairLabels() {
 					chair.label = labels[row][label] ? labels[row][label] : "";
 					label++;
 				}
-			} else {
+			} else if (!chair.enabled || chair.shape === "snare"){	// Make sure it knows that a snare drum is not a chair so it skips this number
 				chair.label = false;
 			}
 		}
