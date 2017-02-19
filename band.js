@@ -114,6 +114,7 @@ function drawChart() {
 	seatScale = Math.min(1, 7 / rows.length) * customScale;
 	var step = 300 / (rows.length - 1)
 	var row_length = 0;
+	var vc = 0
 	for(var row in rows) {
 		if(restartNumbering)
 			n = 1;
@@ -128,15 +129,17 @@ function drawChart() {
 			var angle_step = arc_length / (rows[row] - 1)
 			for(var i = 0; i < rows[row]; i++) {
 				var t = 0;
-				var vc = 0
+				if (chairs[row][j].shape === "cello") {
+					vc ++;
+				};
+/*				for (var j = 0; j < row[rows]; j++) {
+					if (chairs[row][j].shape === "cello") {
+						vc ++;
+					};
+				};*/
 				if(rows[row] > 1)
 					//adjust for cello spacing here
-					for (var j = 0; j < row[rows]; j++) {
-						if (chairs[row][j].shape === "cello") {
-							vc += 1;
-						};
-					}
-					var t = -1 * (-1 * (arc_length - vc * 10) / 2 + angle_step * i);
+					var t = -1 * (-1 * (arc_length - vc * 10) / 2 + angle_step * vc * i);
 				// Hide the arc under disabled chairs
 				if(!chairs[row][i].enabled) {
 					$('canvas').drawArc({
