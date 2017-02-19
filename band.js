@@ -129,7 +129,7 @@ function drawChart() {
 			var angle_step = arc_length / (rows[row] - 1)
 			for(var i = 0; i < rows[row]; i++) {
 				var t = 0;
-				if (chairs[row][j].shape === "cello") {
+				if (chairs[row][i].shape === "cello") {
 					vc ++;
 				};
 /*				for (var j = 0; j < row[rows]; j++) {
