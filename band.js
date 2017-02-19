@@ -132,11 +132,11 @@ function drawChart() {
 				if(rows[row] > 1)
 					//adjust for cello spacing here
 					for (var j = 0; j < row[rows]; j++) {
-						if (chairs[row][i].shape === "cello") {
+						if (chairs[row][j].shape === "cello") {
 							vc += 1;
 						};
 					}
-					var t = -1 * (-1 * (arc_length - vc * 50) / 2 + angle_step * i);
+					var t = -1 * (-1 * (arc_length - vc * 10) / 2 + angle_step * i);
 				// Hide the arc under disabled chairs
 				if(!chairs[row][i].enabled) {
 					$('canvas').drawArc({
