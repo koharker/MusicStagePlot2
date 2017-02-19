@@ -338,6 +338,14 @@ function drawChairXY(x, y, t, n, a, chair) {
 				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
 				angle: -1 * t
 			});
+			$('canvas').drawText({
+				fillStyle: '#000',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				x: x, y: y,
+				text: chair.label === false ? a + n : chair.label,
+				font: 'normal ' + fontSize + 'pt Verdana, sans-serif'
+			});
 		}
 		
 	} else {
