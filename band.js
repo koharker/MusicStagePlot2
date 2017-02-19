@@ -136,7 +136,7 @@ function drawChart() {
 							vc += 1;
 						};
 					}
-					var t = -1 * (-1 * (arc_length - vc * 10) / 2 + angle_step * i);
+					var t = -1 * (-1 * (arc_length - vc * 50) / 2 + angle_step * i);
 				// Hide the arc under disabled chairs
 				if(!chairs[row][i].enabled) {
 					$('canvas').drawArc({
@@ -587,7 +587,7 @@ function updateChairLabels() {
 			var chair = chairs[row][c];
 			chair.fontSize = customRowFontSizes[row];
 			if(labels[row]) {
-				if (chair.enabled && chair.shape != "snare") {
+				if (chair.enabled && chair.shape !== "snare") {
 					chair.label = labels[row][label] ? labels[row][label] : "";
 					label++;
 				}
