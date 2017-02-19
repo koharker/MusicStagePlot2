@@ -128,8 +128,15 @@ function drawChart() {
 			var angle_step = arc_length / (rows[row] - 1)
 			for(var i = 0; i < rows[row]; i++) {
 				var t = 0;
+				var vc = 0
 				if(rows[row] > 1)
-					var t = -1 * (-1 * arc_length / 2 + angle_step * i);
+					//adjust for cello spacing here
+					for (var j = 0; j < row[rows]; j++) {
+						if (chairs[row][i].shape === "cello") {
+							vc += 1;
+						};
+					}
+					var t = -1 * (-1 * (arc_length - vc * 10) / 2 + angle_step * i);
 				// Hide the arc under disabled chairs
 				if(!chairs[row][i].enabled) {
 					$('canvas').drawArc({
@@ -580,7 +587,7 @@ function updateChairLabels() {
 			var chair = chairs[row][c];
 			chair.fontSize = customRowFontSizes[row];
 			if(labels[row]) {
-				if (chair.enabled) {
+				if (chair.enabled && chair.shape != "snare") {
 					chair.label = labels[row][label] ? labels[row][label] : "";
 					label++;
 				}
