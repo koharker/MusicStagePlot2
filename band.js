@@ -147,7 +147,7 @@ function drawChart() {
 							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (vcStep / rows.length))* i) + (vcStep * vcLoc));
 						*/ 
 						} else {
-							var t = -1 * (-1 * arc_length / 2 + (angle_step - (vcStep / rows.length))* i);
+							var t = -1 * (-1 * arc_length / 2 + (angle_step - (angle_step * 0.1 / rows.length))* i);
 						
 						};
 							/*for (var j = i; j >= 0; j--) {
