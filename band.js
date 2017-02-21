@@ -546,8 +546,6 @@ function dblClickChart(e) {
 				} else if(chair.shape === "circ"){
 					chair.shape = "cello";
 					vc += 1;
-					vcLoc = chair.t;
-					console.log(vcLoc);
 				} else if(chair.shape === "cello"){
 					chair.shape = "snare";
 					vc -= 1;
