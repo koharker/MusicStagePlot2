@@ -162,7 +162,7 @@ function drawChart() {
 						end: i == rows[row] - 1 ? Math.PI : ((t - angle_step * 0.55) * -1)  // Last chair, blank out entire arc to the right
 					});
 				}
-				drawChair(r, t, n, a, chairs[row][j]);
+				drawChair(r, t, n, a, chairs[row][i]);
 				console.log(t);
 				if(showStands) {
 					drawStand(Math.max(r - step * 0.5, r - 35 * customScale), t, stands[row][i*2]);
