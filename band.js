@@ -141,14 +141,14 @@ function drawChart() {
 					//adjust for cello spacing here
 					if (vc > 0) {
 						if (chairs[row][i].shape === "cello") {
-							console.log(vc);
-							vcLoc = rows[row];
-							console.log(vcLoc);
+							var vcLoc = rows[row];
+							console.log(vcLoc + "vcLoc");
 							var t = -1 * (-1 * arc_length / 2 + vcStep * i);
 						/*} else if (rows[row] > vcLoc) {
 							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (vcStep / rows.length))* i) + (vcStep * vcLoc));
 						*/ 
-						} else if (rows[row] < vcLoc) {
+						} else if (rows[row] > vcLoc) {
+							console.log(rows[row] + "row > " + vcLoc + "vcLoc")
 							var t = -1 * (-1 * arc_length / 2 + (angle_step - (angle_step * 0.1 / rows.length))* i);
 						};
 							/*for (var j = i; j >= 0; j--) {
@@ -170,7 +170,6 @@ function drawChart() {
 					});
 				}
 				drawChair(r, t, n, a, chairs[row][i]);
-				console.log(t);
 				if(showStands) {
 					drawStand(Math.max(r - step * 0.5, r - 35 * customScale), t, stands[row][i*2]);
 					if(i != rows[row] - 1)
