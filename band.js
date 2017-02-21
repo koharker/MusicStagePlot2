@@ -129,7 +129,7 @@ function drawChart() {
 			var angle_step = arc_length / (rows[row] - 1)
 			for(var i = 0; i < rows[row]; i++) {
 				var t = 0;
-				console.log(row)
+				console.log(t)
 				if (chairs[row][i].shape === "cello") {
 					vc ++;
 					console.log(vc);
@@ -154,6 +154,7 @@ function drawChart() {
 					});
 				}
 				drawChair(r, t, n, a, chairs[row][i]);
+				console.log(t);
 				if(showStands) {
 					drawStand(Math.max(r - step * 0.5, r - 35 * customScale), t, stands[row][i*2]);
 					if(i != rows[row] - 1)
