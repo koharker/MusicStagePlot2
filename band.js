@@ -14,6 +14,8 @@ var standCoordinates;
 var straightRows = 0;
 var editingLabelRow;
 
+var vc = 0;
+
 $(document).ready(function() {
 	setLetterCheckbox();
 	$.jCanvas({
@@ -114,7 +116,7 @@ function drawChart() {
 	seatScale = Math.min(1, 7 / rows.length) * customScale;
 	var step = 300 / (rows.length - 1)
 	var row_length = 0;
-	var vc = 0
+	var vc = 0;
 	for(var row in rows) {
 		if(restartNumbering)
 			n = 1;
@@ -143,7 +145,7 @@ function drawChart() {
 							vc += 1;
 							console.log(vc);
 							var t = -1 * (-1 * arc_length / 2 + angle_step * 0.5 * i);
-							for (var j; j < i; j++) {
+							for (var j = 0; j < i; j++) {
 								drawChair(r, t, n, a, chairs[row][j]);
 							}
 						} else {
@@ -539,9 +541,11 @@ function dblClickChart(e) {
 				if (chair.shape === "sqr"){
 					chair.shape = "circ"
 				} else if(chair.shape === "circ"){
-					chair.shape = "cello"
+					chair.shape = "cello";
+					vc += 1;
 				} else if(chair.shape === "cello"){
-					chair.shape = "snare"
+					chair.shape = "snare";
+					vc -= 1;
 				} else if(chair.shape === "snare"){
 					chair.shape = "sqr"
 				}
