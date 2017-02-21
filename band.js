@@ -148,7 +148,7 @@ function drawChart() {
 								var t = -1 * (-1 * arc_length / 2 + (angle_step - (angle_step * 0.1 / rows.length))* i);
 							} else if (rows[row] > vcLoc){
 								var t = -1 * (-1 * arc_length / 2 + (angle_step - (angle_step * 0.1 / rows.length))* i + angle_step * 1.1);
-							}
+							};
 							/*for (var j = i; j >= 0; j--) {
 								var vt = -1 * (-1 * arc_length / 2 + (angle_step * 0.9) * j);  //(1 - (0.1 * vc)/(rows.length - 1)))
 								drawChair(r, vt, n, a, chairs[row][j]);
@@ -546,6 +546,7 @@ function dblClickChart(e) {
 				} else if(chair.shape === "circ"){
 					chair.shape = "cello";
 					vc += 1;
+					vcLoc = rows[row]
 				} else if(chair.shape === "cello"){
 					chair.shape = "snare";
 					vc -= 1;
