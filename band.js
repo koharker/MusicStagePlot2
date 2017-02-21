@@ -141,7 +141,6 @@ function drawChart() {
 					if (vc > 0) {
 						if (chairs[row][i].shape === "cello") {
 							console.log(vc);
-							vcLoc = rows[row]
 							var t = -1 * (-1 * arc_length / 2 + angle_step * 1.1 * i);
 						} else {
 							if (rows[row] < vcLoc) {
@@ -546,12 +545,13 @@ function dblClickChart(e) {
 				} else if(chair.shape === "circ"){
 					chair.shape = "cello";
 					vc += 1;
-					vcLoc = rows[row]
+					vcLoc = rows[row];
+					console.log(vcLoc);
 				} else if(chair.shape === "cello"){
 					chair.shape = "snare";
 					vc -= 1;
 				} else if(chair.shape === "snare"){
-					chair.shape = "sqr"
+					chair.shape = "sqr";
 				}
 				drawChart();
 				break;
