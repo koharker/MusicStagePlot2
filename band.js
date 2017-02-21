@@ -136,16 +136,21 @@ function drawChart() {
 					};
 				};*/
 				console.log(rows[row]);
-				if(rows[row] > 1)
+				if(rows[row] > 1) {
 					//adjust for cello spacing here
-					if (chairs[row][i].shape === "cello") {
-						vc ++;
-						console.log(vc);
-						var t = -1 * (-1 * arc_length / 2 + angle_step * i);
+					if (vc > 0) {
+						if (chairs[row][i].shape === "cello") {
+							vc ++;
+							console.log(vc);
+							var t = -1 * (-1 * arc_length / 2 + angle_step * i);
+						} else {
+							var t = -1 * (-1 * arc_length / 2 + (angle_step * 0.9) * i);
+						}
 					} else {
 						var t = -1 * (-1 * arc_length / 2 + (angle_step) * i);
 						console.log(angle_step);
 					}
+				}
 				// Hide the arc under disabled chairs
 				if(!chairs[row][i].enabled) {
 					$('canvas').drawArc({
