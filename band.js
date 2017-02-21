@@ -135,12 +135,12 @@ function drawChart() {
 						vc ++;
 					};
 				};*/
-				console.log(rows[row]);
 				if(rows[row] > 1) {
 					//adjust for cello spacing here
+					console.log(chairs[row][i].shape);
 					if (vc > 0) {
 						if (chairs[row][i].shape === "cello") {
-							vc ++;
+							vc += 1;
 							console.log(vc);
 							var t = -1 * (-1 * arc_length / 2 + angle_step * i);
 						} else {
@@ -148,7 +148,6 @@ function drawChart() {
 						}
 					} else {
 						var t = -1 * (-1 * arc_length / 2 + (angle_step) * i);
-						console.log(angle_step);
 					}
 				}
 				// Hide the arc under disabled chairs
