@@ -138,20 +138,18 @@ function drawChart() {
 				};*/
 				if(rows[row] > 1) {
 					//adjust for cello spacing here
-					console.log(chairs[row][i].shape);
 					if (vc > 0) {
 						if (chairs[row][i].shape === "cello") {
-							vc += 1;
 							console.log(vc);
-							var t = -1 * (-1 * arc_length / 2 + angle_step * 0.9 * i);
-							for (var j = 0; j < i; j++) {
-								drawChair(r, t, n, a, chairs[row][j]);
-							}
+							var t = -1 * (-1 * arc_length / 2 + angle_step * 1.1 * i);
 						} else {
-							var t = -1 * (-1 * arc_length / 2 + (angle_step * 0.25) * i);
+							var vt = -1 * (-1 * arc_length / 2 + (angle_step * ((0.1 * vc)/(rows.length - 1)) * i);
+							for (var j = 0; j < i; j++) {
+								drawChair(r, vt, n, a, chairs[row][j]);
+							}
 						}
 					} else {
-						var t = -1 * (-1 * arc_length / 2 + (angle_step * 0.5) * i);
+						var t = -1 * (-1 * arc_length / 2 + (angle_step) * i);
 					}
 				}
 				// Hide the arc under disabled chairs
@@ -164,7 +162,6 @@ function drawChart() {
 						end: i == rows[row] - 1 ? Math.PI : ((t - angle_step * 0.55) * -1)  // Last chair, blank out entire arc to the right
 					});
 				}
-				drawChair(r, t, n, a, chairs[row][i]);
 				console.log(t);
 				if(showStands) {
 					drawStand(Math.max(r - step * 0.5, r - 35 * customScale), t, stands[row][i*2]);
