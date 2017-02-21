@@ -129,20 +129,21 @@ function drawChart() {
 			var angle_step = arc_length / (rows[row] - 1)
 			for(var i = 0; i < rows[row]; i++) {
 				var t = 0;
-				console.log(t)
 				if (chairs[row][i].shape === "cello") {
 					vc ++;
 					console.log(vc);
-					var t = -1 * (-1 * arc_length / 2 + angle_step * i)
 				};
 /*				for (var j = 0; j < row[rows]; j++) {
 					if (chairs[row][j].shape === "cello") {
 						vc ++;
 					};
 				};*/
+				console.log(rows[row]);
 				if(rows[row] > 1)
 					//adjust for cello spacing here
+					
 					var t = -1 * (-1 * arc_length / 2 + angle_step * i);
+					console.log("HI");
 				// Hide the arc under disabled chairs
 				if(!chairs[row][i].enabled) {
 					$('canvas').drawArc({
