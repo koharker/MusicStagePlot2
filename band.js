@@ -128,7 +128,7 @@ function drawChart() {
 			$('canvas').drawArc({ radius: r });
 			var arc_length = Math.PI - .3 - (1 - r / 550)
 			var angle_step = arc_length / (rows[row] - 1)
-			var vcStep = angle_step * 1.1
+			var vcStep = angle_step * 1.2
 			for(var i = 0; i < rows[row]; i++) {
 				var t = 0;
 				var vcT = 0;
@@ -142,7 +142,6 @@ function drawChart() {
 					if (vc > 0) {
 						if (chairs[row][i].shape === "cello") {
 							vcLoc = i;
-							console.log(vcLoc + "vcLoc");
 							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (angle_step * 0.1 / rows.length)) * (i-1)) + vcStep);
 						} else if (i > vcLoc && i !== (vcLoc + 1)) {
 							console.log(i + "chair " + vcLoc + "vcLoc")
