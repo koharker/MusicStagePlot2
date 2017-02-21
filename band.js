@@ -143,8 +143,8 @@ function drawChart() {
 							console.log(vc);
 							var t = -1 * (-1 * arc_length / 2 + angle_step * 1.1 * i);
 						} else {
-							var vt = -1 * (-1 * arc_length / 2 + (angle_step * 0.9) * i);  //(1 - (0.1 * vc)/(rows.length - 1)))
-							for (var j = 0; j < i; j++) {
+							for (var j = i; j >= 0; j--) {
+								var vt = -1 * (-1 * arc_length / 2 + (angle_step * 0.9) * j);  //(1 - (0.1 * vc)/(rows.length - 1)))
 								drawChair(r, vt, n, a, chairs[row][j]);
 							}
 						}
