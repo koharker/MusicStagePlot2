@@ -13,7 +13,7 @@ var customRowFontSizes;
 var standCoordinates;
 var straightRows = 0;
 var editingLabelRow;
-
+var vcLoc;
 var vc = 0;
 
 $(document).ready(function() {
@@ -130,7 +130,7 @@ function drawChart() {
 			var angle_step = arc_length / (rows[row] - 1)
 			for(var i = 0; i < rows[row]; i++) {
 				var t = 0;
-
+				var vcT = 0;
 /*				for (var j = 0; j < row[rows]; j++) {
 					if (chairs[row][j].shape === "cello") {
 						vc ++;
@@ -141,9 +141,14 @@ function drawChart() {
 					if (vc > 0) {
 						if (chairs[row][i].shape === "cello") {
 							console.log(vc);
+							vcLoc = chairs[row][i]
 							var t = -1 * (-1 * arc_length / 2 + angle_step * 1.1 * i);
 						} else {
-							var t = -1 * (-1 * arc_length / 2 + (angle_step - (angle_step * 0.1 / rows.length))* i);
+							if (chairs[row][i] < vcLoc) {
+								var t = -1 * (-1 * arc_length / 2 + (angle_step - (angle_step * 0.1 / rows.length))* i);
+							} else if (chairs[row][i] > vcLoc){
+								var t = -1 * (-1 * arc_length / 2 + (angle_step - (angle_step * 0.1 / rows.length))* i + angle_step * 1.1);
+							}
 							/*for (var j = i; j >= 0; j--) {
 								var vt = -1 * (-1 * arc_length / 2 + (angle_step * 0.9) * j);  //(1 - (0.1 * vc)/(rows.length - 1)))
 								drawChair(r, vt, n, a, chairs[row][j]);
