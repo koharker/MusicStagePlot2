@@ -13,7 +13,7 @@ var customRowFontSizes;
 var standCoordinates;
 var straightRows = 0;
 var editingLabelRow;
-var vcLoc;
+var vcLoc = 0;
 var vc = 0;
 
 $(document).ready(function() {
@@ -144,7 +144,7 @@ function drawChart() {
 							console.log(vc);
 							var t = -1 * (-1 * arc_length / 2 + vcStep * i);
 						} else if (rows[row] > vcLoc) {
-							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (vcStep / rows.length))* i) + vcStep);
+							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (vcStep / rows.length))* i) + (vcStep * vcLoc));
 						} else {
 							var t = -1 * (-1 * arc_length / 2 + (angle_step - (vcStep / rows.length))* i);
 						};
