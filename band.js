@@ -152,7 +152,7 @@ function drawChart() {
 							var t = -1 * (-1 * arc_length / 2 + (angle_step * 0.5) * i);
 						}
 					} else {
-						var t = -1 * (-1 * arc_length / 2 + (angle_step) * i);
+						var t = -1 * (-1 * arc_length / 2 + (angle_step * 0.5) * i);
 					}
 				}
 				// Hide the arc under disabled chairs
