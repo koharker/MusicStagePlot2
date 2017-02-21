@@ -149,12 +149,15 @@ function drawChart() {
 						*/ 
 						} else if (i > vcLoc) {
 							console.log(n + "chair> " + vcLoc + "vcLoc")
-							var t = -1 * (-1 * arc_length / 2 + (angle_step - (angle_step * 0.1 / rows.length))* i);
-						};
+							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (angle_step * 0.1 / rows.length))* i) + vcLoc);
+						} else if (i < vcLoc) {
+							console.log(n + "chair> " + vcLoc + "vcLoc")
+							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (angle_step * 0.1 / rows.length))* i));
 							/*for (var j = i; j >= 0; j--) {
 								var vt = -1 * (-1 * arc_length / 2 + (angle_step * 0.9) * j);  //(1 - (0.1 * vc)/(rows.length - 1)))
 								drawChair(r, vt, n, a, chairs[row][j]);
 							}*/
+						}
 					} else {
 						var t = -1 * (-1 * arc_length / 2 + (angle_step) * i);
 					}
