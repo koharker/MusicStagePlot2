@@ -129,9 +129,11 @@ function drawChart() {
 			var angle_step = arc_length / (rows[row] - 1)
 			for(var i = 0; i < rows[row]; i++) {
 				var t = 0;
+				console.log(row)
 				if (chairs[row][i].shape === "cello") {
 					vc ++;
 					console.log(vc);
+					var t = -1 * (-1 * arc_length / 2 + angle_step * i)
 				};
 /*				for (var j = 0; j < row[rows]; j++) {
 					if (chairs[row][j].shape === "cello") {
