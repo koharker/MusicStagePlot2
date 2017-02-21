@@ -142,9 +142,12 @@ function drawChart() {
 						if (chairs[row][i].shape === "cello") {
 							vc += 1;
 							console.log(vc);
-							var t = -1 * (-1 * arc_length / 2 + angle_step * i);
+							var t = -1 * (-1 * arc_length / 2 + angle_step * 0.5 * i);
+							for (var j; j < i; j++) {
+								drawChair(r, t, n, a, chairs[row][j]);
+							}
 						} else {
-							var t = -1 * (-1 * arc_length / 2 + (angle_step * 0.9) * i);
+							var t = -1 * (-1 * arc_length / 2 + (angle_step * 0.5) * i);
 						}
 					} else {
 						var t = -1 * (-1 * arc_length / 2 + (angle_step) * i);
