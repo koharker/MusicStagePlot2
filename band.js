@@ -143,18 +143,18 @@ function drawChart() {
 						if (chairs[row][i].shape === "cello") {
 							vcLoc = i;
 							console.log(vcLoc + "vcLoc");
-							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (angle_step * 0.5 / rows.length))* (i-1)) + vcStep);
+							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (angle_step * 0.1 / rows.length))* (i-1)) + vcStep);
 						/*} else if (rows[row] > vcLoc) {
 							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (vcStep / rows.length))* i) + (vcStep * vcLoc));
 						*/ 
 						} else if (i > vcLoc && i !== (vcLoc + 1)) {
 							console.log(i + "chair " + vcLoc + "vcLoc")
-							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (angle_step * 0.5 / rows.length))* i) + vcStep);
+							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (angle_step * 0.1 / rows.length))* i) + vcStep);
 						} else if (i  === (vcLoc +1)) {
-							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (angle_step * 0.5 / rows.length))* (i-1)) + vcStep);
+							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (angle_step * 0.1 / rows.length))* (i-1)) + vcStep);
 						} else {
 							console.log(i + "chair '<' " + vcLoc + "vcLoc")
-							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (angle_step * 0.25 / rows.length))* i));
+							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (angle_step * 0.1 / rows.length))* i));
 							/*for (var j = i; j >= 0; j--) {
 								var vt = -1 * (-1 * arc_length / 2 + (angle_step * 0.9) * j);  //(1 - (0.1 * vc)/(rows.length - 1)))
 								drawChair(r, vt, n, a, chairs[row][j]);
