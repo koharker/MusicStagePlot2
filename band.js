@@ -14,7 +14,7 @@ var standCoordinates;
 var straightRows = 0;
 var editingLabelRow;
 var vcLoc = [];
-var vc = 0;
+var numberOfCelloChairs = vcLoc.length;
 
 $(document).ready(function() {
 	setLetterCheckbox();
@@ -131,22 +131,16 @@ function drawChart() {
 			var vcStep = angle_step * 1.5
 			for(var i = 0; i < rows[row]; i++) {
 				var t = 0;
-				var vcT = 0;
-/*				for (var j = 0; j < row[rows]; j++) {
-					if (chairs[row][j].shape === "cello") {
-						vc ++;
-					};
-				};*/
 				if(rows[row] > 1) {
 					//adjust for cello spacing here
-					if (vc > 0) {
+					if (numberOfCelloChairs > 0) {
 						for (var vcChair in vcLoc) {
-							var nonCelloAngleStep = angle_step - ((angle_step * 0.5 * vc) / (rows[row] - vc));
+							var nonCelloAngleStep = angle_step - ((angle_step * 0.5 * numberOfCelloChairs) / (rows[row] - numberOfCelloChairs));
 							if (chairs[row][i].shape === "cello") {
 								var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + (vcStep + nonCelloAngleStep)/2));
 							};
 							if (i > vcChair && chairs[row][i].shape !== "cello") {
-								var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1)) + (vcStep * vc));
+								var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1)) + (vcStep * numberOfCelloChairs));
 							} else if (!(i > vcChair) && chairs[row][i].shape !== "cello") {
 								var t = -1 * (-1 * arc_length / 2 + nonCelloAngleStep * i);
 							};
@@ -543,10 +537,10 @@ function dblClickChart(e) {
 					chair.shape = "cello";
 					console.log(c)
 					vcLoc.push(c);
-					vc += 1;
+					//numberOfCelloChairs += 1;
 				} else if(chair.shape === "cello"){
 					chair.shape = "snare";
-					vc -= 1;
+					//numberOfCelloChairs -= 1;
 					var vcChairNumber = vcLoc.indexOf(c);
 					vcLoc.splice(vcChairNumber)
 					console.log(c)
