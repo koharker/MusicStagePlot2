@@ -146,9 +146,9 @@ function drawChart() {
 							var t = -1 * (-1 * arc_length / 2 + angle_step * (i - 1) + vcStep);
 						} else if (i > vcLoc) {
 							console.log(i + "chair " + vcLoc + "vcLoc")
-							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (angle_step * 0.1 / rows.length))* i) + vcStep);
+							var t = -1 * (-1 * arc_length / 2 + ((angle_step - ((angle_step * 0.1) / rows.length))* i) + vcStep);
 						} else {
-							var t = -1 * (-1 * arc_length / 2 + ((angle_step - (angle_step * 0.1 / (rowLength - 1)))* i));
+							var t = -1 * (-1 * arc_length / 2 + ((angle_step - ((angle_step * 0.1) / (rowLength - 1)))* i));
 							/*for (var j = i; j >= 0; j--) {
 								var vt = -1 * (-1 * arc_length / 2 + (angle_step * 0.9) * j);  //(1 - (0.1 * vc)/(rows.length - 1)))
 								drawChair(r, vt, n, a, chairs[row][j]);
