@@ -13,7 +13,7 @@ var customRowFontSizes;
 var standCoordinates;
 var straightRows = 0;
 var editingLabelRow;
-var vcLoc = 0;
+var vcLoc = [];
 var vc = 0;
 
 $(document).ready(function() {
@@ -140,20 +140,17 @@ function drawChart() {
 				if(rows[row] > 1) {
 					//adjust for cello spacing here
 					if (vc > 0) {
-						var nonCelloAngleStep = angle_step - ((angle_step * 0.5 * vc) / (rows[row] - vc));
-						if (chairs[row][i].shape === "cello") {
-							vcLoc = i;
-							var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + (vcStep + nonCelloAngleStep)/2));
+						for (var vcChair in vcLoc) {
+							var nonCelloAngleStep = angle_step - ((angle_step * 0.5 * vc) / (rows[row] - vc));
+							if (chairs[row][i].shape === "cello") {
+								var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + (vcStep + nonCelloAngleStep)/2));
+							};
+							if (i > vcChair && chairs[row][i].shape !== "cello") {
+								var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1)) + (vcStep * vc));
+							} else if (!(i > vcChair) && chairs[row][i].shape !== "cello") {
+								var t = -1 * (-1 * arc_length / 2 + nonCelloAngleStep * i);
+							};
 						}
-						if (i > vcLoc) {
-							var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1)) + vcStep);
-						} else if (!(i > vcLoc) && chairs[row][i].shape !== "cello") {
-							var t = -1 * (-1 * arc_length / 2 + nonCelloAngleStep * i);
-							/*for (var j = i; j >= 0; j--) {
-								var vt = -1 * (-1 * arc_length / 2 + (angle_step * 0.9) * j);  //(1 - (0.1 * vc)/(rows.length - 1)))
-								drawChair(r, vt, n, a, chairs[row][j]);
-							}*/
-						};
 					} else {
 						var t = -1 * (-1 * arc_length / 2 + (angle_step) * i);
 					}
@@ -544,10 +541,15 @@ function dblClickChart(e) {
 					chair.shape = "circ"
 				} else if(chair.shape === "circ"){
 					chair.shape = "cello";
+					console.log(c)
+					vcLoc.push(c);
 					vc += 1;
 				} else if(chair.shape === "cello"){
 					chair.shape = "snare";
 					vc -= 1;
+					var vcChairNumber = vcLoc.indexOf(c);
+					vcLoc.splice(vcChairNumber)
+					console.log(c)
 				} else if(chair.shape === "snare"){
 					chair.shape = "sqr";
 				}
