@@ -143,15 +143,11 @@ function drawChart() {
 						var nonCelloAngleStep = angle_step - ((angle_step * 0.5) / (rows[row] - vc));
 						if (chairs[row][i].shape === "cello") {
 							vcLoc = i;
-							var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + vcStep));
-							console.log(rows.length)
-							console.log(rows.length - 1)
-							console.log(rows[row] + "rows[row]")
-							console.log((angle_step - ((angle_step * 0.5) / rows.length)) + "with row.length and " + (angle_step - ((angle_step * 0.1) / rows[row])) + "with rows[row]."  + (rows.length - 1) + " = rL - 1");
-						} else if (i > vcLoc) {
-							console.log(i + "chair and " + vcLoc + "vcLoc");
+							var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + (vcStep + nonCelloAngleStep)/2));
+						}
+						if (i > vcLoc) {
 							var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1)) + vcStep);
-						} else {
+						} else if (i !> vcLoc && chairs[row][i].shape !== "cello") {
 							var t = -1 * (-1 * arc_length / 2 + nonCelloAngleStep * i);
 							/*for (var j = i; j >= 0; j--) {
 								var vt = -1 * (-1 * arc_length / 2 + (angle_step * 0.9) * j);  //(1 - (0.1 * vc)/(rows.length - 1)))
