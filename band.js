@@ -140,13 +140,13 @@ function drawChart() {
 				if(rows[row] > 1) {
 					//adjust for cello spacing here
 					if (vc > 0) {
-						var nonCelloAngleStep = angle_step - ((angle_step * 0.1) / rows.length));
+						var nonCelloAngleStep = angle_step - ((angle_step * 0.1) / rows.length);
 						if (chairs[row][i].shape === "cello") {
 							vcLoc = i;
 							var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + vcStep));
-							console.log((angle_step - ((angle_step * 0.1) / rows.length))) + "with row.length and " + (angle_step - ((angle_step * 0.1) / (rows.length - 1))) + "with row.length - 1."  + (rows.length - 1) + " = rL - 1")
+							console.log((angle_step - ((angle_step * 0.1) / rows.length)) + "with row.length and " + (angle_step - ((angle_step * 0.1) / (rows.length - 1))) + "with row.length - 1."  + (rows.length - 1) + " = rL - 1");
 						} else if (i > vcLoc) {
-							console.log(i + "chair and " + vcLoc + "vcLoc")
+							console.log(i + "chair and " + vcLoc + "vcLoc");
 							var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep* i) + vcStep);
 						} else {
 							var t = -1 * (-1 * arc_length / 2 + nonCelloAngleStep * i);
