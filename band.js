@@ -561,6 +561,7 @@ function readInputs() {
 	rows = [];
 	for(var i = maxRows - 1; i >= 0; i--) {
 		var val = parseInt($('#row' + (i+1)).val());
+		console.log(val);
 		if(rows.length == 0 && !val)
 			continue;
 		if(!val)
