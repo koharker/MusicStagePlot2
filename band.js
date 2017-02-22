@@ -128,7 +128,7 @@ function drawChart() {
 			$('canvas').drawArc({ radius: r });
 			var arc_length = Math.PI - .3 - (1 - r / 550)
 			var angle_step = arc_length / (rows[row] - 1)
-			var vcStep = angle_step * 1.2
+			var vcStep = angle_step * 1.5
 			for(var i = 0; i < rows[row]; i++) {
 				var t = 0;
 				var vcT = 0;
@@ -140,14 +140,14 @@ function drawChart() {
 				if(rows[row] > 1) {
 					//adjust for cello spacing here
 					if (vc > 0) {
-						var nonCelloAngleStep = angle_step - ((angle_step * 0.1) / (rows[row] - vc));
+						var nonCelloAngleStep = angle_step - ((angle_step * 0.5) / (rows[row] - vc));
 						if (chairs[row][i].shape === "cello") {
 							vcLoc = i;
 							var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + vcStep));
 							console.log(rows.length)
 							console.log(rows.length - 1)
 							console.log(rows[row] + "rows[row]")
-							console.log((angle_step - ((angle_step * 0.1) / rows.length)) + "with row.length and " + (angle_step - ((angle_step * 0.1) / rows[row])) + "with rows[row]."  + (rows.length - 1) + " = rL - 1");
+							console.log((angle_step - ((angle_step * 0.5) / rows.length)) + "with row.length and " + (angle_step - ((angle_step * 0.1) / rows[row])) + "with rows[row]."  + (rows.length - 1) + " = rL - 1");
 						} else if (i > vcLoc) {
 							console.log(i + "chair and " + vcLoc + "vcLoc");
 							var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1)) + vcStep);
