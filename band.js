@@ -139,11 +139,14 @@ function drawChart() {
 							console.log(vcLoc[vcChair] + "vcChair");
 							var nonCelloAngleStep = angle_step - ((angle_step * 0.5 * numberOfCelloChairs) / (rows[row] - numberOfCelloChairs));
 							if (chairs[row][i].shape === "cello") {
+								console.log(i + "i \=" + vcLoc[vcChair] + "vcChair");
 								var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + (vcStep + nonCelloAngleStep)/2)) ;
 							};
 							if (i > vcLoc[vcChair] && chairs[row][i].shape !== "cello") {
+								console.log(i + "i \>" + vcLoc[vcChair] + "vcChair");
 								var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1)) + (vcStep * numberOfCelloChairs));
 							} else if ((i < vcLoc[vcChair]) && chairs[row][i].shape !== "cello") {
+								console.log(i + "i \<" + vcLoc[vcChair] + "vcChair");
 								var t = -1 * (-1 * arc_length / 2 + nonCelloAngleStep * i);
 							};
 						}
