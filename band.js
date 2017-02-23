@@ -231,15 +231,20 @@ function drawChart() {
 }
 
 function drawChair(r, t, n, a, chair) {
+	console.log(x + "x");
+	console.log(y + "y");
 	var x = centerX - Math.sin(t) * r;
 	var y = centerY - Math.cos(t) * r;
+	console.log(t + "t");	
+	console.log(x + "x");
+	console.log(y + "y");
+	console.log(r + "r");
 	drawChairXY(x, y, t, n, a, chair);
 }	
 	
 function drawChairXY(x, y, t, n, a, chair) {
 	chair.x = x;
 	chair.y = y;
-	console.log(r + "r");
 	console.log(x + "x");
 	console.log(y + "y");
 	console.log(chair.x + "chair.x");
