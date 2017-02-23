@@ -239,7 +239,9 @@ function drawChair(r, t, n, a, chair) {
 function drawChairXY(x, y, t, n, a, chair) {
 	chair.x = x;
 	chair.y = y;
-	var tInt = parseInt(t) + 20;
+	console.log(chair.x + "chair.x");
+	console.log(chair.y + "chair.y");
+	console.log(t + "t");
 	var fontSize = (chair.fontSize ? chair.fontSize : 1) * Math.round((a ? 14 : 16) * seatScale);
 	// The black borders don't work in old Firefoxen.
 	// So fake it by drawing two rectangles
@@ -366,7 +368,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				strokeStyle: '#000',
 				strokeWidth: 5,
 				width: 10 * seatScale, height: 38 * seatScale,
-				x: x + Math.sin(t * 19), y: y + Math.cos(tInt),
+				x: x + Math.sin(t) / 19, y: y + Math.cos(tInt),
 				angle: -1 * t
 			});
 			$('canvas').drawEllipse({
@@ -374,7 +376,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				strokeStyle: '#fff',
 				strokeWidth: 5,
 				width: 10 * seatScale - 4, height: 38 * seatScale - 4 ,
-				x: x + Math.sin(t * 19), y: y + Math.cos(tInt),
+				x: x + Math.sin(t), y: y + Math.cos(tInt),
 				angle: -1 * t
 			});
 			/*$('canvas').drawRect({
