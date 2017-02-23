@@ -141,7 +141,7 @@ function drawChart() {
 							};
 							if (i > vcChair && chairs[row][i].shape !== "cello") {
 								var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1)) + (vcStep * numberOfCelloChairs));
-							} else if (!(i > vcChair) && chairs[row][i].shape !== "cello") {
+							} else if ((i < vcChair) && chairs[row][i].shape !== "cello") {
 								var t = -1 * (-1 * arc_length / 2 + nonCelloAngleStep * i);
 							};
 						}
