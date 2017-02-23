@@ -239,6 +239,9 @@ function drawChair(r, t, n, a, chair) {
 function drawChairXY(x, y, t, n, a, chair) {
 	chair.x = x;
 	chair.y = y;
+	console.log(r + "r");
+	console.log(x + "x");
+	console.log(y + "y");
 	console.log(chair.x + "chair.x");
 	console.log(chair.y + "chair.y");
 	console.log(t + "t");
