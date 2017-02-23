@@ -365,7 +365,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				strokeStyle: '#000',
 				strokeWidth: 5,
 				width: 10 * seatScale, height: 38 * seatScale,
-				x: x + Math.sin(t + (18 * seatScale)), y: y + Math.cos(t + (18 * seatScale)),
+				x: x + Math.sin(t + (18)), y: y + Math.cos(t + (18 )),
 				angle: -1 * t
 			});
 			$('canvas').drawEllipse({
