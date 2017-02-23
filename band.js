@@ -136,6 +136,7 @@ function drawChart() {
 					console.log(numberOfCelloChairs + "numberOfCelloChairs");
 					if (numberOfCelloChairs > 0) {
 						for (var vcChair in vcLoc) {
+							console.log(vcLoc[vcChair] + "vcChair");
 							var nonCelloAngleStep = angle_step - ((angle_step * 0.5 * numberOfCelloChairs) / (rows[row] - numberOfCelloChairs));
 							if (chairs[row][i].shape === "cello") {
 								var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + (vcStep + nonCelloAngleStep)/2)) ;
@@ -530,7 +531,6 @@ function dblClickChart(e) {
 					chair.shape = "circ"
 				} else if(chair.shape === "circ"){
 					chair.shape = "cello";
-					console.log(c)
 					vcLoc.push(c);
 					//numberOfCelloChairs += 1;
 				} else if(chair.shape === "cello"){
@@ -538,7 +538,6 @@ function dblClickChart(e) {
 					//numberOfCelloChairs -= 1;
 					var vcChairNumber = vcLoc.indexOf(c);
 					vcLoc.splice(vcChairNumber)
-					console.log(c)
 				} else if(chair.shape === "snare"){
 					chair.shape = "sqr";
 				}
