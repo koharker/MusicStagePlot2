@@ -133,6 +133,7 @@ function drawChart() {
 				var t = 0;
 				if(rows[row] > 1) {
 					//adjust for cello spacing here
+					var numberOfCelloChairs = vloc.length;
 					if (numberOfCelloChairs > 0) {
 						for (var vcChair in vcLoc) {
 							var nonCelloAngleStep = angle_step - ((angle_step * 0.5 * numberOfCelloChairs) / (rows[row] - numberOfCelloChairs));
@@ -530,6 +531,7 @@ function dblClickChart(e) {
 	for(var row in rows) {
 		for(var c in chairs[row]) {
 			var chair = chairs[row][c];
+			//var c = parseInt(c);
 			if(chair.x > x - 18 && chair.x < x + 18 && chair.y > y - 18 && chair.y < y + 18 ) {
 				if (chair.shape === "sqr"){
 					chair.shape = "circ"
