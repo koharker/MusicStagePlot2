@@ -141,7 +141,7 @@ function drawChart() {
 							if (chairs[row][i].shape === "cello") {
 								console.log(i + "i \=" + vcLoc[vcChair] + "vcChair");
 								if (chairs[row][i + 1].shape === "cello") {
-									var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + vcStep));
+									var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + (vcStep + nonCelloAngleStep)/2));
 								} else if (chairs[row][i + 1].shape !== "cello") {
 									var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + (vcStep + nonCelloAngleStep)/2  + vcStep * (numberOfCelloChairs - 1)));
 								}
@@ -359,7 +359,53 @@ function drawChairXY(x, y, t, n, a, chair) {
 				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
 				angle: -1 * t
 			});
-		}
+		} else if(chair.shape === "bass_drum") {
+			$('canvas').drawEllipse({
+				fillStyle: '#000',
+				strokeStyle: '#000',
+				strokeWidth: 5,
+				width: 10 * seatScale, height: 38 * seatScale,
+				x: x + Math.sin(t) * 9 * seatScale, y: y * seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawEllipse({
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				width: 10 * seatScale - 4, height: 38 * seatScale - 4 ,
+				x: x + Math.sin(t) * 9 * seatScale, y: y * seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawRect({
+				fillStyle: '#000',
+				strokeStyle: '#000',
+				x: x, y: y,
+				width: 40 * seatScale, height: 16 * seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawRect({
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				x: x, y: y,
+				width: 40 * seatScale - 4, height: 16 * seatScale +seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawEllipse({
+				fillStyle: '#000',
+				strokeStyle: '#000',
+				strokeWidth: 5,
+				width: 38 * seatScale, height: 10 * seatScale,
+				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
+				angle: -1 * t
+			});
+			$('canvas').drawEllipse({
+				fillStyle: '#fff',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				width: 38 * seatScale - 4, height: 10 * seatScale - 4 ,
+				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
+				angle: -1 * t
+			});
 		
 	} else {
 		if(chair.shape === "sqr"){
