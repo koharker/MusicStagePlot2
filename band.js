@@ -151,7 +151,7 @@ function drawChart() {
 							};
 						}
 					} else {
-						var t = -1 * (-1 * arc_length / 2 + (angle_step) * i);
+						chairs[row][i].t = -1 * (-1 * arc_length / 2 + (angle_step) * i);
 					}
 				}
 				// Hide the arc under disabled chairs
@@ -164,7 +164,7 @@ function drawChart() {
 						end: i == rows[row] - 1 ? Math.PI : ((t - angle_step * 0.55) * -1)  // Last chair, blank out entire arc to the right
 					});
 				}
-				drawChair(r, t, n, a, chairs[row][i]);
+				drawChair(r, chairs[row][i].t, n, a, chairs[row][i]);
 				if(showStands) {
 					drawStand(Math.max(r - step * 0.5, r - 35 * customScale), t, stands[row][i*2]);
 					if(i != rows[row] - 1)
@@ -235,7 +235,6 @@ function drawChair(r, t, n, a, chair) {
 function drawChairXY(x, y, t, n, a, chair) {
 	chair.x = x;
 	chair.y = y;
-	chair.t = t;
 	var fontSize = (chair.fontSize ? chair.fontSize : 1) * Math.round((a ? 14 : 16) * seatScale);
 	// The black borders don't work in old Firefoxen.
 	// So fake it by drawing two rectangles
@@ -567,7 +566,7 @@ function readInputs() {
 		if(!chairs[i] || chairs[i].length != val) {
 			chairs[i] = [];
 			for(var j = 0; j < val; j ++) {
-				chairs[i][j] = { enabled: true, x: 0, y: 0, label: false, fontSize: false, shape: "sqr" }; // Add "type"
+				chairs[i][j] = { enabled: true, x: 0, y: 0, t: 0, label: false, fontSize: false, shape: "sqr" }; // Add "type"
 
 			}
 		}
@@ -877,7 +876,7 @@ function decode(code) {
 			$('#row' + (i/2+1)).val(val);
 			chairs[i/2] = [];
 			for(var j = 0; j < parseInt(val, 10); j++) {
-				chairs[i/2][j] = { enabled: true, x: 0, y: 0, label: false, fontSize: false, shape: "sqr" };
+				chairs[i/2][j] = { enabled: true, x: 0, y: 0, t: 0, label: false, fontSize: false, shape: "sqr" };
 			}
 		}
 	}
