@@ -155,7 +155,7 @@ function drawChart() {
 							};
 						}
 					} else {
-						chairs[row][i].t = -1 * (-1 * arc_length / 2 + (angle_step) * i);
+						 var t = -1 * (-1 * arc_length / 2 + (angle_step) * i);
 					}
 				}
 				// Hide the arc under disabled chairs
@@ -168,7 +168,7 @@ function drawChart() {
 						end: i == rows[row] - 1 ? Math.PI : ((t - angle_step * 0.55) * -1)  // Last chair, blank out entire arc to the right
 					});
 				}
-				drawChair(r, chairs[row][i].t, n, a, chairs[row][i]);
+				drawChair(r, t, n, a, chairs[row][i]);
 				if(showStands) {
 					drawStand(Math.max(r - step * 0.5, r - 35 * customScale), t, stands[row][i*2]);
 					if(i != rows[row] - 1)
