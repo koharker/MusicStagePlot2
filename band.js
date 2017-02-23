@@ -595,6 +595,7 @@ function dblClickChart(e) {
 					chair.shape = "bass_drum";
 				} else if(chair.shape === "bass_drum"){
 					chair.shape = "sqr";
+				}
 				drawChart();
 				break;
 			}
