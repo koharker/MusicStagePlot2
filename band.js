@@ -165,7 +165,7 @@ function drawChart() {
 					if(i != rows[row] - 1)
 						drawStand(Math.max(r - step * 0.5, r - 35 * customScale), t - angle_step / 2, stands[row][i*2+1]);
 				}
-				if(showNumbers && chairs[row][i].enabled && chairs[row][i].label === false && chair[row][i].shape !== "snare")
+				if(showNumbers && chairs[row][i].enabled && chairs[row][i].label === false && chairs[row][i].shape !== "snare")
 					n++;
 			}
 		} else {
@@ -200,7 +200,7 @@ function drawChart() {
 					if(i != rows[row] - 1)
 						drawStandXY(x + x_step * 0.5, Math.min(y + step * 0.5, y + 35 * customScale), stands[row][i*2+1]);
 				}
-				if(showNumbers && chairs[row][i].enabled && chairs[row][i].label === false && chair[row][i].shape !== "snare")
+				if(showNumbers && chairs[row][i].enabled && chairs[row][i].label === false && chairs[row][i].shape !== "snare")
 					n++;
 			}
 		}
