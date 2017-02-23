@@ -591,8 +591,9 @@ function dblClickChart(e) {
 					var vcChairNumber = vcLoc.indexOf(c);
 					vcLoc.splice(vcChairNumber)
 				} else if(chair.shape === "snare"){
+					chair.shape = "bass_drum";
+				} else if(chair.shape === "bass_drum"){
 					chair.shape = "sqr";
-				}
 				drawChart();
 				break;
 			}
