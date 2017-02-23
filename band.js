@@ -406,6 +406,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
 				angle: -1 * t
 			});
+		}
 		
 	} else {
 		if(chair.shape === "sqr"){
