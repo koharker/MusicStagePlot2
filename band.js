@@ -141,9 +141,9 @@ function drawChart() {
 							if (chairs[row][i].shape === "cello") {
 								console.log(i + "i \=" + vcLoc[vcChair] + "vcChair");
 								if (chairs[row][i + 1].shape === "cello") {
-									var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + vcStep * numberOfCelloChairs));
+									var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + vcStep));
 								} else if (chairs[row][i + 1].shape !== "cello") {
-									var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + (vcStep + nonCelloAngleStep)/2));
+									var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + (vcStep + nonCelloAngleStep)/2  + vcStep * (numberOfCelloChairs - 1)));
 								}
 							};
 							if (i > vcLoc[vcChair] && chairs[row][i].shape !== "cello") {
