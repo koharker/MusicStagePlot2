@@ -137,12 +137,12 @@ function drawChart() {
 						for (var vcChair in vcLoc) {
 							var nonCelloAngleStep = angle_step - ((angle_step * 0.5 * numberOfCelloChairs) / (rows[row] - numberOfCelloChairs));
 							if (chairs[row][i].shape === "cello") {
-								var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + (vcStep + nonCelloAngleStep)/2));
+								chair[row][i].t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1) + (vcStep + nonCelloAngleStep)/2));
 							};
 							if (i > vcLoc[vcChair] && chairs[row][i].shape !== "cello") {
-								var t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1)) + (vcStep * numberOfCelloChairs));
+								chair[row][i].t = -1 * (-1 * arc_length / 2 + (nonCelloAngleStep * (i - 1)) + (vcStep * numberOfCelloChairs));
 							} else if ((i < vcLoc[vcChair]) && chairs[row][i].shape !== "cello") {
-								var t = -1 * (-1 * arc_length / 2 + nonCelloAngleStep * i);
+								chair[row][i].t = -1 * (-1 * arc_length / 2 + nonCelloAngleStep * i);
 							};
 						}
 					} else {
@@ -230,6 +230,7 @@ function drawChair(r, t, n, a, chair) {
 function drawChairXY(x, y, t, n, a, chair) {
 	chair.x = x;
 	chair.y = y;
+	chair.t = t;
 	var fontSize = (chair.fontSize ? chair.fontSize : 1) * Math.round((a ? 14 : 16) * seatScale);
 	// The black borders don't work in old Firefoxen.
 	// So fake it by drawing two rectangles
@@ -349,14 +350,6 @@ function drawChairXY(x, y, t, n, a, chair) {
 				width: 38 * seatScale - 4, height: 10 * seatScale - 4 ,
 				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
 				angle: -1 * t
-			});
-			$('canvas').drawText({
-				fillStyle: '#000',
-				strokeStyle: '#fff',
-				strokeWidth: 5,
-				x: x, y: y,
-				text: chair.label === false ? a + n : chair.label,
-				font: 'normal ' + fontSize + 'pt Verdana, sans-serif'
 			});
 		}
 		
