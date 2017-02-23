@@ -14,7 +14,6 @@ var standCoordinates;
 var straightRows = 0;
 var editingLabelRow;
 var vcLoc = [];
-var numberOfCelloChairs = vcLoc.length;
 
 $(document).ready(function() {
 	setLetterCheckbox();
