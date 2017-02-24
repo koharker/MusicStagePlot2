@@ -8,6 +8,8 @@ var showStands;
 var rows;
 var stands;
 var chairs;
+var totalChairs;
+var totalStands;
 var labels;
 var customRowFontSizes;
 var standCoordinates;
@@ -107,6 +109,7 @@ function drawChart() {
 	var letterRows = $('#chkletters').attr('checked') != null;
 	if(showNumbers)
 		var n = 1;
+		var nT = 1;
 	else
 		var n = '';
 	var a = '';
@@ -117,7 +120,9 @@ function drawChart() {
 	var row_length = 0;
 	for(var row in rows) {
 		if(restartNumbering)
+			nT += n;
 			n = 1;
+			
 		if(letterRows)
 			a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.charAt(row);
 		var r = 350;
@@ -238,15 +243,18 @@ function drawChart() {
 	$('canvas').drawText({
 		fillStyle: '#000',
 		strokeStyle: '#fff',
-		x: 900, y: 8,
+		x: 1000, y: 8,
 		text: 'total chairs =',
 		font: 'normal 11pt Verdana, sans-serif'
 	});
+	/*for(var rown in rows) {
+		var totalChairs =	
+		*/
 	$('canvas').drawText({
 		fillStyle: '#000',
 		strokeStyle: '#fff',
-		x: 950, y: 8,
-		text: n,
+		x: 1080, y: 8,
+		text: nT,
 		font: 'normal 11pt Verdana, sans-serif'
 	});
 
