@@ -123,6 +123,8 @@ function drawChart() {
 		if(restartNumbering) {
 			nT += n;
 			n = 1;
+		} else {
+			nT = n;
 		}
 		if(letterRows)
 			a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.charAt(row);
@@ -234,7 +236,7 @@ function drawChart() {
 		$('canvas').drawText({
 			fillStyle: '#000',
 			strokeStyle: '#fff',
-			x: 950, y: 20,
+			x: 960, y: 20,
 			text: 'total stands =',
 			font: 'normal 11pt Verdana, sans-serif'
 		});
@@ -244,7 +246,7 @@ function drawChart() {
 	$('canvas').drawText({
 		fillStyle: '#000',
 		strokeStyle: '#fff',
-		x: 950, y: 8,
+		x: 960, y: 8,
 		text: 'total chairs =',
 		font: 'normal 11pt Verdana, sans-serif'
 	});
@@ -254,7 +256,7 @@ function drawChart() {
 	$('canvas').drawText({
 		fillStyle: '#000',
 		strokeStyle: '#fff',
-		x: 1030, y: 8,
+		x: 1020, y: 8,
 		text: nT,
 		font: 'normal 11pt Verdana, sans-serif'
 	});
