@@ -217,8 +217,10 @@ function drawChart() {
 					if(i != rows[row] - 1)
 						drawStandXY(x + x_step * 0.5, Math.min(y + step * 0.5, y + 35 * customScale), stands[row][i*2+1]);
 				}
-				if(showNumbers && chairs[row][i].enabled && chairs[row][i].label === false && chairs[row][i].shape !== "snare")
-					n++;
+				if(showNumbers && chairs[row][i].enabled && chairs[row][i].label === false && chairs[row][i].shape !== "snare") {
+					n++
+					nT++;
+				}
 			}
 		}
 	}
@@ -243,23 +245,25 @@ function drawChart() {
 	}
 	
 	//disp heading()  ??
-	$('canvas').drawText({
-		fillStyle: '#000',
-		strokeStyle: '#fff',
-		x: 960, y: 8,
-		text: 'total chairs =',
-		font: 'normal 11pt Verdana, sans-serif'
-	});
-	/*for(var rown in rows) {
-		var totalChairs =	
-		*/
-	$('canvas').drawText({
-		fillStyle: '#000',
-		strokeStyle: '#fff',
-		x: 1020, y: 8,
-		text: nT,
-		font: 'normal 11pt Verdana, sans-serif'
-	});
+	if (n) {
+		($('canvas').drawText({
+			fillStyle: '#000',
+			strokeStyle: '#fff',
+			x: 960, y: 8,
+			text: 'total chairs =',
+			font: 'normal 11pt Verdana, sans-serif'
+		});
+		/*for(var rown in rows) {
+			var totalChairs =	
+			*/
+		$('canvas').drawText({
+			fillStyle: '#000',
+			strokeStyle: '#fff',
+			x: 1020, y: 8,
+			text: nT - 1,
+			font: 'normal 11pt Verdana, sans-serif'
+		});
+	}
 
 	$('.title').html($('#title').val());
 	if(generateCode)
