@@ -107,11 +107,12 @@ function drawChart() {
 	var showNumbers = $('#chknumbers').attr('checked') != null;
 	var restartNumbering = $('#chkrestart').attr('checked') != null;
 	var letterRows = $('#chkletters').attr('checked') != null;
-	if(showNumbers)
-		var n = 1;
+	if(showNumbers) {
 		var nT = 1;
-	else
+		var n = 1;
+	} else {
 		var n = '';
+	}
 	var a = '';
 	readInputs();
 	updateChairLabels();
@@ -119,10 +120,10 @@ function drawChart() {
 	var step = 300 / (rows.length - 1)
 	var row_length = 0;
 	for(var row in rows) {
-		if(restartNumbering)
+		if(restartNumbering) {
 			nT += n;
 			n = 1;
-			
+		}
 		if(letterRows)
 			a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.charAt(row);
 		var r = 350;
