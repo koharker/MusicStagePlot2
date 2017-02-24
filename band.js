@@ -234,7 +234,7 @@ function drawChart() {
 		$('canvas').drawText({
 			fillStyle: '#000',
 			strokeStyle: '#fff',
-			x: 500, y: 8,
+			x: 950, y: 20,
 			text: 'total stands =',
 			font: 'normal 11pt Verdana, sans-serif'
 		});
@@ -244,7 +244,7 @@ function drawChart() {
 	$('canvas').drawText({
 		fillStyle: '#000',
 		strokeStyle: '#fff',
-		x: 1000, y: 8,
+		x: 950, y: 8,
 		text: 'total chairs =',
 		font: 'normal 11pt Verdana, sans-serif'
 	});
@@ -254,7 +254,7 @@ function drawChart() {
 	$('canvas').drawText({
 		fillStyle: '#000',
 		strokeStyle: '#fff',
-		x: 1080, y: 8,
+		x: 1030, y: 8,
 		text: nT,
 		font: 'normal 11pt Verdana, sans-serif'
 	});
