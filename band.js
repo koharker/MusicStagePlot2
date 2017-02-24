@@ -238,15 +238,15 @@ function drawChart() {
 	$('canvas').drawText({
 		fillStyle: '#000',
 		strokeStyle: '#fff',
-		x: 450, y: 8,
+		x: 900, y: 8,
 		text: 'total chairs =',
 		font: 'normal 11pt Verdana, sans-serif'
 	});
 	$('canvas').drawText({
 		fillStyle: '#000',
 		strokeStyle: '#fff',
-		x: 500, y: 8,
-		text: '\n',
+		x: 950, y: 8,
+		text: n,
 		font: 'normal 11pt Verdana, sans-serif'
 	});
 
