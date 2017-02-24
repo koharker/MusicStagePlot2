@@ -218,7 +218,7 @@ function drawChart() {
 						drawStandXY(x + x_step * 0.5, Math.min(y + step * 0.5, y + 35 * customScale), stands[row][i*2+1]);
 				}
 				if(showNumbers && chairs[row][i].enabled && chairs[row][i].label === false && chairs[row][i].shape !== "snare") {
-					n++
+					n++;
 					nT++;
 				}
 			}
@@ -246,7 +246,7 @@ function drawChart() {
 	
 	//disp heading()  ??
 	if (n) {
-		($('canvas').drawText({
+		$('canvas').drawText({
 			fillStyle: '#000',
 			strokeStyle: '#fff',
 			x: 960, y: 8,
