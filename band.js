@@ -224,7 +224,32 @@ function drawChart() {
 		});
 		$('canvas').drawLine({ x1: 2, y1: 2, x2: 12, y2: 12 });
 		$('canvas').drawLine({ x1: 2, y1: 12, x2: 12, y2: 2 });
+		
+		$('canvas').drawText({
+			fillStyle: '#000',
+			strokeStyle: '#fff',
+			x: 500, y: 8,
+			text: 'total stands =',
+			font: 'normal 11pt Verdana, sans-serif'
+		});
 	}
+	
+	//disp heading()  ??
+	$('canvas').drawText({
+		fillStyle: '#000',
+		strokeStyle: '#fff',
+		x: 450, y: 8,
+		text: 'total chairs =',
+		font: 'normal 11pt Verdana, sans-serif'
+	});
+	$('canvas').drawText({
+		fillStyle: '#000',
+		strokeStyle: '#fff',
+		x: 500, y: 8,
+		text: '\n',
+		font: 'normal 11pt Verdana, sans-serif'
+	});
+
 	$('.title').html($('#title').val());
 	if(generateCode)
 		$('#code').attr('value', encode());
