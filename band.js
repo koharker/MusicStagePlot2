@@ -107,7 +107,7 @@ function drawChart() {
 	var showNumbers = $('#chknumbers').attr('checked') != null;
 	var restartNumbering = $('#chkrestart').attr('checked') != null;
 	var letterRows = $('#chkletters').attr('checked') != null;
-	var totalChairs;
+	var totalChairs = 0;
 	if(showNumbers) {
 		var nT = 1;
 		var n = 1;
