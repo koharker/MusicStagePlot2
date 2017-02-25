@@ -250,8 +250,8 @@ function drawChart() {
 	console.log(rows[row]);
 	totalChairs += rows[row];
 	var sum = 0;
-	for (int i = 0; i < rows.length; i++) {
-  		sum += myArray[i];
+	for (var i = 0; i < rows.length; i++) {
+  		sum += rows[i];
 	}
 	if (rows[row]) {
 		$('canvas').drawText({
