@@ -26,9 +26,6 @@ body {
   width: 100%;
 }
 
-.containers p [
-  display: inline-block;
-}
 
 .msp-icon-hamburger:before {
     content: "\e01b";
