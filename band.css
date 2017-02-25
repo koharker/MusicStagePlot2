@@ -16,10 +16,17 @@ body {
 
 .header {
   background: #fff;
-  height: 120px;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: auto;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
 }
 
-.containers [
+.containers p [
   display: inline-block;
 }
 
