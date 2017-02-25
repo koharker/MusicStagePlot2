@@ -251,7 +251,11 @@ function drawChart() {
 	totalChairs += rows[row];
 	var sum = 0;
 	for (var i = 0; i < rows.length; i++) {
-  		sum += rows[i];
+		for(var j = 0; j < rows[row]; j++) {
+			if (rows[i][j].enabled && rows[i][j].shape !== "snare") {
+				sum += 1;
+			};
+		};
 	}
 	if (rows[row]) {
 		$('canvas').drawText({
