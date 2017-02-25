@@ -8,7 +8,7 @@ var showStands;
 var rows;
 var stands;
 var chairs;
-var totalChairs;
+
 var totalStands;
 var labels;
 var customRowFontSizes;
@@ -107,6 +107,7 @@ function drawChart() {
 	var showNumbers = $('#chknumbers').attr('checked') != null;
 	var restartNumbering = $('#chkrestart').attr('checked') != null;
 	var letterRows = $('#chkletters').attr('checked') != null;
+	var totalChairs;
 	if(showNumbers) {
 		var nT = 1;
 		var n = 1;
@@ -247,7 +248,7 @@ function drawChart() {
 	
 	//disp heading()  ??
 	console.log(rows[row]);
-	var totalChairs += rows[row];
+	totalChairs += rows[row];
 	if (rows[row]) {
 		$('canvas').drawText({
 			fillStyle: '#000',
