@@ -246,7 +246,8 @@ function drawChart() {
 	}
 	
 	//disp heading()  ??
-	if (rows[row] !== 0) {
+	console.log(rows[row])
+	if (rows[row]) {
 		$('canvas').drawText({
 			fillStyle: '#000',
 			strokeStyle: '#fff',
