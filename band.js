@@ -246,7 +246,8 @@ function drawChart() {
 	}
 	
 	//disp heading()  ??
-	console.log(rows[row])
+	console.log(rows[row]);
+	var totalChairs += rows[row];
 	if (rows[row]) {
 		$('canvas').drawText({
 			fillStyle: '#000',
