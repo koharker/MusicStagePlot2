@@ -263,7 +263,7 @@ function drawChart() {
 			fillStyle: '#000',
 			strokeStyle: '#fff',
 			x: 1020, y: 8,
-			text: nT - 1,
+			text: totalChairs,
 			font: 'normal 11pt Verdana, sans-serif'
 		});
 	}
