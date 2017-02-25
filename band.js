@@ -124,7 +124,7 @@ function drawChart() {
 			nT += n;
 			n = 1;
 		} else {
-			nT = n;
+			var nT = n;
 		}
 		if(letterRows)
 			a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.charAt(row);
@@ -184,6 +184,7 @@ function drawChart() {
 				}
 				if(showNumbers && chairs[row][i].enabled && chairs[row][i].label === false && chairs[row][i].shape !== "snare")
 					n++;
+				        nT = n;
 			}
 		} else {
 			var y = centerY - r;
@@ -245,7 +246,7 @@ function drawChart() {
 	}
 	
 	//disp heading()  ??
-	if (n) {
+	if (rows[row] !== 0) {
 		$('canvas').drawText({
 			fillStyle: '#000',
 			strokeStyle: '#fff',
