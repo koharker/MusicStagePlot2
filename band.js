@@ -252,7 +252,7 @@ function drawChart() {
 	var sum = 0;
 	for (var i = 0; i < rows.length; i++) {
 		for(var j = 0; j < rows[row]; j++) {
-			if (rows[i][j].enabled && rows[i][j].shape !== "snare") {
+			if (chairs[i][j].enabled && chairs[i][j].shape !== "snare") {
 				sum += 1;
 			};
 		};
