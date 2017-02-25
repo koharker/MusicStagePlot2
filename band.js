@@ -250,7 +250,7 @@ function drawChart() {
 	console.log(rows[row]);
 	totalChairs += rows[row];
 	var sum = 0;
-	for (int i = 0; i < rows.length; i++)
+	for (int i = 0; i < rows.length; i++) {
   		sum += myArray[i];
 	}
 	if (rows[row]) {
