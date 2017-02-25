@@ -8,7 +8,6 @@ var showStands;
 var rows;
 var stands;
 var chairs;
-var totalChairs = 0;
 var totalStands;
 var labels;
 var customRowFontSizes;
@@ -107,9 +106,8 @@ function drawChart() {
 	var showNumbers = $('#chknumbers').attr('checked') != null;
 	var restartNumbering = $('#chkrestart').attr('checked') != null;
 	var letterRows = $('#chkletters').attr('checked') != null;
-	
+	var totalChairs = 0
 	if(showNumbers) {
-		var nT = 1;
 		var n = 1;
 	} else {
 		var n = '';
@@ -183,9 +181,10 @@ function drawChart() {
 					if(i != rows[row] - 1)
 						drawStand(Math.max(r - step * 0.5, r - 35 * customScale), t - angle_step / 2, stands[row][i*2+1]);
 				}
-				if(showNumbers && chairs[row][i].enabled && chairs[row][i].label === false && chairs[row][i].shape !== "snare")
+				if(showNumbers && chairs[row][i].enabled && chairs[row][i].label === false && chairs[row][i].shape !== "snare") {
 					n++;
-				        nT = n;
+				        totalChairs ++;
+				}
 			}
 		} else {
 			var y = centerY - r;
@@ -221,7 +220,7 @@ function drawChart() {
 				}
 				if(showNumbers && chairs[row][i].enabled && chairs[row][i].label === false && chairs[row][i].shape !== "snare") {
 					n++;
-					nT++;
+					totalChairs++;
 				}
 			}
 		}
@@ -251,7 +250,7 @@ function drawChart() {
 	totalChairs += rows[row];
 	var sum = 0;
 	for (var i = 0; i < rows.length; i++) {
-		for(var j = 0; j < rows[row]; j++) {
+		for(var j = 0; j < rows[i]; j++) {
 			if (chairs[i][j].enabled && chairs[i][j].shape !== "snare") {
 				sum += 1;
 			};
@@ -261,7 +260,7 @@ function drawChart() {
 		$('canvas').drawText({
 			fillStyle: '#000',
 			strokeStyle: '#fff',
-			x: 960, y: 8,
+			x: 950, y: 8,
 			text: 'total chairs =',
 			font: 'normal 11pt Verdana, sans-serif'
 		});
@@ -271,8 +270,8 @@ function drawChart() {
 		$('canvas').drawText({
 			fillStyle: '#000',
 			strokeStyle: '#fff',
-			x: 1020, y: 8,
-			text: sum,
+			x: 1015, y: 8,
+			text: sum + " " + totalChairs,
 			font: 'normal 11pt Verdana, sans-serif'
 		});
 	}
