@@ -14,35 +14,37 @@
 
   
   <div class='header'>
-    <div class="align-left-container">
-      <span role="button" tabindex="0" aria-label="Open Graph (ctrl+o)" class="msp-header-btn msp-action-opendrawer msp-tooltip" tooltip="Open Graph (ctrl+o)" original-title="">
-        <i class="msp-icon-hamburger"></i>
+    <div class='containers' role="navigation">
+      <div class="align-left-container">
+        <span role="button" tabindex="0" aria-label="Open Graph (ctrl+o)" class="msp-header-btn msp-action-opendrawer msp-tooltip" tooltip="Open Graph (ctrl+o)" original-title="">
+          <i class="msp-icon-hamburger"></i>
+        </span>
+
+        <span class="title-div">
+          <span role="button" tabindex="0" class="dcg-variable-title dcg-tooltip dcg-action-savedialog" tooltip="Duplicate or Rename (ctrl+shift+s)" aria-label="Conic Sections: Circle. To duplicate or rename this graph, press ctrl+shift+s" original-title="">Conic Sections: Circle</span>
+        </span>
+      </div>
+
+      <div id='helplink' class='noprint'>
+        <a href='help.html' onclick='showHelp(); return false;'>Help / About</a>
+      </div>
+
+      <p class='noprint'>This is a simple browser-based tool that you can use to generate and print semicircular seating charts. Have fun!<br>
+        <span id='loadlink'>
+          <a href='#' onclick='return false;'>Load saved chart</a>
+        </span>
+        <span id='loadcontainer' class='hidden'>
+          <span id='loadfilecontainer'>
+            <span style='color: green;'>Select a saved chart from your computer:</span>
+            <input type="file" accept=".txt" id="fileinput"><br>
+            <span style='color: #888;' id='loadcodelabel'>You may also <a href='javascript:showCodeInput()' style='color: #88f !important;'>input a code manually</a></span></span>
+      <span id='loadcodecontainer' class='hidden'><br>Chart code: <textarea id='loadcode' style='vertical-align: top;'></textarea><input type='button' value='Load' id='load'></span>
       </span>
-    
-      <span class="title-div">
-        <span role="button" tabindex="0" class="dcg-variable-title dcg-tooltip dcg-action-savedialog" tooltip="Duplicate or Rename (ctrl+shift+s)" aria-label="Conic Sections: Circle. To duplicate or rename this graph, press ctrl+shift+s" original-title="">Conic Sections: Circle</span>
-      </span>
+      <span id='loadmessage' class='hidden' style='color: red;'></span>
+      </p>
+      <hr class='noprint'>
+      <a href='javascript:window.print()'>print</a>
     </div>
-    
-    <div id='helplink' class='noprint'>
-      <a href='help.html' onclick='showHelp(); return false;'>Help / About</a>
-    </div>
-    
-    <p class='noprint'>This is a simple browser-based tool that you can use to generate and print semicircular seating charts. Have fun!<br>
-      <span id='loadlink'>
-        <a href='#' onclick='return false;'>Load saved chart</a>
-      </span>
-      <span id='loadcontainer' class='hidden'>
-        <span id='loadfilecontainer'>
-          <span style='color: green;'>Select a saved chart from your computer:</span>
-          <input type="file" accept=".txt" id="fileinput"><br>
-          <span style='color: #888;' id='loadcodelabel'>You may also <a href='javascript:showCodeInput()' style='color: #88f !important;'>input a code manually</a></span></span>
-    <span id='loadcodecontainer' class='hidden'><br>Chart code: <textarea id='loadcode' style='vertical-align: top;'></textarea><input type='button' value='Load' id='load'></span>
-    </span>
-    <span id='loadmessage' class='hidden' style='color: red;'></span>
-    </p>
-    <hr class='noprint'>
-    <a href='javascript:window.print()'>print</a>
   </div>
   
   <div id='wrapper' style='text-align: center'>
@@ -68,6 +70,7 @@
   <div title="Only available if 'Restart numbers on each row' is selected">
   <input type='checkbox' id='chkletters' style='float: left' disabled='disabled'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkletters' class='disabled' id='lblletters'>Give each row a letter</label></div>
   </div>
+
   <input type='checkbox' id='chkstands' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkstands'>Show music stands</label><span id='helpstands' class='help'><br>Click the chart to toggle stands</span></div>
   Seat size: <input type='button' id='btnscaledown' value='-'></input> <input type='button' id='btnscaleup' value='+'></input> <span id='scale'>100</span>%
   <p>Chart title: <input id='title'></input></p>
