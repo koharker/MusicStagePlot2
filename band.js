@@ -255,7 +255,7 @@ function drawChart() {
 		$('canvas').drawText({
 			fillStyle: '#000',
 			strokeStyle: '#fff',
-			x: 960, y: 20,
+			x: 960, y: 24,
 			text: 'total stands =',
 			font: 'normal 11pt Verdana, sans-serif'
 		});
@@ -263,7 +263,7 @@ function drawChart() {
 		$('canvas').drawText({
 			fillStyle: '#000',
 			strokeStyle: '#fff',
-			x: 1015, y: 20,
+			x: 1025, y: 24,
 			text: totalStands,
 			font: 'normal 11pt Verdana, sans-serif'
 		});
@@ -275,7 +275,7 @@ function drawChart() {
 		$('canvas').drawText({
 			fillStyle: '#000',
 			strokeStyle: '#fff',
-			x: 950, y: 8,
+			x: 960, y: 8,
 			text: 'total chairs =',
 			font: 'normal 11pt Verdana, sans-serif'
 		});
@@ -285,7 +285,7 @@ function drawChart() {
 		$('canvas').drawText({
 			fillStyle: '#000',
 			strokeStyle: '#fff',
-			x: 1015, y: 8,
+			x: 1025, y: 8,
 			text: totalChairs,
 			font: 'normal 11pt Verdana, sans-serif'
 		});
@@ -294,7 +294,19 @@ function drawChart() {
 	$('.title').html($('#title').val());
 	if(generateCode)
 		$('#code').attr('value', encode());
+	drawPodium();
 }
+
+function drawPodium()
+	$('canvas').drawRect({
+		fillStyle: '#fff',
+		strokeStyle: '#000',
+		strokeWidth: 4,
+		x: 525, y: 450,
+		width: 50 * seatScale,
+		height: 50 * seatScale,
+		cornerRadius: 10
+	});
 
 function drawChair(r, t, n, a, chair) {
 	console.log(x + "x");
@@ -436,6 +448,14 @@ function drawChairXY(x, y, t, n, a, chair) {
 				x: x - Math.sin(t) * 8 * seatScale, y: y - Math.cos(t) * 8 * seatScale,
 				angle: -1 * t
 			});
+			$('canvas').drawText({
+				fillStyle: '#000',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				x: x, y: y,
+				text: chair.label === false ? "SD" : chair.label,
+				font: 'normal ' + fontSize + 'pt Verdana, sans-serif'
+			});
 		} else if(chair.shape === "bass_drum") {
 			$('canvas').drawEllipse({
 				fillStyle: '#000',
@@ -483,8 +503,15 @@ function drawChairXY(x, y, t, n, a, chair) {
 				x: x - Math.cos(t) * 8 * seatScale, y: y + Math.sin(t) * 8 * seatScale,
 				angle: -1 * t
 			});
+			$('canvas').drawText({
+				fillStyle: '#000',
+				strokeStyle: '#fff',
+				strokeWidth: 5,
+				x: x, y: y,
+				text: chair.label === false ? "BD" : chair.label,
+				font: 'normal ' + fontSize + 'pt Verdana, sans-serif'
+			});
 		}
-		
 	} else {
 		if(chair.shape === "sqr"){
 			$('#guide_canvas').drawRect({
