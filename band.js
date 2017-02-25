@@ -249,6 +249,10 @@ function drawChart() {
 	//disp heading()  ??
 	console.log(rows[row]);
 	totalChairs += rows[row];
+	var sum = 0;
+	for (int i = 0; i < rows.length; i++)
+  		sum += myArray[i];
+	}
 	if (rows[row]) {
 		$('canvas').drawText({
 			fillStyle: '#000',
@@ -264,7 +268,7 @@ function drawChart() {
 			fillStyle: '#000',
 			strokeStyle: '#fff',
 			x: 1020, y: 8,
-			text: totalChairs,
+			text: sum,
 			font: 'normal 11pt Verdana, sans-serif'
 		});
 	}
