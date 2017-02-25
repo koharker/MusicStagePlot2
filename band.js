@@ -302,7 +302,7 @@ function drawPodium() {
 		fillStyle: '#fff',
 		strokeStyle: '#000',
 		strokeWidth: 4,
-		x: 525, y: 450,
+		x: 525, y: 480,
 		width: 50 * seatScale,
 		height: 50 * seatScale,
 		cornerRadius: 10
