@@ -19,6 +19,12 @@ body {
   height: 120px;
 }
 
+.dcg-icon-hamburger:before {
+    content: "\e01b";
+    text-shadow: 0 0 black;
+    background-color: #d02f2f;
+}
+
 .header .align-left-container {
     position: absolute;
     top: 10px;
