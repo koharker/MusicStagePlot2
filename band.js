@@ -297,7 +297,7 @@ function drawChart() {
 	drawPodium();
 }
 
-function drawPodium()
+function drawPodium() {
 	$('canvas').drawRect({
 		fillStyle: '#fff',
 		strokeStyle: '#000',
@@ -307,6 +307,7 @@ function drawPodium()
 		height: 50 * seatScale,
 		cornerRadius: 10
 	});
+}
 
 function drawChair(r, t, n, a, chair) {
 	console.log(x + "x");
