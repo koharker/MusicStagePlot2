@@ -16,13 +16,6 @@ body {
 
 .header {
   background: #fff;
-  background-color: rgba(255, 255, 255, 0.9);
-  height: auto;
-  text-align: center;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 999;
   width: 100%;
 }
 
@@ -40,6 +33,7 @@ body {
     font-size: 80%;
     margin-left: 5px;
     width: 20%;
+    display: inline-block;
 	
 }
 
