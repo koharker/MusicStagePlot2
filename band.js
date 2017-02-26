@@ -769,13 +769,13 @@ function updateChairLabels() {
 			var chair = chairs[row][c];
 			chair.fontSize = customRowFontSizes[row];
 			if(labels[row]) {
-				if (chair.enabled && chair.shape !== "snare") {
+				if (chair.enabled) {
 					chair.label = labels[row][label] ? labels[row][label] : "";
 					label++;
-				} else if (chair.shape === "snare") {
+				} else {
 					chair.label = false;
 				};
-			} else if (!chair.enabled || chair.shape === "snare"){	// Make sure it knows that a snare drum is not a chair so it skips this number
+			} else if (!chair.enabled){
 				chair.label = false;
 			}
 		}
