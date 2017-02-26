@@ -15,7 +15,7 @@
   
   <div class='header noprint'>
     <div class='nav' role="navigation">
-      <p>
+      <div class='header-containers'>
         <div class="align-left-container">
           <span role="button" tabindex="0" aria-label="Open Graph (ctrl+o)" class="msp-header-btn msp-action-opendrawer msp-tooltip" tooltip="Open Graph (ctrl+o)" original-title="">
             <i class="msp-icon-hamburger"></i>
@@ -25,29 +25,34 @@
             <span role="button" tabindex="0" class="dcg-variable-title dcg-tooltip dcg-action-savedialog" tooltip="Duplicate or Rename (ctrl+shift+s)" aria-label="Conic Sections: Circle. To duplicate or rename this graph, press ctrl+shift+s" original-title="">Conic Sections: Circle</span>
           </span>
         </div>
-
-        <div id='helplink'>
-          <a href='help.html' onclick='showHelp(); return false;'>Help / About</a>
+        
+        <div class='align-center-container'>
+          <p>This is a simple browser-based tool that you can use to generate and print semicircular seating charts. Have fun!<br>
+            <span id='loadlink'>
+              <a href='#' onclick='return false;'>Load saved chart</a>
+            </span>
+            <span id='loadcontainer' class='hidden'>
+              <span id='loadfilecontainer'>
+                <span style='color: green;'>Select a saved chart from your computer:</span>
+                <input type="file" accept=".txt" id="fileinput"><br>
+                <span style='color: #888;' id='loadcodelabel'>
+                  You may also <a href='javascript:showCodeInput()' style='color: #88f !important;'>input a code manually</a>
+                </span>
+              </span>
+            <span id='loadcodecontainer' class='hidden'><br>Chart code: <textarea id='loadcode' style='vertical-align: top;'></textarea><input type='button' value='Load' id='load'></span>
+            </span>
+            <span id='loadmessage' class='hidden' style='color: red;'></span>
+          </p>
         </div>
-
-        <p>This is a simple browser-based tool that you can use to generate and print semicircular seating charts. Have fun!<br>
-          <span id='loadlink'>
-            <a href='#' onclick='return false;'>Load saved chart</a>
-          </span>
-          <span id='loadcontainer' class='hidden'>
-            <span id='loadfilecontainer'>
-              <span style='color: green;'>Select a saved chart from your computer:</span>
-              <input type="file" accept=".txt" id="fileinput"><br>
-              <span style='color: #888;' id='loadcodelabel'>You may also <a href='javascript:showCodeInput()' style='color: #88f !important;'>input a code manually</a></span></span>
-        <span id='loadcodecontainer' class='hidden'><br>Chart code: <textarea id='loadcode' style='vertical-align: top;'></textarea><input type='button' value='Load' id='load'></span>
-        </span>
-        <span id='loadmessage' class='hidden' style='color: red;'></span>
-        </p>
-        <hr class='noprint'>
-        <div class='noprint'>
+        
+        <div class='align-right-container'>
           <a href='javascript:window.print()'>print</a>
+          <div id='helplink'>
+            <a href='help.html' onclick='showHelp(); return false;'>Help / About</a>
+          </div>
+        </div>
+        <hr class='noprint'>
       </div>
-      <p>
     </div>
   </div>
   
