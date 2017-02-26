@@ -44,8 +44,8 @@ body {
 }
 
 
-.align-right-container {
-
+.align-right-container p, a{
+	display: inline-block;
 }
 
 h1 {
