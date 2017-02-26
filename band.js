@@ -513,7 +513,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 			});
 		} else if(chair.shape === "timp") {
 			$('canvas').drawImage({
-				source: 'master/timpani-icon.png',
+				source: 'https://raw.githubusercontent.com/koharker/MusicStagePlot/master/timpani-icon.png',
 				x: x, y: y,
 				width: 50 * seatScale, height: 50 * seatScale
 			});
