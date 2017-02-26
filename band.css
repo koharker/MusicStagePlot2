@@ -31,7 +31,7 @@ body {
 }
 
 .align-left-container .align-center-container .align-right-container{
-    display: inline;
+    display: inline-block;
 	
 }
 
