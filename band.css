@@ -17,6 +17,7 @@ body {
 .header {
   background: #fff;
   width: 100%;
+	height: auto;
 }
 
 
@@ -26,15 +27,27 @@ body {
     background-color: #d02f2f;
 }
 
-.header .align-left-container {
-    position: absolute;
+.align-left-container .align-center-container .align-right-container{
+    position: relative;
     top: 10px;
-    height: 46px;
+    height: auto;
     font-size: 80%;
     margin-left: 5px;
-    width: 20%;
     display: inline-block;
 	
+}
+
+.align-left-container {
+	text-align: left;
+}
+
+.align-center-container {
+	text-align: center;
+}
+
+
+.align-right-container {
+	text-align: center;
 }
 
 h1 {
@@ -144,9 +157,6 @@ a {
 	overflow-y: scroll;
 }
 
-#helplink {
-	float: right;
-}
 
 #close {
 	display: block !important;
