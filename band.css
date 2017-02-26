@@ -32,7 +32,6 @@ body {
 
 .align-left-container .align-center-container .align-right-container{
 	display: inline-block;
-	width: 33%;
 }
 
 .align-left-container {
