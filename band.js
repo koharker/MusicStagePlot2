@@ -514,8 +514,9 @@ function drawChairXY(x, y, t, n, a, chair) {
 			});
 		} else if (chair.shape === "timp") {
 			$('canvas').drawImage({
-				source: 'timp-icon.png',
-				x: x, y: y
+				source: 'blob/master/timpani-icon.png',
+				x: x, y: y,
+				width: 50 * seatScale, height: 50 * seatScale
 			});
 		}
 	} else {
