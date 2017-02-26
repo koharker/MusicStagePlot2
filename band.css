@@ -23,6 +23,13 @@ body {
   	width: 100%;
 }
 
+.header-containers {
+	width: 100%;
+	height: auto;
+	position: relative;
+	text-align: center;
+}
+
 
 .msp-icon-hamburger:before {
     content: "\e01b";
