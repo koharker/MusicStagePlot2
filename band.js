@@ -512,6 +512,11 @@ function drawChairXY(x, y, t, n, a, chair) {
 				text: chair.label === false ? "BD" : chair.label,
 				font: 'normal ' + fontSize + 'pt Verdana, sans-serif'
 			});
+		} else if (chair.shape === "timp") {
+			$('canvas').drawImage({
+				source: 'timp-icon.png',
+				x: x, y: y
+			});
 		}
 	} else {
 		if(chair.shape === "sqr"){
@@ -699,8 +704,10 @@ function dblClickChart(e) {
 				} else if(chair.shape === "snare"){
 					chair.shape = "bass_drum";
 				} else if(chair.shape === "bass_drum"){
+					chair.shape = "timp";
+				} else if(chair.shape === "timp"){
 					chair.shape = "sqr";
-				}
+				} 
 				drawChart();
 				break;
 			}
