@@ -511,12 +511,12 @@ function drawChairXY(x, y, t, n, a, chair) {
 				text: chair.label === false ? "BD" : chair.label,
 				font: 'normal ' + fontSize + 'pt Verdana, sans-serif'
 			});
-		} else if (chair.shape === "timp") {
+		/*} else if(chair.shape === "timp") {
 			$('canvas').drawImage({
 				source: 'blob/master/timpani-icon.png',
 				x: x, y: y,
 				width: 50 * seatScale, height: 50 * seatScale
-			});
+			});*/
 		}
 	} else {
 		if(chair.shape === "sqr"){
