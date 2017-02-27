@@ -35,7 +35,8 @@ body {
     background-color: #d02f2f;
 }
 
-.align-left-container .align-center-container .align-right-container{
+
+.align-left-container .align-center-container .align-right-container {
 	display: inline-block;
 	margin: 20px;
 }
@@ -80,16 +81,9 @@ h2 {
 }
 
 ul {
-  margin: 0 auto;
-  padding: 0;
-  width: 50%;
 }
 
 li {
-  border-bottom: 1px solid #E4BB97;
-  list-style: none;
-  margin: 100px 0px;
-  padding-bottom: 60px;
 }
 
 p {
@@ -105,7 +99,6 @@ a {
   font-family: 'Raleway', sans-serif;
   font-size: 13px;
   font-weight: 900;
-  text-align: left;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
