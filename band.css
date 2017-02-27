@@ -39,12 +39,8 @@ body {
 
 
 .align-left-container .align-center-container .align-right-container {
-	color: #666666;
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	font-weight: 100;
-	display: inline;
-	text-transform: uppercase;
+	display: inline-block;
+	
 }
 
 .align-center-container {
