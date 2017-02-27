@@ -57,7 +57,7 @@ body {
 }
 
 .align-center-container p, a{
-	color: #666666;
+	color: #fff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-weight: 100;
@@ -67,7 +67,7 @@ body {
 
 
 .align-right-container p, a{
-	color: #666666;
+	color: #fff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-weight: 100;
