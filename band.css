@@ -24,8 +24,6 @@ body {
 }
 
 .header-containers {
-	width: 100%;
-	height: auto;
 	position: relative;
 	text-align: center;
 	display: inline-block;
@@ -39,11 +37,13 @@ body {
 
 .align-left-container .align-center-container .align-right-container{
 	display: inline-block;
+	margin: 20px;
 }
 
 .align-left-container {
 	width: 200px;
 	position: relative;
+	margin: 20px;
 }
 
 .align-center-container {
