@@ -16,14 +16,12 @@ body {
 
 .header {
 	background: #fff;
-  	height: 60px;
   	text-align: center;
 	position: fixed;
 	left: 0;
 	top: 0;
   	z-index: 999;
   	width: 100%;
-	overflow: auto;
 }
 
 .header-containers {
@@ -54,7 +52,7 @@ body {
 	font-weight: 100;
 	letter-spacing: 2px;
 	margin: 20px;
-	display: inline-block;
+	display: inline;
 	text-transform: uppercase;
 }
 
