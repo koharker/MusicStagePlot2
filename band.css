@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-	background-color: #333;
+	background-color: #fff;
 	position: relative;
 	left: 0;
 	top: 0;
@@ -22,14 +22,17 @@ body {
 }
 
 .header a {
-	color: #fff;
+	color: #000;
 	font-family: 'Roboto', sans-serif;
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: 400;
+	margin: 5px;
+	display: inline;
 
 }
 .header-containers {
 	position: relative;
+	background-color: #fff;
 	padding: 0px;
 	display: inline;
 }
@@ -42,30 +45,28 @@ body {
 
 
 .msp-icon-hamburger:before {
-    text-shadow: 0 0 black;
-    background-color: #d02f2f;
+
 }
 
 
 .align-left-container .align-center-container .align-right-container {
 	display: inline-block;
-	
 }
 
 .align-center-container {
 }
 
 .align-left-container p {
-	color: #fff;
+	color: #000;
 	font-family: 'Roboto', sans-serif;
-	font-size: 12px;
-	font-weight: 100;
+	font-size: 16px;
+	font-weight: 400;
 	margin: 5px;
 	display: inline;
 }
 
 .align-center-container p{
-	color: #fff;
+	color: #000;
 	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-weight: 400;
@@ -75,11 +76,11 @@ body {
 
 
 .align-right-container p{
-	color: #fff;
+	color: #000;
 	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-weight: 400;
-	margin: 2px;
+	margin: 5px;
 	display: inline;
 }
 
