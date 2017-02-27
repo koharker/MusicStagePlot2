@@ -37,31 +37,30 @@ body {
 
 .align-left-container .align-center-container .align-right-container {
   display: inline-block;
-  color: #666666;
+  text-transform: uppercase;
+}
+
+.align-left-container p{
+
+}
+
+.align-center-container p{
+	color: #666666;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 100;
   letter-spacing: 2px;
-  margin: 20px;
-  text-transform: uppercase;
-}
-
-.align-left-container {
-
-	position: relative;
-	margin: 20px;
-}
-
-.align-center-container {
-
-	position: relative;
+	  margin: 20px;
 }
 
 
-.align-right-container {
-
-	display: inline-block;
-
+.align-right-container p{
+	color: #666666;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 2px;
+	  margin: 20px;
 }
 
 h1 {
