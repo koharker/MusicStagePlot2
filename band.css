@@ -29,13 +29,15 @@ body {
 .header-containers {
 	position: relative;
 	padding: 20px;
-	-moz-column-width:300px;
+<!--	-moz-column-width:300px;
 	-webkit-column-width:300px;
 	column-width:300px;
+-->
 }
 
 .header-containers div{
 	height: 60px;
+	display: inline;
 }
 
 
