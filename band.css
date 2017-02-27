@@ -53,7 +53,7 @@ body {
 
 
 .align-right-container {
-	position: relative;
+	position: right;
 	display: inline-block;
 	width: 200px;
 }
