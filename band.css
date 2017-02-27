@@ -16,10 +16,11 @@ body {
 .header {
 	background: #fff;
   	text-align: center;
-	position: fixed;
+	position: relative;
 	left: 0;
 	top: 0;
   	width: 100%;
+	
 }
 
 .header-containers {
