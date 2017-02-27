@@ -34,6 +34,7 @@ body {
 }
 
 .header-containers div{
+	height: 60px;
 }
 
 
@@ -52,6 +53,10 @@ body {
 	margin: 20px;
 	display: inline-block;
 	text-transform: uppercase;
+}
+
+.align-center-container {
+	width: 600;
 }
 
 .align-left-container p, a{
