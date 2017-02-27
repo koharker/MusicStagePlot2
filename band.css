@@ -10,6 +10,7 @@ body {
 	background: -webkit-linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
 	/* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
+	
 }
 
 .header {
@@ -46,7 +47,7 @@ body {
 	text-transform: uppercase;
 }
 
-.align-left-container p{
+.align-left-container p, a{
 	color: #666666;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
@@ -57,7 +58,7 @@ body {
 	text-transform: uppercase;
 }
 
-.align-center-container p{
+.align-center-container p, a{
 	color: #666666;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
@@ -69,7 +70,7 @@ body {
 }
 
 
-.align-right-container p{
+.align-right-container p, a{
 	color: #666666;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
