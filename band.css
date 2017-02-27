@@ -28,11 +28,11 @@ body {
 	height: auto;
 	position: relative;
 	text-align: center;
+	display: inline-block;
 }
 
 
 .msp-icon-hamburger:before {
-    content: "\e01b";
     text-shadow: 0 0 black;
     background-color: #d02f2f;
 }
