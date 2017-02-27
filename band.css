@@ -47,7 +47,7 @@ body {
 .align-center-container {
 }
 
-.align-left-container p, a{
+.align-left-container p a{
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
@@ -56,21 +56,21 @@ body {
 	display: inline;
 }
 
-.align-center-container p, a{
+.align-center-container p a{
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
-	font-weight: 100;
+	font-weight: 400;
 	margin: 5px;
 	display: inline;
 }
 
 
-.align-right-container p, a{
+.align-right-container p a{
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
-	font-weight: 100;
+	font-weight: 400;
 	margin: 2px;
 	display: inline;
 }
@@ -111,11 +111,6 @@ p {
 }
 
 a {
-  color: #214E34;
-  font-family: 'Raleway', sans-serif;
-  font-size: 10px;
-  font-weight: 900;
-  text-decoration: none;
 }
 
 #canvas {
