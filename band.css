@@ -34,7 +34,6 @@ body {
 }
 
 .header-containers div{
-	height: 60px;
 	display: inline;
 }
 
@@ -78,7 +77,7 @@ body {
 	font-weight: 100;
 	letter-spacing: 2px;
 	margin: 20px;
-	display: inline-block;
+	display: inline;
 	text-transform: uppercase;
 }
 
