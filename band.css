@@ -42,16 +42,17 @@ body {
 }
 
 .align-left-container {
-
+	width: 200px;
 }
 
 .align-center-container {
-
+	width: 200px;
 }
 
 
 .align-right-container p, a{
 	display: inline-block;
+	width: 200px;
 }
 
 h1 {
