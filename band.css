@@ -15,15 +15,15 @@ body {
 
 .header {
 	background-color: #333;
-  	text-align: center;
+
 	position: relative;
 	left: 0;
 	top: 0;
-  	width: 100%;
+	width: 100%;
 }
 
 .header-containers {
-	position: relative;
+	position: absolute;
 	float: left;
 	padding: 0px;
 	display: block;
