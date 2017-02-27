@@ -25,6 +25,7 @@ body {
 
 .header-containers {
 	position: relative;
+	padding: 20px;
 }
 
 
@@ -35,26 +36,32 @@ body {
 
 
 .align-left-container .align-center-container .align-right-container {
-	display: inline-block;
-	margin: 20px;
+  display: inline-block;
+  color: #666666;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin: 20px;
+  text-transform: uppercase;
 }
 
 .align-left-container {
-	width: 200px;
+
 	position: relative;
 	margin: 20px;
 }
 
 .align-center-container {
-	width: 200px;
+
 	position: relative;
 }
 
 
 .align-right-container {
-	position: right;
+
 	display: inline-block;
-	width: 200px;
+
 }
 
 h1 {
