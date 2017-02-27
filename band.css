@@ -20,13 +20,11 @@ body {
 	left: 0;
 	top: 0;
   	width: 100%;
-	
 }
 
 .header-containers {
 	position: relative;
 	padding: 0px;
-
 }
 
 .header-containers div{
@@ -45,8 +43,6 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	font-weight: 100;
-	letter-spacing: 2px;
-	margin: 20px;
 	display: inline;
 	text-transform: uppercase;
 }
