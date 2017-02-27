@@ -52,16 +52,15 @@ body {
 }
 
 .align-center-container {
-	width: 600;
+	width: 500;
 }
 
 .align-left-container p, a{
 	color: #666666;
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
+	font-size: 8px;
 	font-weight: 100;
-	letter-spacing: 2px;
-	margin: 20px;
+	margin: 5px;
 	display: inline;
 	text-transform: uppercase;
 }
@@ -71,8 +70,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 8px;
 	font-weight: 100;
-	letter-spacing: 2px;
-	margin: 20px;
+	margin: 5px;
 	display: inline;
 	text-transform: uppercase;
 }
@@ -81,10 +79,9 @@ body {
 .align-right-container p, a{
 	color: #666666;
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
+	font-size: 8px;
 	font-weight: 100;
-	letter-spacing: 2px;
-	margin: 20px;
+	margin: 2px;
 	display: inline;
 }
 
