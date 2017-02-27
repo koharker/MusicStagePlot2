@@ -126,11 +126,9 @@ p {
 a {
   color: #214E34;
   font-family: 'Raleway', sans-serif;
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 900;
-  text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 2px;
 }
 
 #canvas {
