@@ -21,6 +21,13 @@ body {
 	width: 100%;
 }
 
+.header a {
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+
+}
 .header-containers {
 	position: relative;
 	padding: 0px;
@@ -31,6 +38,7 @@ body {
 	float: left;
 	display: inline;
 }
+
 
 
 .msp-icon-hamburger:before {
@@ -47,7 +55,7 @@ body {
 .align-center-container {
 }
 
-.align-left-container p a{
+.align-left-container p {
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
@@ -56,7 +64,7 @@ body {
 	display: inline;
 }
 
-.align-center-container p a{
+.align-center-container p{
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
@@ -66,7 +74,7 @@ body {
 }
 
 
-.align-right-container p a{
+.align-right-container p{
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
