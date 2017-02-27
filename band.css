@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-	background: #fff;
+	background-color: #333;
   	text-align: center;
 	position: relative;
 	left: 0;
@@ -26,6 +26,7 @@ body {
 	position: relative;
 	float: left;
 	padding: 0px;
+	display: block;
 }
 
 .header-containers div{
