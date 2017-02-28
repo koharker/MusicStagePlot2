@@ -1,8 +1,8 @@
-/*
+
 * { 
 	border: 1px solid rgba(0, 0, 0, 0.3);
 }
-*/
+
 
 body {
 	background: #fff7ef;
@@ -14,6 +14,18 @@ body {
 	background: linear-gradient(45deg, #f7f7f7 0%, #fff7ef 100%);
 }
 
+.main-container {
+	overflow: hidden;
+}
+
+.main-container div {
+	float: left;
+}
+
+.main-container div div {
+	display: inline-block;
+}
+	
 .header {
 	background-color: rgba(255, 255, 255, 0.9);
 	position: relative;
