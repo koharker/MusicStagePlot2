@@ -55,7 +55,8 @@ body {
 	display: inline-block;
 }
 
-.align-center-container {
+.align-right-container {
+	float: right;
 }
 
 .align-left-container p {
