@@ -310,15 +310,26 @@ function drawChart() {
 }
 
 function drawPodium() {
-	$('canvas').drawRect({
-		fillStyle: '#fff',
-		strokeStyle: '#000',
-		strokeWidth: 4,
-		x: 525, y: 470,
-		width: 48 * seatScale,
-		height: 48 * seatScale,
-		cornerRadius: 10
-	});
+	if(chair.enabled) {
+		$('canvas').drawRect({
+			fillStyle: '#fff',
+			strokeStyle: '#000',
+			strokeWidth: 4,
+			x: 525, y: 470,
+			width: 48 * seatScale,
+			height: 48 * seatScale,
+			cornerRadius: 10
+		});
+	} else {
+		$('canvas').drawRect({
+			fillStyle: '#fff',
+			strokeStyle: '#CCC',
+			strokeWidth: 4,
+			x: 525, y: 470,
+			width: 48 * seatScale,
+			height: 48 * seatScale,
+			cornerRadius: 10
+		});
 }
 
 function drawChair(r, t, n, a, chair) {
@@ -746,6 +757,7 @@ function readInputs() {
 			}
 		}
 	}
+	podium = { enabled: true, x: 525, y: 470 };
 	rows.reverse();
 	showStands = $('#chkstands').attr('checked');
 	setStraight(0); // Re-run "max straight rows" logic in case rows were removed
