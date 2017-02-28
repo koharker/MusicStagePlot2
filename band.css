@@ -13,7 +13,7 @@ body {
 	/* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(45deg, #f7f7f7 0%, #fff7ef 100%);
 }
-/*
+
 .main-container {
 	overflow: hidden;
 }
@@ -21,13 +21,14 @@ body {
 #input-container {
 	float: left;
 	width: 280px;
+	overflow: hidden;
 }
 
 
 #input-main {
 	display: block;
 }
-*/
+
 .header {
 	background-color: rgba(255, 255, 255, 0.9);
 	position: relative;
