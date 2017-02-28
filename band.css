@@ -27,6 +27,7 @@ body {
 
 #input-main {
 	display: inline-block;
+	overflow: hidden;
 }
 
 .header {
