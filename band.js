@@ -20,8 +20,7 @@ $(document).ready(function() {
 	setLetterCheckbox();
 	$.jCanvas({
 		strokeStyle: '#000',
-		strokeWidth: 6,
-		//strokeWidth: 2,
+		strokeWidth: 2,
 		x: centerX, y: centerY,
 		inDegrees: false
 	});
@@ -322,24 +321,14 @@ function drawPodium() {
 }
 
 function drawChair(r, t, n, a, chair) {
-	console.log(x + "x");
-	console.log(y + "y");
 	var x = centerX - Math.sin(t) * r;
 	var y = centerY - Math.cos(t) * r;
-	console.log(t + "t");	
-	console.log(x + "x");
-	console.log(y + "y");
 	drawChairXY(x, y, t, n, a, chair);
 }	
 	
 function drawChairXY(x, y, t, n, a, chair) {
 	chair.x = x;
 	chair.y = y;
-	console.log(x + "x");
-	console.log(y + "y");
-	console.log(chair.x + "chair.x");
-	console.log(chair.y + "chair.y");
-	console.log(t + "t");
 	var fontSize = (chair.fontSize ? chair.fontSize : 1) * Math.round((a ? 14 : 16) * seatScale);
 	// The black borders don't work in old Firefoxen.
 	// So fake it by drawing two rectangles
@@ -356,7 +345,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				x: x, y: y,
-				width: 40 * seatScale - 8, height: 40 * seatScale - 8,
+				width: 40 * seatScale - 4, height: 40 * seatScale - 4,
 				angle: -1 * t
 			});
 			$('canvas').drawText({
