@@ -17,17 +17,12 @@ body {
 .main-container {
 	overflow: hidden;
 }
-.main-container div {
-	display: inline-block;
-}
+
 #input-container {
 	float: left;
 	width: 280px;
 }
 
-#chart-container {
-	float: right;
-}
 
 #input-main {
 	display: block;
