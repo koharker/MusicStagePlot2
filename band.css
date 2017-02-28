@@ -29,6 +29,8 @@ body {
 
 .header div a {
 	color: #000;
+	border: 1px solid #000;
+	border-radius: 4px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
@@ -40,6 +42,8 @@ body {
 
 .header div p {
 	color: #000;
+	border: 1px solid #000;
+	border-radius: 4px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
@@ -62,6 +66,7 @@ body {
 
 .header div p:hover {
 	background-color: #05A8AA;
+	border: 1px solid #05A8AA;
 	color: #FFF;
 }
 .align-right-container {
