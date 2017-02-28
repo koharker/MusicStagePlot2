@@ -86,8 +86,8 @@ body {
 }
 
 #wrapper h1 {
-  color: #41292C;
-  font-family: 'Covered By Your Grace', serif;
+	font-family: 'Roboto', sans-serif;
+	color: #41292C;
   font-size: 48px;
   line-height: 32px;
   margin: 0;
@@ -191,12 +191,6 @@ a {
 	margin: 0;
 }
 
-.title h1{
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
-	font-size: 48px;
-	margin: 0;
-}
 
 .disabled {
 	color: gray;
