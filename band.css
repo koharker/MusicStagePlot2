@@ -33,7 +33,7 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
-	padding: 14px 16px;
+	padding: 7px 8px;
 	text-decoration: none;
 	display: inline-block;
 }
@@ -62,7 +62,6 @@ body {
 
 .header div p:hover {
 	background-color: #05A8AA;
-	border: 1px solid #05A8AA;
 	color: #FFF;
 }
 .align-right-container {
