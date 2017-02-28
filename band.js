@@ -856,7 +856,7 @@ function checkPodium() {
 		showPodium = true;
 		$('#helppodium').show();
 	} else {
-		showStands = false;
+		showPodium = false;
 		$('#helppodium').hide();
 	}	
 	drawChart();
