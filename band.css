@@ -17,7 +17,9 @@ body {
 .main-container {
 	overflow: hidden;
 }
-
+.main-container div {
+	display: inline-block;
+}
 .chart-container div {
 	float: right;
 }
