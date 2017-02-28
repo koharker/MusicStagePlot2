@@ -20,7 +20,8 @@ body {
 .main-container div {
 	display: inline-block;
 }
-.input-container {
+#input-container {
+	float: left;
 	width: 280px;
 }
 .chart-container div {
