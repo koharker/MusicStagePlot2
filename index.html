@@ -30,22 +30,19 @@
         </div>
         
         <div class='align-center-container'>
-          <p>This is a simple browser-based tool that you can use to generate and print semicircular seating charts. Have fun!
-            <span id='loadlink'>
-              <a href='#' onclick='return false;'>Load saved chart</a>
-            </span>
-            <span id='loadcontainer' class='hidden'>
-              <span id='loadfilecontainer'>
-                <span style='color: green;'>Select a saved chart from your computer:</span>
-                <input type="file" accept=".txt" id="fileinput"><br>
-                <span style='color: #888;' id='loadcodelabel'>
-                  You may also <a href='javascript:showCodeInput()' style='color: #88f !important;'>input a code manually</a>
-                </span>
+          <span id='loadlink'>
+            <a href='#' onclick='return false;'>Load saved chart</a>
+          </span>
+          <span id='loadcontainer' class='hidden'>
+            <span id='loadfilecontainer'>
+              <span style='color: green;'>Select a saved chart from your computer:</span>
+              <input type="file" accept=".txt" id="fileinput"><br>
+              <span style='color: #888;' id='loadcodelabel'>You may also <a href='javascript:showCodeInput()' style='color: #88f !important;'>input a code manually</a>
               </span>
-            <span id='loadcodecontainer' class='hidden'><br>Chart code: <textarea id='loadcode' style='vertical-align: top;'></textarea><input type='button' value='Load' id='load'></span>
             </span>
-            <span id='loadmessage' class='hidden' style='color: red;'></span>
-          </p>
+          <span id='loadcodecontainer' class='hidden'><br>Chart code: <textarea id='loadcode' style='vertical-align: top;'></textarea><input type='button' value='Load' id='load'></span>
+          </span>
+          <span id='loadmessage' class='hidden' style='color: red;'></span>
         </div>
         
         <div class='align-right-container'>
@@ -53,9 +50,10 @@
           <a href='help.html' onclick='showHelp(); return false;'>Help / About</a>
         </div>
       </div>
+  <hr class='noprint'>  
   </div>
   
-  <hr class='noprint'>
+
 
 
   
@@ -67,6 +65,7 @@
   
   <div id='input_container' class='noprint'>
     <div id='input_main'>
+      <p>This is a simple browser-based tool that you can use to generate and print semicircular seating charts. Have fun!</p>
       <p><b>Enter number of chairs per row:</b><br>
         <span style='color: #090;'>New! Partial rows / hide chairs.
           <a href='help.html#partial' onclick='javascript:showHelp("partial"); return false;'>How?
@@ -74,7 +73,8 @@
         </span>
       </p>
     <div id='rows'>
-      <p>Row 1: <input id='row1' size='2' maxlength='2' tabindex='1'></input> <a class='editlabellink' href='javascript:editLabels(1)' tabindex='2'>Edit labels</a></p><p>Row 2: <input id='row2' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(2)' tabindex='2'>Edit labels</a></p><p>Row 3: <input id='row3' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(3)' tabindex='2'>Edit labels</a></p><p>Row 4: <input id='row4' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(4)' tabindex='2'>Edit labels</a></p><p>Row 5: <input id='row5' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(5)' tabindex='2'>Edit labels</a></p><p>Row 6: <input id='row6' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(6)' tabindex='2'>Edit labels</a></p><p>Row 7: <input id='row7' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(7)' tabindex='2'>Edit labels</a></p><p>Row 8: <input id='row8' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(8)' tabindex='2'>Edit labels</a></p></div>
+      <p>Row 1: 
+        <input id='row1' size='2' maxlength='2' tabindex='1'></input> <a class='editlabellink' href='javascript:editLabels(1)' tabindex='2'>Edit labels</a></p><p>Row 2: <input id='row2' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(2)' tabindex='2'>Edit labels</a></p><p>Row 3: <input id='row3' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(3)' tabindex='2'>Edit labels</a></p><p>Row 4: <input id='row4' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(4)' tabindex='2'>Edit labels</a></p><p>Row 5: <input id='row5' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(5)' tabindex='2'>Edit labels</a></p><p>Row 6: <input id='row6' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(6)' tabindex='2'>Edit labels</a></p><p>Row 7: <input id='row7' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(7)' tabindex='2'>Edit labels</a></p><p>Row 8: <input id='row8' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(8)' tabindex='2'>Edit labels</a></p></div>
   <p><a href='javascript:addRow()'>Add Row</a></p>
   <p>Straight rows: <input type='button' id='btnstraightdown'value='-'></input> <input type='button' id='btnstraightup' value='+'></input> <span id='straight'>0</span></p>
   <input type='checkbox' id='chknumbers' checked='checked' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chknumbers'>Show numbers on seats</label></div>
