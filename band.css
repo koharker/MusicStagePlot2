@@ -3,18 +3,17 @@
 }
 
 body {
-	background: #f7f7f7;
+	background: #fff7ef;
 	/* Old browsers */
-	background: -moz-linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
+	background: -moz-linear-gradient(45deg, #f7f7f7 0%, #fff7ef 100%);
 	/* FF3.6-15 */
-	background: -webkit-linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
+	background: -webkit-linear-gradient(45deg, #f7f7f7 0%, #fff7ef 100%);
 	/* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
-	
+	background: linear-gradient(45deg, #f7f7f7 0%, #fff7ef 100%);
 }
 
 .header {
-	background-color: #fff;
+	background-color: rgba(255, 160, 255, 0.9);
 	position: relative;
 	left: 0;
 	top: 0;
@@ -54,11 +53,15 @@ body {
 }
 
 .header div a:hover {
-    background-color: gray;
+	background-color: #05A8AA;
+	border: 1px solid #05A8AA;
+	color: #FFF;
 }
 
 .header div p:hover {
-    background-color: green;
+	background-color: #05A8AA;
+	border: 1px solid #05A8AA;
+	color: #FFF;
 }
 .align-right-container {
 	float: right;
