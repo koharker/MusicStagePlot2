@@ -109,7 +109,6 @@ function drawChart() {
 	$("canvas").clearCanvas();
 	var showNumbers = $('#chknumbers').attr('checked') != null;
 	var restartNumbering = $('#chkrestart').attr('checked') != null;
-	var showPodium = $('chkpodium').attr('checked') != null;
 	var letterRows = $('#chkletters').attr('checked') != null;
 	var totalChairs = 0;
 	var totalStands = 0;
