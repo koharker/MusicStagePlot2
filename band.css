@@ -72,6 +72,10 @@ body {
 	float: left;
 }
 
+.canvas {
+	display: block;
+}
+
 .header div a:hover {
 	background-color: #05A8AA;
 	border: 1px solid #05A8AA;
