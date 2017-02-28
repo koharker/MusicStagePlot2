@@ -20,6 +20,9 @@ body {
 .main-container div {
 	display: inline-block;
 }
+.input-container {
+	width: 280px;
+}
 .chart-container div {
 	float: right;
 }
