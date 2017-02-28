@@ -330,6 +330,7 @@ function drawPodium() {
 			height: 48 * seatScale,
 			cornerRadius: 10
 		});
+	}
 }
 
 function drawChair(r, t, n, a, chair) {
