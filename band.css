@@ -60,34 +60,6 @@ body {
 	float: right;
 }
 
-.align-left-container p {
-	color: #000;
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	margin: 5px;
-
-}
-
-.align-center-container p{
-	color: #000;
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	margin: 5px;
-	display: inline;
-}
-
-
-.align-right-container p{
-	color: #000;
-	font-family: 'Roboto', sans-serif;
-	font-size: 12px;
-	font-weight: 400;
-	margin: 5px;
-	display: inline;
-}
-
 h1 {
   color: #41292C;
   font-family: 'Covered By Your Grace', serif;
