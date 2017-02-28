@@ -20,6 +20,11 @@ body {
 	top: 0;
 	width: 100%;
 	display: inline;
+	height: auto;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
 
 .header a {
