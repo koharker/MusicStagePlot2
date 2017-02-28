@@ -26,7 +26,7 @@ body {
 
 
 #input-main {
-	display: block;
+	display: inline-block;
 }
 
 .header {
