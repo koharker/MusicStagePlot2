@@ -7,6 +7,7 @@ var generateCode = false;
 var showStands;
 var showPodium;
 var rows;
+var podium;
 var stands;
 var chairs;
 var labels;
@@ -299,7 +300,7 @@ function drawChart() {
 	if (showPodium) {
 		drawPodium();
 		if (showStands) {
-			drawStandXY(525, 445, stands[11][1]);
+			drawStandXY(525, 445, podium);
 		}
 	}
 
