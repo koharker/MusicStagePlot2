@@ -18,10 +18,14 @@ body {
 	overflow: hidden;
 }
 
-.main-container div {
-	display: inline-block;
+.chart-container div {
+	float: right;
 }
-	
+
+#input-main {
+	display: block;
+}
+
 .header {
 	background-color: rgba(255, 255, 255, 0.9);
 	position: relative;
