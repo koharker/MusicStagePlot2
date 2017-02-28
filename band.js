@@ -5,6 +5,7 @@ var customScale = 1;
 var maxRows = 8;
 var generateCode = false;
 var showStands;
+var showPodium;
 var rows;
 var stands;
 var chairs;
@@ -99,6 +100,7 @@ $(document).ready(function() {
 	
 	reset();
 	checkStands();
+	checkPodium()
 	drawChart();
 	loadUrlCode();
 });
@@ -860,6 +862,18 @@ function checkStands() {
 	}	
 	drawChart();
 }
+
+function checkPodium() {
+	if($('#chkpodium').attr('checked')) {
+		showPodium = true;
+		$('#helppodium').show();
+	} else {
+		showStands = false;
+		$('#helppodium').hide();
+	}	
+	drawChart();
+}
+
 
 function setCustomScale(n) {
 	customScale = Math.min(2, Math.max(0.5, (customScale + n).toFixed(1)));
