@@ -55,116 +55,139 @@
   <hr class='noprint'>  -->
   </div>
   
-
-
-
-  
-  <div id='wrapper' style='text-align: center'>
-    <h1 class='title'></h1>
-    <canvas id='canvas' width='1050' height='510'>Sorry, your browser does not support Canvas. :(</canvas>
-    <canvas id='guide_canvas' width='1050' height='510' class='noprint'>Sorry, your browser does not support Canvas. :(</canvas>
+  <div class='main-container'>
+    <div class='chart-container'>
+      <div id='wrapper' style='text-align: center'>
+        <h1 class='title'></h1>
+        <canvas id='canvas' width='1050' height='510'>Sorry, your browser does not support Canvas. :(</canvas>
+        <canvas id='guide_canvas' width='1050' height='510' class='noprint'>Sorry, your browser does not support Canvas. :(</canvas>
+      </div>
+    </div>
+      
+    <div id='input_container' class='noprint'>
+      <div id='input_main'>
+        <p>This is a simple browser-based tool that you can use to generate and print semicircular seating charts. Have fun!</p>
+        <p><b>Enter number of chairs per row:</b><br>
+          <span style='color: #090;'>New! Partial rows / hide chairs.
+            <a href='help.html#partial' onclick='javascript:showHelp("partial"); return false;'>How?
+            </a>
+          </span>
+        </p>
+        <div class='row-container'>
+          <div id='rows'>
+            <p>Row 1: <input id='row1' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(1)' tabindex='2'>Edit labels</a></p>
+            <p>Row 2: <input id='row2' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(2)' tabindex='2'>Edit labels</a></p>
+            <p>Row 3: <input id='row3' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(3)' tabindex='2'>Edit labels</a></p>
+            <p>Row 4: <input id='row4' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(4)' tabindex='2'>Edit labels</a></p>
+            <p>Row 5: <input id='row5' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(5)' tabindex='2'>Edit labels</a></p>
+            <p>Row 6: <input id='row6' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(6)' tabindex='2'>Edit labels</a></p>
+            <p>Row 7: <input id='row7' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(7)' tabindex='2'>Edit labels</a></p>
+            <p>Row 8: <input id='row8' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(8)' tabindex='2'>Edit labels</a></p>
+          </div>
+          <p><a href='javascript:addRow()'>Add Row</a></p>
+        </div>
+      
+        <p>Straight rows: <input type='button' id='btnstraightdown'value='-'> <input type='button' id='btnstraightup' value='+'> <span id='straight'>0</span></p>
+        <input type='checkbox' id='chknumbers' checked='checked' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chknumbers'>Show numbers on seats</label></div>
+        <input type='checkbox' id='chkrestart' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkrestart' id='lblrestart'>Restart numbers on each row</label></div>
+        <div title="Only available if 'Restart numbers on each row' is selected">
+          <input type='checkbox' id='chkletters' style='float: left' disabled='disabled'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkletters' class='disabled' id='lblletters'>Give each row a letter</label></div>
+        </div>
+      
+        <input type='checkbox' id='chkstands' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkstands'>Show music stands</label><span id='helpstands' class='help'><br>Click the chart to toggle stands</span></div>
+        <input type='checkbox' id='chkpodium' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkpodium'>Show podium</label><span id='helppodium' class='help'><br>Click the chart to toggle podium</span></div>
+        <p>Seat size: <input type='button' id='btnscaledown' value='-'> <input type='button' id='btnscaleup' value='+'> <span id='scale'>100</span>%</p>
+        <p>Chart title: <input id='title'></p>
+        <p><input type='button' value='Generate' id='generate'><input type='button' value='Reset' id='reset'></p>
+      </div>
+      
+      <!-- Edit Label Menu -->
+      <div id='input_labels'>
+        <p><b>Custom Chair Labels: Row <span id='lblcustomrow'></span></b><br>Enter one label per line.<br>Labels will be applied left to right.</p>
+        <textarea id='txtlabels' style='width: 200px; height: 350px;'></textarea>
+        <p>Label size: <input type='button' id='btnrowlabelscaledown' value='-'> <input type='button' id='btnrowlabelscaleup' value='+'></p>
+        <p><input type='button' id='btnlabeldone' value='Done' style='font-size: 16pt;'></p>
+      </div>
+    </div>
   </div>
-  
-  <div id='input_container' class='noprint'>
-    <div id='input_main'>
-      <p>This is a simple browser-based tool that you can use to generate and print semicircular seating charts. Have fun!</p>
-      <p><b>Enter number of chairs per row:</b><br>
-        <span style='color: #090;'>New! Partial rows / hide chairs.
-          <a href='help.html#partial' onclick='javascript:showHelp("partial"); return false;'>How?
-          </a>
-        </span>
-      </p>
-    <div id='rows'>
-      <p>Row 1: 
-        <input id='row1' size='2' maxlength='2' tabindex='1'></input> <a class='editlabellink' href='javascript:editLabels(1)' tabindex='2'>Edit labels</a></p><p>Row 2: <input id='row2' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(2)' tabindex='2'>Edit labels</a></p><p>Row 3: <input id='row3' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(3)' tabindex='2'>Edit labels</a></p><p>Row 4: <input id='row4' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(4)' tabindex='2'>Edit labels</a></p><p>Row 5: <input id='row5' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(5)' tabindex='2'>Edit labels</a></p><p>Row 6: <input id='row6' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(6)' tabindex='2'>Edit labels</a></p><p>Row 7: <input id='row7' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(7)' tabindex='2'>Edit labels</a></p><p>Row 8: <input id='row8' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(8)' tabindex='2'>Edit labels</a></p></div>
-  <p><a href='javascript:addRow()'>Add Row</a></p>
-  <p>Straight rows: <input type='button' id='btnstraightdown'value='-'></input> <input type='button' id='btnstraightup' value='+'></input> <span id='straight'>0</span></p>
-  <input type='checkbox' id='chknumbers' checked='checked' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chknumbers'>Show numbers on seats</label></div>
-  <input type='checkbox' id='chkrestart' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkrestart' id='lblrestart'>Restart numbers on each row</label></div>
-  <div title="Only available if 'Restart numbers on each row' is selected">
-  <input type='checkbox' id='chkletters' style='float: left' disabled='disabled'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkletters' class='disabled' id='lblletters'>Give each row a letter</label></div>
-  </div>
-
-  <input type='checkbox' id='chkstands' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkstands'>Show music stands</label><span id='helpstands' class='help'><br>Click the chart to toggle stands</span></div>
-<input type='checkbox' id='chkpodium' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkpodium'>Show podium</label><span id='helppodium' class='help'><br>Click the chart to toggle podium</span></div>
-  Seat size: <input type='button' id='btnscaledown' value='-'></input> <input type='button' id='btnscaleup' value='+'></input> <span id='scale'>100</span>%
-  <p>Chart title: <input id='title'></input></p>
-  <p><input type='button' value='Generate' id='generate'></input>
-  <input type='button' value='Reset' id='reset'></input></p>
-  </div>
-  <div id='input_labels'>
-  <p><b>Custom Chair Labels: Row <span id='lblcustomrow'></span></b><br>Enter one label per line.<br>Labels will be applied left to right.</p>
-  <textarea id='txtlabels' style='width: 200px; height: 350px;'></textarea>
-  <p>Label size: <input type='button' id='btnrowlabelscaledown' value='-'></input> <input type='button' id='btnrowlabelscaleup' value='+'></input></p>
-  <p><input type='button' id='btnlabeldone' value='Done' style='font-size: 16pt;'></input></p>
-  </div>
-  
-  <p style='text-align: center;'><br>When you are finished, you can <a href='javascript:window.print()'>print</a> this page. Landscape mode is recommended.<br>
-    You can also <a href='javascript:save()'>save this chart</a> to edit later, or <a href='javascript:email()'>send a link to this chart by email</a>.</p>
-  <p style='text-align: center;' class='hidden' id='bottommessage'></p>
-  <p style='text-align: center;' class='hidden' id='helpsave'>To load this chart later, input the following code at the top of this page when you return:<br>
-  <input type='text' readonly='readonly' id='code' size='80'></p>
-  <p style='margin-top: 50px'><a href='/'>Home</a></p>
-  <div id='help'><div id='helpcontents'><style type='text/css'>
-  #helpstyle { font-family: sans-serif; }
-  #helpstyle h1 { font-size: 130%; text-align: center; padding-top: 10px; margin-top: 0px; }
-  #helpstyle h2 { font-size: 110%; margin-bottom: 3px; }
-  #helpstyle > * { margin-left: 10px; margin-right: 10px; }
-  #helpstyle p { margin-top: 6px; margin-bottom: 6px; }
-  </style>
-  <div id='helpstyle'>
-  <h1>Band/Orchestra Seating Chart Generator</h1>
-  <p>This tool is an adaptation of the original script by <a href='/about' target='_blank'>Brad Greco</a>.  You can find his original version of this tool <a href="https://www.bgreco.net/band/">here.</a></p>
-  <p>The adaptations in this version include: showing the total chairs and total stands, changing the shape of each seat, and an added spot for the director.  The rest of the script was created for the public by Brad Greco.</p>
     
-
-  <h1>FAQ / Advanced usage</h1>
-
-  <h2>Printing</h2>
-  <p>When you print the page using the <b>print</b> link or your browser's Print command, everything 
-    on the page except for the chart will be hidden automatically. For best results, print in 
-    landscape mode.</p>
-  <p>Options for removing the extra information on the page (date, URL, page number) can be found 
-    in your browser's print settings.</p>
-
-  <div id='partial'><h2>Partial rows / hidden chairs</h2>
-  <p>Chairs may be hidden or shown by clicking on them. Hidden chairs are indicated by a large 
-    grey square on the screen, but will be completely hidden when printing.</p>
-  <p>To create a partial row, first create a full row with more chairs than you need and then hide some of the chairs.</p></div>
-
-  <h2>Music stands</h2>
-  <p>Stands will be displayed when the <b>show music stands</b> checkbox is selected. The small gray 
-    boxes indicate where stands can be placed, click inside these boxes to turn the stands on or off. 
-    The boxes themselves will be hidden when printing.</p>
-
-  <p>To create a row with only music stands (for percussion, etc), first create a normal row and 
-    then hide all the chairs by clicking on each one.</p>
-
-  <h2>Custom labels (names) on chairs</h2>
-  <p>To create custom labels on chairs, click the <b>edit labels</b> link beside each row. Each line of text that 
-    you type in the text box will be displayed over the a chair in the selected row (left to right). To restore the 
-    default numeric labels to a row, click its <b>edit labels</b> link and delete all text from the text box.</p>
-
-  <h2>Saving and sharing charts</h2>
-  <p>If you want to save your chart settings to use later, click the <b>save this chart</b> link at the bottom.  
-    A file containing the chart data will be saved to your computer. Next time you want to return to your saved 
-    chart, click the <b>load saved chart</b> link and select the file that you saved.</p>
-  <p>To share a chart with a co-worker, click the <b>send by email</b> link at the bottom of the page.</p>
-
-  <h1>Changelog</h1>
-  <p>2016-08-23: Add ability to set custom labels on chairs, save and load chart data to files, and send chart links by email</p>
-  <p>2015-05-23: Allow chairs to be hidden, add help document, add option to create straight rows</p>
-  <p>2014-09-22: Add seat scale option</p>
-  <p>2014-02-24: Add music stand options, add save/load functionality</p>
-  <p>2014-01-24: Add link to create additional rows (seriously, you guys needed more than 8?!?!)</p>
-  <p>2013-03-04: Add option to add letters to each row</p>
-  <p>2012-02-06: Fix for older browsers</p>
-  <p>2012-02-04: First release</p>
-  <p>&nbsp;</p>
-  <div id='close' style='text-align: center; display: none;'><b><a href='javascript:closeHelp()'>Close</a></b></div>
-  <p>&nbsp;</p>
-  </div>
-  </div></div>
+  <div class= 'extras'>
+    <!-- Footer -->
+    <p style='text-align: center;'><br>When you are finished, you can <a href='javascript:window.print()'>print</a> this page. Landscape mode is recommended.<br>
+    You can also <a href='javascript:save()'>save this chart</a> to edit later, or <a href='javascript:email()'>send a link to this chart by email</a>.</p>
+    <p style='text-align: center;' class='hidden' id='bottommessage'></p>
+    <p style='text-align: center;' class='hidden' id='helpsave'>To load this chart later, input the following code at the top of this page when you return:<br>
+    <input type='text' readonly='readonly' id='code' size='80'></p>
+    <p style='margin-top: 50px'><a href='/'>Home</a></p>
+    
+    <!-- Help Window -->
+    <div id='help'>
+      <div id='helpcontents'>
+        <style type='text/css'>
+          #helpstyle { font-family: sans-serif; }
+          #helpstyle h1 { font-size: 130%; text-align: center; padding-top: 10px; margin-top: 0px; }
+          #helpstyle h2 { font-size: 110%; margin-bottom: 3px; }
+          #helpstyle > * { margin-left: 10px; margin-right: 10px; }
+          #helpstyle p { margin-top: 6px; margin-bottom: 6px; }
+        </style>
+        <div id='helpstyle'>
+          <h1>Band/Orchestra Seating Chart Generator</h1>
+          <p>This tool is an adaptation of the original script by <a href='/about' target='_blank'>Brad Greco</a>.  You can find his original version of this tool <a href="https://www.bgreco.net/band/">here.</a></p>
+          <p>The adaptations in this version include: showing the total chairs and total stands, changing the shape of each seat, and an added spot for the director.  The rest of the script was created for the public by Brad Greco.</p>
+      
+      
+          <h1>FAQ / Advanced usage</h1>
+      
+          <h2>Printing</h2>
+          <p>When you print the page using the <b>print</b> link or your browser's Print command, everything 
+            on the page except for the chart will be hidden automatically. For best results, print in 
+            landscape mode.</p>
+          <p>Options for removing the extra information on the page (date, URL, page number) can be found 
+            in your browser's print settings.</p>
+      
+          <div id='partial'>
+            <h2>Partial rows / hidden chairs</h2>
+            <p>Chairs may be hidden or shown by clicking on them. Hidden chairs are indicated by a large 
+              grey square on the screen, but will be completely hidden when printing.</p>
+            <p>To create a partial row, first create a full row with more chairs than you need and then hide some of the chairs.</p>
+          </div>
+        
+          <h2>Music stands</h2>
+          <p>Stands will be displayed when the <b>show music stands</b> checkbox is selected. The small gray 
+            boxes indicate where stands can be placed, click inside these boxes to turn the stands on or off. 
+            The boxes themselves will be hidden when printing.</p>
+      
+          <p>To create a row with only music stands (for percussion, etc), first create a normal row and 
+            then hide all the chairs by clicking on each one.</p>
+      
+          <h2>Custom labels (names) on chairs</h2>
+          <p>To create custom labels on chairs, click the <b>edit labels</b> link beside each row. Each line of text that 
+            you type in the text box will be displayed over the a chair in the selected row (left to right). To restore the 
+            default numeric labels to a row, click its <b>edit labels</b> link and delete all text from the text box.</p>
+      
+          <h2>Saving and sharing charts</h2>
+          <p>If you want to save your chart settings to use later, click the <b>save this chart</b> link at the bottom.  
+            A file containing the chart data will be saved to your computer. Next time you want to return to your saved 
+            chart, click the <b>load saved chart</b> link and select the file that you saved.</p>
+          <p>To share a chart with a co-worker, click the <b>send by email</b> link at the bottom of the page.</p>
+      
+          <h1>Changelog</h1>
+          <p>2016-08-23: Add ability to set custom labels on chairs, save and load chart data to files, and send chart links by email</p>
+          <p>2015-05-23: Allow chairs to be hidden, add help document, add option to create straight rows</p>
+          <p>2014-09-22: Add seat scale option</p>
+          <p>2014-02-24: Add music stand options, add save/load functionality</p>
+          <p>2014-01-24: Add link to create additional rows (seriously, you guys needed more than 8?!?!)</p>
+          <p>2013-03-04: Add option to add letters to each row</p>
+          <p>2012-02-06: Fix for older browsers</p>
+          <p>2012-02-04: First release</p>
+          <p>&nbsp;</p>
+          <div id='close' style='text-align: center; display: none;'>
+            <b><a href='javascript:closeHelp()'>Close</a></b>
+          </div>
+          <p>&nbsp;</p>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
