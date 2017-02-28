@@ -74,7 +74,7 @@ $(document).ready(function() {
 		drawChart();
 	});
 	$('#chkstands').change(checkStands);
-	$('#chknumbers').change(showPodium);
+	$('#chknumbers').change(checkPodium);
 	$('#txtlabels').blur(setCustomLabels);
 	$('#txtlabels').keypress(function(e) {
 		if(e.which == 13)
