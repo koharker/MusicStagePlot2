@@ -34,14 +34,15 @@ body {
 	line-height: 24px;
 	margin: 5px;
 	display: inline-block;
-
 }
 
 .header div {
 	float: left;
 }
 
-
+.header div a:hover {
+    background-color: gray;
+}
 
 .align-right-container {
 	float: right;
