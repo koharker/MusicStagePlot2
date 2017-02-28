@@ -33,36 +33,15 @@ body {
 	font-weight: 400;
 	line-height: 24px;
 	margin: 5px;
-	display: inline;
-
-}
-.header-containers {
-	position: relative;
-	background-color: #fff;
-	padding: 0px;
 	display: inline-block;
-	width: 100%;
+
 }
 
 .header div {
 	float: left;
 }
 
-.header-containers div{
-	float: left;
-	display: inline;
-}
 
-
-
-.msp-icon-hamburger:before {
-
-}
-
-
-.align-left-container .align-center-container .align-right-container {
-	display: inline-block;
-}
 
 .align-right-container {
 	float: right;
@@ -74,7 +53,7 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 	margin: 5px;
-	display: inline;
+
 }
 
 .align-center-container p{
