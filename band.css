@@ -19,7 +19,7 @@ body {
 	left: 0;
 	top: 0;
 	width: 100%;
-	display: block;
+	display: inline;
 }
 
 .header a {
@@ -38,6 +38,10 @@ body {
 	padding: 0px;
 	display: inline;
 	width: 100%;
+}
+
+.header div {
+	float: left;
 }
 
 .header-containers div{
