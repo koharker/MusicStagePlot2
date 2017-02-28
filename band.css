@@ -1,6 +1,8 @@
+<!--
 * { 
 	border: 1px solid rgba(0, 0, 0, 0.3);
 }
+-->
 
 body {
 	background: #fff7ef;
@@ -170,6 +172,13 @@ a {
 }
 
 .title {
+	margin: 0;
+}
+
+.title p{
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 48px;
 	margin: 0;
 }
 
