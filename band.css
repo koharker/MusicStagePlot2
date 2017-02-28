@@ -24,7 +24,8 @@ body {
 	float: left;
 	width: 280px;
 }
-.chart-container div {
+
+#chart-container {
 	float: right;
 }
 
