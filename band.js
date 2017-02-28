@@ -47,6 +47,7 @@ $(document).ready(function() {
 		setLetterCheckbox();
 		drawChart();
 	});
+
 	$('#btnscaledown').click(function() {
 		setCustomScale(-0.1);
 		drawChart();
@@ -72,6 +73,7 @@ $(document).ready(function() {
 		drawChart();
 	});
 	$('#chkstands').change(checkStands);
+	$('#chknumbers').change(showPodium);
 	$('#txtlabels').blur(setCustomLabels);
 	$('#txtlabels').keypress(function(e) {
 		if(e.which == 13)
@@ -105,6 +107,7 @@ function drawChart() {
 	$("canvas").clearCanvas();
 	var showNumbers = $('#chknumbers').attr('checked') != null;
 	var restartNumbering = $('#chkrestart').attr('checked') != null;
+	var showPodium = $('chkpodium').attr('checked') != null;
 	var letterRows = $('#chkletters').attr('checked') != null;
 	var totalChairs = 0;
 	var totalStands = 0;
@@ -225,8 +228,12 @@ function drawChart() {
 				drawChairXY(x, y, 0, n, a, chairs[row][i]);
 				if(showStands) {
 					drawStandXY(x, Math.min(y + step * 0.5, y + 35 * customScale), stands[row][i*2]);
-					if(i != rows[row] - 1)
+					if(i != rows[row] - 1) {
 						drawStandXY(x + x_step * 0.5, Math.min(y + step * 0.5, y + 35 * customScale), stands[row][i*2+1]);
+					}
+					if (showPodium) {
+						drawStandXY(60, 0, stands[row][i*2]);
+					}
 				}
 				if(showNumbers && chairs[row][i].enabled && chairs[row][i].label === false && chairs[row][i].shape !== "snare") {
 					n++;
@@ -291,11 +298,14 @@ function drawChart() {
 			font: 'normal 11pt Verdana, sans-serif'
 		});
 	}
+	
+	if (showPodium) {
+		drawPodium();
+	}
 
 	$('.title').html($('#title').val());
 	if(generateCode)
 		$('#code').attr('value', encode());
-	drawPodium();
 }
 
 function drawPodium() {
