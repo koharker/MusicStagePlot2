@@ -19,7 +19,8 @@ $(document).ready(function() {
 	setLetterCheckbox();
 	$.jCanvas({
 		strokeStyle: '#000',
-		strokeWidth: 2,
+		strokeWidth: 6,
+		//strokeWidth: 2,
 		x: centerX, y: centerY,
 		inDegrees: false
 	});
@@ -302,9 +303,9 @@ function drawPodium() {
 		fillStyle: '#fff',
 		strokeStyle: '#000',
 		strokeWidth: 4,
-		x: 525, y: 480,
-		width: 50 * seatScale,
-		height: 50 * seatScale,
+		x: 525, y: 470,
+		width: 48 * seatScale,
+		height: 48 * seatScale,
 		cornerRadius: 10
 	});
 }
@@ -344,7 +345,7 @@ function drawChairXY(x, y, t, n, a, chair) {
 				fillStyle: '#fff',
 				strokeStyle: '#fff',
 				x: x, y: y,
-				width: 40 * seatScale - 4, height: 40 * seatScale - 4,
+				width: 40 * seatScale - 8, height: 40 * seatScale - 8,
 				angle: -1 * t
 			});
 			$('canvas').drawText({
