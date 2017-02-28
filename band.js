@@ -231,9 +231,6 @@ function drawChart() {
 					if(i != rows[row] - 1) {
 						drawStandXY(x + x_step * 0.5, Math.min(y + step * 0.5, y + 35 * customScale), stands[row][i*2+1]);
 					}
-					if (showPodium) {
-						drawStandXY(60, 0, stands[row][i*2]);
-					}
 				}
 				if(showNumbers && chairs[row][i].enabled && chairs[row][i].label === false && chairs[row][i].shape !== "snare") {
 					n++;
@@ -301,6 +298,9 @@ function drawChart() {
 	
 	if (showPodium) {
 		drawPodium();
+		if (showStands) {
+			drawStandXY(525, 445, stands[11][1]);
+		}
 	}
 
 	$('.title').html($('#title').val());
