@@ -19,10 +19,6 @@ body {
 }
 
 .main-container div {
-	float: left;
-}
-
-.main-container div div {
 	display: inline-block;
 }
 	
