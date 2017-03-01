@@ -148,7 +148,7 @@ a {
 	position: absolute;
 	width: 100%;
 	background-color: white;
-	top: 40px;
+	top: 50px;
 	left: 0px;
 	max-width: 1000px;
 }
@@ -156,7 +156,7 @@ a {
 #guide_canvas {
 	position: absolute;
 	width: 100%;
-	top: 40px;
+	top: 50px;
 	left: 0px;
 	max-width: 1000px;
 }
