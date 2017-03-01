@@ -28,9 +28,10 @@ a {
 
 #input-container {
 	background: #DDD;
+	padding: 8px 16px;
 	float: left;
 	width: 25%;
-	max-width: 230px;
+	max-width: 250px;
 }
 
 
