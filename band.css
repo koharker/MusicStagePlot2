@@ -23,15 +23,15 @@ a {
 }
 
 .main-container {
-	overflow: hidden;
+	overflow: wrap;
 }
 
 #input-container {
 	background: #DDD;
-	padding: 8px 16px;
+	padding: 6px 16px;
 	float: left;
 	width: 25%;
-	max-width: 250px;
+	max-width: 242px;
 }
 
 
