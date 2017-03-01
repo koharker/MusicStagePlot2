@@ -28,6 +28,8 @@ a {
 
 #input-container {
 	background: #DDD;
+	border: 1px solid #ccc;
+	border-radius: 1px;
 	padding: 6px 16px;
 	float: left;
 	width: 25%;
