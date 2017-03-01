@@ -86,10 +86,6 @@ a {
 	float: left;
 }
 
-.canvas {
-	position: absolute;
-	display: block;
-}
 
 .header div a:hover {
 	background-color: #05A8AA;
@@ -175,9 +171,6 @@ a {
 	top: 20%;
 }
 
-.canvas {
-	display: block;
-}
 
 #code {
 	text-align: center;
