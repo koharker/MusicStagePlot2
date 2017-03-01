@@ -34,7 +34,6 @@ a {
 	float: left;
 	width: 25%;
 	max-width: 212px;
-	z-index: 1;
 }
 
 
@@ -86,6 +85,9 @@ a {
 	float: left;
 }
 
+.canvas {
+	display: block;
+}
 
 .header div a:hover {
 	background-color: #05A8AA;
@@ -166,6 +168,7 @@ a {
 	font-size: 48px;
 	line-height: 48px;
 	padding: 8px;
+	margin: 0;
 	position: relative;
 	text-align: center;
 	top: 20%;
