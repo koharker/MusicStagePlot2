@@ -159,8 +159,9 @@ a {
 
 #wrapper {
 	float: right;
-	position: absolute;
+	position: relative;
 	width: 75%;
+	display: block;
 }
 
 #wrapper h1 {
@@ -172,6 +173,10 @@ a {
 	position: relative;
 	text-align: center;
 	top: 20%;
+}
+
+.canvas {
+	
 }
 
 #code {
