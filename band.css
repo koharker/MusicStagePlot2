@@ -23,7 +23,7 @@ a {
 }
 
 .main-container {
-	overflow: wrap;
+	overflow: auto;
 }
 
 #input-container {
