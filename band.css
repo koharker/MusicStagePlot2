@@ -159,9 +159,10 @@ a {
 
 #wrapper {
 	float: right;
-	position: relative;
+	position: absolute;
 	width: 75%;
 	display: block;
+	text-align: center;
 }
 
 #wrapper h1 {
