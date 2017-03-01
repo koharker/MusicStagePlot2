@@ -23,7 +23,7 @@ a {
 }
 
 .main-container {
-	overflow: auto;
+	overflow: hidden;
 }
 
 #input-container {
