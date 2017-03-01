@@ -34,6 +34,7 @@ a {
 	float: left;
 	width: 25%;
 	max-width: 212px;
+	z-index: 1;
 }
 
 
@@ -105,17 +106,7 @@ a {
 	float: right;
 }
 
-#wrapper h1 {
-	font-family: 'Roboto', sans-serif;
-	color: #41292C;
-	font-size: 48px;
-	line-height: 48px;
-	padding: 8px;
-	margin: 0px;
-	position: relative;
-	text-align: center;
-	top: 20%;
-}
+
 
 /** List style **/
 
@@ -168,11 +159,20 @@ a {
 
 #wrapper {
 	float: right;
-	position: relative;
+	position: absolute;
 	width: 75%;
 }
 
-
+#wrapper h1 {
+	font-family: 'Roboto', sans-serif;
+	color: #41292C;
+	font-size: 48px;
+	line-height: 48px;
+	padding: 8px;
+	position: relative;
+	text-align: center;
+	top: 20%;
+}
 
 #code {
 	text-align: center;
@@ -211,6 +211,7 @@ a {
 
 .title {
 	margin: 0;
+	min-height: 64px;
 }
 
 
