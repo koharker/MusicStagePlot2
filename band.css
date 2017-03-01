@@ -27,14 +27,17 @@ a {
 }
 
 #input-container {
+	background: #DDD;
 	float: left;
 	width: 25%;
+	max-width: 230px;
 }
 
 
 #input-main {
 	display: inline-block;
 	overflow: hidden;
+	
 }
 
 .header {
