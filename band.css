@@ -222,3 +222,12 @@ a {
 	.title { margin-bottom: 0.2in; }
 	#canvas: display: block !important;
 }
+
+
+input[type=text] {
+    padding: 2px 4px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: 2px solid #CCC;
+    border-radius: 4px;
+}
