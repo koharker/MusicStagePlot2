@@ -87,6 +87,7 @@ a {
 }
 
 .canvas {
+	position: absolute;
 	display: block;
 }
 
@@ -159,7 +160,7 @@ a {
 
 #wrapper {
 	float: right;
-	position: absolute;
+	position: relative;
 	width: 75%;
 	display: block;
 	text-align: center;
