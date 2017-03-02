@@ -5,18 +5,12 @@
 
 
 body {
-	background: #fff7ef;
-	/* Old browsers */
-	background: -moz-linear-gradient(45deg, #f7f7f7 0%, #fff7ef 100%);
-	/* FF3.6-15 */
-	background: -webkit-linear-gradient(45deg, #f7f7f7 0%, #fff7ef 100%);
-	/* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(45deg, #f7f7f7 0%, #fff7ef 100%);
+	background: #fff;
 }
 
 p{
 	font-family: 'Roboto', sans-serif;
-	margin: 0.5em;
+	margin: 0.25em 0em;
 }
 
 a {
