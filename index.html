@@ -31,9 +31,9 @@
         </div>
         
         <div class='align-center-container'>
-          <span id='loadlink'>
+          <div class='load-btn' id='loadlink'>
             <a href='#' onclick='return false;'>Load saved chart</a>
-          </span>
+          </div>
           <span id='loadcontainer' class='hidden'>
             <span id='loadfilecontainer'>
               <span style='color: green;'>Select a saved chart from your computer:</span>
@@ -44,6 +44,14 @@
           <span id='loadcodecontainer' class='hidden'><br>Chart code: <textarea id='loadcode' style='vertical-align: top;'></textarea><input type='button' value='Load' id='load'></span>
           </span>
           <span id='loadmessage' class='hidden' style='color: red;'></span>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
         </div>
         
         <div style="float:right" class='align-right-container'>
@@ -216,6 +224,30 @@
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("main").style.marginLeft= "0";
+    }
+  </script>
+
+
+
+  <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var d = 0; d < dropdowns.length; d++) {
+          var openDropdown = dropdowns[d];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
     }
   </script>
   
