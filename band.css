@@ -1,7 +1,8 @@
-
+/*
 * { 
 	border: 1px solid rgba(0, 0, 0, 0.3);
 }
+*/
 
 /*General style*/
 body {
@@ -28,6 +29,7 @@ a {
 	margin: 0px 0px;
 	padding: 0;
 	overflow: hidden;
+	z-index: 1;
 }
 
 .header div p {
@@ -145,7 +147,7 @@ a {
 	width: 100%;
 	background-color: white;
 	left: 0px;
-	max-width: 1000px;
+	max-width: 1500px;
 }
 
 #guide_canvas {
@@ -153,7 +155,7 @@ a {
 	width: 100%;
 	top: 0px;
 	left: 0px;
-	max-width: 1000px;
+	max-width: 1500px;
 }
 
 #wrapper {
@@ -240,9 +242,9 @@ a {
 #rows input {
     padding: 4px 8px;
     margin: 2px 0;
-    box-sizing: border-box;
-    border: 1px solid #CCC;
-    border-radius: 3px;
+	box-sizing: border-box;
+	border: 1px solid #CCC;
+	border-radius: 3px;
 	letter-spacing: 1px;
 	font-family: Roboto, sans-serif;
 	font-weight: 400;
