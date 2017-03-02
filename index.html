@@ -56,7 +56,7 @@
   </div>
   
   <div class='new'>
-    <div id="mySidenav" class="sidenav">
+    <div id="mySidenavq" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="#">About</a>
       <a href="#">Services</a>
@@ -72,7 +72,7 @@
 
   
   <div class='main-container'>
-    <div id='input-container' class='noprint'>
+    <div id='mySidenav' class='input-container' class='noprint'>
       <div id='input-main'>
         <p>This is a simple browser-based tool that you can use to generate and print semicircular seating charts. Have fun!</p>
         <p><b>Enter number of chairs per row:</b><br>
@@ -209,12 +209,12 @@
   <script>
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("input-container").style.marginLeft = "250px";
     }
 
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
+        document.getElementById("input-container").style.marginLeft= "0";
     }
   </script>
   
