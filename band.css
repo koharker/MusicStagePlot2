@@ -95,6 +95,11 @@ a {
 	overflow: hidden;
 }
 
+#input-container label {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+
 #input-container p{
 	margin: 0.25em 0em;
 }
@@ -122,9 +127,6 @@ a {
   font-weight: 300;
 }
 
-.chart-options-container p {
-	font-family: 'Roboto', sans-serif;
-}
 
 
 #loadcontainer #loadcodecontainer #loadmessage {
