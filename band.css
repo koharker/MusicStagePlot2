@@ -139,11 +139,14 @@ a {
 	display: block;
 }
 
+.canvas {
+	position: relative;	
+}
+
 #canvas {
-	position: absolute;
+	position: static;
 	width: 100%;
 	background-color: white;
-	top: 66px;
 	left: 0px;
 	max-width: 1000px;
 }
@@ -151,7 +154,7 @@ a {
 #guide_canvas {
 	position: absolute;
 	width: 100%;
-	top: 66px;
+	top: 0px;
 	left: 0px;
 	max-width: 1000px;
 }
