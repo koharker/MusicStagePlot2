@@ -97,7 +97,7 @@ a {
 
 #input-container label {
 	font-family: 'Roboto', sans-serif;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 #input-container p{
@@ -112,11 +112,13 @@ a {
 
 
 #input-main h2 {
-  color: #E4BB97;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  text-transform: uppercase;
+	color: #05A8AA;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 0.25em;
+	margin-top: 1em;
 }
 
 
