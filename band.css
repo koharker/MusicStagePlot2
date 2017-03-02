@@ -21,11 +21,11 @@ p{
 a {
 	font-family: 'Roboto', sans-serif;
 }
-
+/*
 .main-container {
 	overflow: hidden;
 }
-
+*/
 /*#input-container {
 	background: #DDD;
 	border: 1px solid #ccc;
@@ -37,11 +37,11 @@ a {
 }*/
 
 
-#input-main {
+/*#input-main {
 	display: inline-block;
 	overflow: hidden;
 	
-}
+}*/
 
 .header {
 	background-color: rgba(255, 255, 255, 0.9);
@@ -85,9 +85,7 @@ a {
 	float: left;
 }
 
-.canvas {
-	display: block;
-}
+
 
 .header div a:hover {
 	background-color: #05A8AA;
@@ -104,7 +102,6 @@ a {
 .align-right-container {
 	float: right;
 }
-
 
 
 /** List style **/
@@ -142,7 +139,8 @@ a {
 }
 
 .canvas {
-	position: relative;	
+	position: relative;
+	display: block;
 }
 
 #canvas {
@@ -163,7 +161,7 @@ a {
 
 #wrapper {
 	float: right;
-	position: relative;
+	position: static;
 	width: 75%;
 }
 
