@@ -34,19 +34,19 @@
           <div class='load-btn' id='loadlink'>
             <a href='#' onclick='return false;'>Load saved chart</a>
           </div>
-          <span id='loadcontainer' class='hidden'>
+          <div id='loadcontainer' class='hidden'>
             <span id='loadfilecontainer'>
               <span style='color: green;'>Select a saved chart from your computer:</span>
               <input type="file" accept=".txt" id="fileinput"><br>
-              <span style='color: #888;' id='loadcodelabel'>You may also <a href='javascript:showCodeInput()' style='color: #88f !important;'>input a code manually</a>
-              </span>
+              <span style='color: #888;' id='loadcodelabel'>You may also <a href='javascript:showCodeInput()' style='color: #88f !important;'>input a code manually</a></span>
             </span>
-          <span id='loadcodecontainer' class='hidden'><br>Chart code: <textarea id='loadcode' style='vertical-align: top;'></textarea><input type='button' value='Load' id='load'></span>
-          </span>
-          <span id='loadmessage' class='hidden' style='color: red;'></span>
+            <span id='loadcodecontainer' class='hidden'><br>Chart code: <textarea id='loadcode' style='vertical-align: top;'></textarea><input type='button' value='Load' id='load'></span>
+          </div>
+          <div id='loadmessage' class='hidden' style='color: red;'></div>
           <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-            <div id="myDropdown" class="dropdown-content">
+            <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Dropdown</a>
+            <div class="dropdown-content" id="myDropdown">
               <a href="#">Link 1</a>
               <a href="#">Link 2</a>
               <a href="#">Link 3</a>
