@@ -13,7 +13,7 @@ p {
 }
 
 a {
-
+	font-family: 'Roboto', sans-serif;
 }
 
 /*menu bar style*/
@@ -30,18 +30,6 @@ a {
 	overflow: hidden;
 }
 
-.header div a {
-	color: #000;
-	border: 1px solid #fff;
-	border-radius: 4px;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 24px;
-	padding: 7px 8px;
-	text-decoration: none;
-	display: inline-block;
-}
-
 .header div p {
 	color: #000;
 	border: 1px solid #fff;
@@ -55,15 +43,20 @@ a {
 	margin: 0;
 }
 
-.header div {
-	float: left;
+.header div a {
+	color: #000;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	padding: 7px 8px;
+	text-decoration: none;
+	display: inline-block;
 }
 
-
-.header div a:hover {
-	background-color: #05A8AA;
-	border: 1px solid #05A8AA;
-	color: #FFF;
+.header div {
+	float: left;
 }
 
 .header div p:hover {
@@ -72,9 +65,17 @@ a {
 	color: #FFF;
 }
 
+.header div a:hover {
+	background-color: #05A8AA;
+	border: 1px solid #05A8AA;
+	color: #FFF;
+}
+
+
 .align-right-container {
 	float: right;
 }
+
 
 
 /*Main Container Style*/
@@ -107,7 +108,7 @@ a {
 
 #input-main h2 {
   color: #E4BB97;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -121,6 +122,9 @@ a {
   font-weight: 300;
 }
 
+.chart-options-container p {
+	font-family: 'Roboto', sans-serif;
+}
 
 
 #loadcontainer #loadcodecontainer #loadmessage {
