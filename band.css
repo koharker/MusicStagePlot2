@@ -3,41 +3,16 @@
 	border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-
+/*General style*/
 body {
 	background: #fff;
-}
-
-p{
-	font-family: 'Roboto', sans-serif;
-	margin: 0.25em 0em;
 }
 
 a {
 	font-family: 'Roboto', sans-serif;
 }
 
-.main-container {
-	overflow: hidden;
-}
-
-#input-container {
-	background: #DDD;
-	border: 1px solid #ccc;
-	border-radius: 1px;
-	padding: 6px 16px;
-	float: left;
-	width: 25%;
-	max-width: 212px;
-}
-
-
-#input-main {
-	display: inline-block;
-	overflow: hidden;
-	
-}
-
+/*menu bar style*/
 .header {
 	background-color: rgba(255, 255, 255, 0.9);
 	position: relative;
@@ -80,9 +55,6 @@ a {
 	float: left;
 }
 
-.canvas {
-	display: block;
-}
 
 .header div a:hover {
 	background-color: #05A8AA;
@@ -101,31 +73,49 @@ a {
 }
 
 
+/*Main Container Style*/
 
-/** List style **/
+.main-container {
+	overflow: hidden;
+}
+
+#input-container {
+	background: #DDD;
+	border: 1px solid #ccc;
+	border-radius: 1px;
+	padding: 6px 16px;
+	float: left;
+	width: 25%;
+	max-width: 212px;
+	overflow: hidden;
+}
+
+#input-container p{
+	font-family: 'Roboto', sans-serif;
+	margin: 0.25em 0em;
+}
+
+#input-main {
+	display: inline-block;
+	overflow: hidden;
+	
+}
+
 
 #input-main h2 {
   color: #E4BB97;
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  font-weight: 500;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
-ul {
-}
-
-li {
-}
 
 #input-main p {
   color: #000;
   line-height: 18px;
   font-size: 14px;
   font-weight: 200;
-}
-
-a {
 }
 
 
@@ -135,7 +125,8 @@ a {
 }
 
 .canvas {
-	position: relative;	
+	position: relative;
+	display: block;
 }
 
 #canvas {
