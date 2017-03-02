@@ -21,11 +21,12 @@ p{
 a {
 	font-family: 'Roboto', sans-serif;
 }
-/*
+
 .main-container {
 	overflow: hidden;
+	display: block;
 }
-*/
+
 /*#input-container {
 	background: #DDD;
 	border: 1px solid #ccc;
@@ -144,7 +145,7 @@ a {
 }
 
 #canvas {
-	position: static;
+	position: relative;
 	width: 100%;
 	background-color: white;
 	left: 0px;
