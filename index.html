@@ -93,19 +93,22 @@
           </div>
           <p><a href='javascript:addRow()'>Add Row</a></p>
         </div>
-        <div id='chart-options'>
-          <p>Straight rows: <input type='button' id='btnstraightdown'value='-'> <input type='button' id='btnstraightup' value='+'> <span id='straight'>0</span></p>
-          <input type='checkbox' id='chknumbers' checked='checked' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chknumbers'>Show numbers on seats</label></div>
-          <input type='checkbox' id='chkrestart' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkrestart' id='lblrestart'>Restart numbers on each row</label></div>
-          <div title="Only available if 'Restart numbers on each row' is selected">
-            <input type='checkbox' id='chkletters' style='float: left' disabled='disabled'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkletters' class='disabled' id='lblletters'>Give each row a letter</label></div>
+        <div class='chart-options-container'>
+          <h2>Chart Options</h2>
+          <div id='chart-options'>
+            <p>Straight rows: <input type='button' id='btnstraightdown'value='-'> <input type='button' id='btnstraightup' value='+'> <span id='straight'>0</span></p>
+            <input type='checkbox' id='chknumbers' checked='checked' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chknumbers'>Show numbers on seats</label></div>
+            <input type='checkbox' id='chkrestart' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkrestart' id='lblrestart'>Restart numbers on each row</label></div>
+            <div title="Only available if 'Restart numbers on each row' is selected">
+              <input type='checkbox' id='chkletters' style='float: left' disabled='disabled'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkletters' class='disabled' id='lblletters'>Give each row a letter</label></div>
+            </div>
+            <input type='checkbox' id='chkstands' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkstands'>Show music stands</label><span id='helpstands' class='help'><br>Click the chart to toggle stands</span></div>
+            <input type='checkbox' id='chkpodium' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkpodium'>Show podium</label><span id='helppodium' class='help'><br>Click the chart to toggle podium</span></div>
+            <p>Seat size: <input type='button' id='btnscaledown' value='-'> <input type='button' id='btnscaleup' value='+'> <span id='scale'>100</span>%</p>
           </div>
-          <input type='checkbox' id='chkstands' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkstands'>Show music stands</label><span id='helpstands' class='help'><br>Click the chart to toggle stands</span></div>
-          <input type='checkbox' id='chkpodium' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkpodium'>Show podium</label><span id='helppodium' class='help'><br>Click the chart to toggle podium</span></div>
-          <p>Seat size: <input type='button' id='btnscaledown' value='-'> <input type='button' id='btnscaleup' value='+'> <span id='scale'>100</span>%</p>
+          <p>Chart title: <input id='title'></p>
+          <p><input type='button' value='Generate' id='generate'><input type='button' value='Reset' id='reset'></p>
         </div>
-        <p>Chart title: <input id='title'></p>
-        <p><input type='button' value='Generate' id='generate'><input type='button' value='Reset' id='reset'></p>
       </div>
       
       <!-- Edit Label Menu -->
