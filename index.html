@@ -44,7 +44,6 @@
           </div>
           <div id='loadmessage' class='hidden' style='color: red;'></div>
           <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
             <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Dropdown</a>
             <div class="dropdown-content" id="myDropdown">
               <a href="#">Link 1</a>
@@ -55,7 +54,7 @@
           
           
           <style>
-            ul {
+            .item {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
@@ -63,11 +62,11 @@
                 background-color: #333;
             }
 
-            li {
+            .dropdown {
                 float: left;
             }
 
-            li a, .dropbtn {
+            .dropdown a, .dropbtn {
                 display: inline-block;
                 color: white;
                 text-align: center;
@@ -75,11 +74,11 @@
                 text-decoration: none;
             }
 
-            li a:hover, .dropdown:hover .dropbtn {
+            .dropdown a:hover, .dropdown:hover .dropbtn {
                 background-color: red;
             }
 
-            li.dropdown {
+            .dropdown {
                 display: inline-block;
             }
 
@@ -105,17 +104,15 @@
             .show {display:block;}
             </style>
 
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#news">News</a></li>
-              <li class="dropdown">
+            <ul class='item'>
+              <div class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Dropdown</a>
                 <div class="dropdown-content" id="myDropdown">
                   <a href="#">Link 1</a>
                   <a href="#">Link 2</a>
                   <a href="#">Link 3</a>
                 </div>
-              </li>
+              </div>
             </ul>
 
             <h3>Dropdown Menu inside a Navigation Bar</h3>
