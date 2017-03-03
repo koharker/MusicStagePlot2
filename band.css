@@ -79,7 +79,9 @@ a {
 	float: right;
 }
 
-
+.align-center-container {
+	overflow-y: visible;
+}
 
 
 /*Main Container Style*/
