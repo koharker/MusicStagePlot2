@@ -52,9 +52,9 @@
               <a href="#">Link 3</a>
             </div>
           </div>
-          <div class='dropdown' id='load'>
-            <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Load Chart</a>
-            <div class="dropdown-content" id="myDropdown">
+          <div class='load-dropdown' id='load'>
+            <a href="javascript:void(0)" class="loaddropbtn" onclick="toggleLoadDropdown()">Load Chart</a>
+            <div class="load-dropdown-content" id="loadDropdown">
               <div id='loadcontainer'>
                 <div id='loadfilecontainer'>
                   <p style='color: green;'>Select a saved chart from your computer:</p>
@@ -66,6 +66,69 @@
               <div id='loadmessage' class='hidden' style='color: red;'>loading</div>
             </div>
           </div>
+          
+          
+          
+          <style>
+            .align-center-container {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            .load-dropdown {
+                float: left;
+            }
+
+            .load-dropdown a, .loaddropbtn {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .load-dropdown a:hover, .load-dropdown:hover .loaddropbtn {
+                background-color: red;
+            }
+
+            .load-dropdown {
+                display: inline-block;
+            }
+
+            .load-dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .load-dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .load-dropdown-content a:hover {background-color: #f1f1f1}
+
+            .showLoad {display:block;}
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
           
           <style>
@@ -133,7 +196,7 @@
             <script>
             /* When the user clicks on the button, 
             toggle between hiding and showing the dropdown content */
-            function myFunction() {
+            function loadFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }
 
@@ -152,6 +215,29 @@
             }
             </script>
           
+          
+          
+            <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function toggleLoadDropdown() {
+                document.getElementById("loadDropdown").classList.toggle("showLoad");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(e) {
+              if (!e.target.matches('.loaddropbtn')) {
+
+                var loaddropdowns = document.getElementsByClassName("load-dropdown-content");
+                for (var d = 0; d < loaddropdowns.length; d++) {
+                  var openDropdown = loaddropdowns[d];
+                  if (openDropdown.classList.contains('showLoad')) {
+                    openDropdown.classList.remove('showLoad');
+                  }
+                }
+              }
+            }
+            </script>          
           
           
           
