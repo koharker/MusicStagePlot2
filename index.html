@@ -34,6 +34,7 @@
           <div class='load-btn' id='loadlink'>
             <a href='#' onclick='return false;'>Load saved chart</a>
           </div>
+          
           <div id='loadcontainer' class='hidden'>
             <span id='loadfilecontainer'>
               <span style='color: green;'>Select a saved chart from your computer:</span>
@@ -49,6 +50,20 @@
               <a href="#">Link 1</a>
               <a href="#">Link 2</a>
               <a href="#">Link 3</a>
+            </div>
+          </div>
+          <div class='dropdown' id='load'>
+            <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Load Chart</a>
+            <div class="dropdown-content" id="myDropdown">
+              <div id='loadcontainer'>
+                <div id='loadfilecontainer'>
+                  <p style='color: green;'>Select a saved chart from your computer:</p>
+                  <p><input type="file" accept=".txt" id="fileinput"><br></p>
+                  <p style='color: #888;' id='loadcodelabel'>You may also <a href='javascript:showCodeInput()' style='color: #88f !important;'>input a code manually</a></p>
+                </div>
+                <div id='loadcodecontainer' class='hidden'><br>Chart code: <textarea id='loadcode' style='vertical-align: top;'></textarea><input type='button' value='Load' id='load'></div>
+              </div>
+              <div id='loadmessage' class='hidden' style='color: red;'>loading</div>
             </div>
           </div>
           
@@ -114,9 +129,6 @@
                 </div>
               </div>
             </ul>
-
-            <h3>Dropdown Menu inside a Navigation Bar</h3>
-            <p>Click on the "Dropdown" link to see the dropdown menu.</p>
 
             <script>
             /* When the user clicks on the button, 
