@@ -29,6 +29,7 @@ a {
 	margin: 0px 0px;
 	padding: 0;
 	overflow-x: hidden;
+	overflow-y: visible;
 	z-index: 1;
 }
 
@@ -77,6 +78,7 @@ a {
 .align-right-container {
 	float: right;
 }
+
 
 
 
