@@ -94,6 +94,7 @@ a {
 
 .load-dropdown {
                 float: left;
+	
 }
 
 .load-dropdown a, .loaddropbtn {
@@ -105,19 +106,22 @@ a {
 }
 
 .load-dropdown a:hover, .load-dropdown:hover .loaddropbtn {
-                background-color: red;
+	background-color: #05A8AA;
+	color: white;
 }
 .load-dropdown {
-                display: inline-block;
+	display: inline-block;
 }
 
 .load-dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #f9f9f9;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
+	display: none;
+	position: absolute;
+ 	background-color: #f9f9f9;
+	min-width: 160px;
+	border: 1px solid #f9f9f9;
+	border-radius: 5px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
 }
 
 .load-dropdown-content a {
@@ -128,6 +132,12 @@ a {
                 text-align: left;
 }
 .load-dropdown-content a:hover {background-color: #f1f1f1}
+
+#loadcontainer p {
+    font-size: 12px;
+}
+
+
 .showLoad {display:block;}
 
 /*Main Container Style*/
@@ -144,7 +154,7 @@ a {
 	padding: 6px 16px;
 	float: left;
 	width: 25%;
-	max-width: 212px;
+	max-width: 200px;
 	overflow: hidden;
 }
 
