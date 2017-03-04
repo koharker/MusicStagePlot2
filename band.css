@@ -20,7 +20,7 @@ a {
 /*menu bar style*/
 .header {
 	background-color: rgba(255, 255, 255, 0.9);
-	position: relative;
+	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -31,6 +31,11 @@ a {
 	overflow-x: hidden;
 	overflow-y: visible;
 	z-index: 1;
+}
+
+.header div {
+	float: left;
+	z-index: 987;
 }
 
 .header div p {
@@ -58,9 +63,7 @@ a {
 	display: inline-block;
 }
 
-.header div {
-	float: left;
-}
+
 
 .header div p:hover {
 	background-color: #05A8AA;
@@ -74,14 +77,21 @@ a {
 	color: #FFF;
 }
 
+.align-left-container {
+	float: left;
+}
+
+.align-center-container {
+	float: left;
+	overflow-y: visible;
+	position: relative;
+}
 
 .align-right-container {
 	float: right;
 }
 
-.align-center-container {
-	overflow-y: visible;
-}
+
 
 
 /*Main Container Style*/
