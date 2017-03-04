@@ -35,7 +35,7 @@
             <a href='#' onclick='return false;'>Load saved chart</a>
           </div>
           
-          <div id='loadcontainer' class='hidden'>
+      <!--         <div id='loadcontainer' class='hidden'>
             <span id='loadfilecontainer'>
               <span style='color: green;'>Select a saved chart from your computer:</span>
               <input type="file" accept=".txt" id="fileinput"><br>
@@ -44,7 +44,7 @@
             <span id='loadcodecontainer' class='hidden'><br>Chart code: <textarea id='loadcode' style='vertical-align: top;'></textarea><input type='button' value='Load' id='load'></span>
           </div>
           <div id='loadmessage' class='hidden' style='color: red;'></div>
-     <!--     <div class="dropdown">
+     <div class="dropdown">
             <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Dropdown</a>
             <div class="dropdown-content" id="myDropdown">
               <a href="#">Link 1</a>
@@ -212,13 +212,13 @@
     <div id='input-container' class='noprint'>
       <div id='input-main'>
         <p style='font-size: 12px;'>This is a simple browser-based tool that you can use to generate and print semicircular seating charts. Have fun!</p>
-        <p><b>Enter number of chairs per row:</b><br>
-          <span style='color: #090;'>New! Partial rows / hide chairs.
+        <p><span style='color: #090;'>New! Partial rows / hide chairs.
             <a href='help.html#partial' onclick='javascript:showHelp("partial"); return false;'>How?
             </a>
           </span>
         </p>
         <div class='row-container'>
+          <h2>number of chairs per row:</h2>
           <div id='rows'>
             <p>Row 1: <input id='row1' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(1)' tabindex='2'> Edit labels</a></p>
             <p>Row 2: <input id='row2' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(2)' tabindex='2'> Edit labels</a></p>
