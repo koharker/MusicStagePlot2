@@ -38,6 +38,7 @@ a {
 	z-index: 987;
 }
 
+
 .header div p {
 	color: #000;
 	border: 1px solid #fff;
@@ -63,7 +64,11 @@ a {
 	display: inline-block;
 }
 
-
+.header div img {
+	border: 1px solid #fff;
+	border-radius: 4px;
+	padding: 7px 8px;
+}
 
 .header div p:hover {
 	background-color: #05A8AA;
@@ -80,7 +85,6 @@ a {
 .header div img:hover {
 	background-color: #05A8AA;
 	border: 1px solid #05A8AA;
-	border-radius: 4px;
 	color: #FFF;
 }
 
