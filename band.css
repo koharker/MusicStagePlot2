@@ -93,10 +93,15 @@ a {
 	position: relative;
 }
 
+
+
 .align-right-container {
 	float: right;
 }
 
+#print-icon {
+	padding-bottom: 16px;
+}
 
 .load-dropdown {
                 float: left;
