@@ -153,7 +153,8 @@ a {
 	border-radius: 1px;
 	padding: 6px 16px;
 	float: left;
-	width: 25%;
+	width: 20%;
+	min-width: 150px;
 	max-width: 200px;
 	overflow: hidden;
 }
@@ -242,7 +243,7 @@ a {
 }
 
 #loadcode {
-	font-family: monospace;
+	font-family: 'Roboto';
 }
 
 #help {
