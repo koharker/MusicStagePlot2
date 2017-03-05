@@ -77,6 +77,13 @@ a {
 	color: #FFF;
 }
 
+.header div img:hover {
+	background-color: #05A8AA;
+	border: 1px solid #05A8AA;
+	border-radius: 4px;
+	color: #FFF;
+}
+
 .align-left-container {
 	float: left;
 }
