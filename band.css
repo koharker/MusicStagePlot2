@@ -77,11 +77,6 @@ a {
 	color: #FFF;
 }
 
-.header div img:hover {
-	background-color: #05A8AA;
-	border: 1px solid #05A8AA;
-	color: #FFF;
-}
 
 .align-left-container {
 	float: left;
@@ -100,6 +95,7 @@ a {
 }
 
 #print-icon {
+	padding-top: 0px;
 	padding-bottom: 16px;
 }
 
