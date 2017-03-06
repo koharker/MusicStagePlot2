@@ -74,8 +74,10 @@
         </div>
         
         <div style="float:right" class='align-right-container'>
-          <a id='print-icon'><img src="print-icon.png" alt="prt icon" style="width: 24px;top: 8px;height: 24px;position: relative;">print</a>
-          <a href='javascript:window.print()'>&#x1f5b6; print</a>
+          <div id='print-button'>
+            <a id='print-icon'><img src="print-icon.png" alt="prt icon" style="width: 24px;top: 8px;height: 24px;position: relative;"></a>
+            <a href='javascript:window.print()'>print</a>
+          </div>
           <a href='help.html' onclick='showHelp(); return false;'>Help / About</a>
         </div>
 <!--      </div>
@@ -111,20 +113,20 @@
           <h2>number of chairs per row:</h2>
           <div id='rows'>
             <p>Row 1: <input id='row1' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(1)' tabindex='2'> Edit labels</a></p>
-            <p>Row 2: <input id='row2' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(2)' tabindex='2'> Edit labels</a></p>
-            <p>Row 3: <input id='row3' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(3)' tabindex='2'> Edit labels</a></p>
-            <p>Row 4: <input id='row4' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(4)' tabindex='2'> Edit labels</a></p>
-            <p>Row 5: <input id='row5' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(5)' tabindex='2'> Edit labels</a></p>
-            <p>Row 6: <input id='row6' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(6)' tabindex='2'> Edit labels</a></p>
-            <p>Row 7: <input id='row7' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(7)' tabindex='2'> Edit labels</a></p>
-            <p>Row 8: <input id='row8' size='2' maxlength='2' tabindex='1'><a class='editlabellink' href='javascript:editLabels(8)' tabindex='2'> Edit labels</a></p>
+            <p>Row 2: <input id='row2' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(2)' tabindex='2'> Edit labels</a></p>
+            <p>Row 3: <input id='row3' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(3)' tabindex='2'> Edit labels</a></p>
+            <p>Row 4: <input id='row4' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(4)' tabindex='2'> Edit labels</a></p>
+            <p>Row 5: <input id='row5' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(5)' tabindex='2'> Edit labels</a></p>
+            <p>Row 6: <input id='row6' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(6)' tabindex='2'> Edit labels</a></p>
+            <p>Row 7: <input id='row7' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(7)' tabindex='2'> Edit labels</a></p>
+            <p>Row 8: <input id='row8' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(8)' tabindex='2'> Edit labels</a></p>
           </div>
           <p><a href='javascript:addRow()'>Add Row</a></p>
         </div>
         <div class='chart-options-container'>
           <h2>Chart Options</h2>
           <div id='chart-options'>
-            <p>Straight rows: <input type='button' id='btnstraightdown'value='-'> <input type='button' id='btnstraightup' value='+'> <span id='straight'>0</span></p>
+            <p>Straight rows: <input type='button' id='btnstraightdown'value='–'> <input type='button' id='btnstraightup' value='+'> <span id='straight'>0</span></p>
             <input type='checkbox' id='chknumbers' checked='checked' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chknumbers'>Show numbers on seats</label></div>
             <input type='checkbox' id='chkrestart' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkrestart' id='lblrestart'>Restart numbers on each row</label></div>
             <div title="Only available if 'Restart numbers on each row' is selected">
@@ -143,7 +145,7 @@
       <div id='input_labels'>
         <p><b>Custom Chair Labels: Row <span id='lblcustomrow'></span></b><br>Enter one label per line.<br>Labels will be applied left to right.</p>
         <textarea id='txtlabels' style='width: 200px; height: 350px;'></textarea>
-        <p>Label size: <input type='button' id='btnrowlabelscaledown' value='-'> <input type='button' id='btnrowlabelscaleup' value='+'></p>
+        <p>Label size: <input type='button' id='btnrowlabelscaledown' value='–'> <input type='button' id='btnrowlabelscaleup' value='+'></p>
         <p><input type='button' id='btnlabeldone' value='Done' style='font-size: 16pt;'></p>
       </div>
     </div>
