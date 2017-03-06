@@ -1,8 +1,8 @@
-
+/*
 * { 
 	border: 1px solid rgba(0, 0, 0, 0.3);
 }
-
+*/
 
 /*General style*/
 body {
@@ -96,7 +96,7 @@ a {
 
 #print-icon {
 	padding-top: 0px;
-	padding-bottom: 16px;
+	padding-bottom: 14px;
 }
 
 .load-dropdown {
