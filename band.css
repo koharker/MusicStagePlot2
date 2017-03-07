@@ -329,9 +329,14 @@ a {
 }
 
 #rows input {
-	padding: 4px 8px;
-	margin: 2px 0;
 	min-width: 3em;
+	max-width: 3.5em;
+}
+
+#rows input, #title input {
+	padding: 3px 6px;
+	margin: 2px 0;
+
 	box-sizing: border-box;
 	border: 1px solid #CCC;
 	border-radius: 4px;
@@ -340,6 +345,7 @@ a {
 	font-weight: 400;
 }
 
+	
 input[type=text] {
     padding: 4px 8px;
     margin: 2px 0;
