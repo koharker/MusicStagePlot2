@@ -105,6 +105,61 @@ $(document).ready(function() {
 	loadUrlCode();
 });
 
+
+
+
+
+
+
+/*
+
+
+	var step = (250 + 10 * rows.length) / (rows.length - 1)
+	console.log(rows.length + "is rows.length");
+	var row_length = 0;
+	for(var row in rows) {
+		if(restartNumbering) {
+			nT += n;
+			n = 1;
+		} else {
+			var nT = n;
+		}
+		if(letterRows)
+			a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.charAt(row);
+		var r = 350;
+		if(rows.length > 1)
+			console.log(step + "is step");
+			r = 225 + step * row + 50 * (customScale - 1);
+			console.log(r + "is r");
+		if(row < rows.length - straightRows) {
+			$('canvas').drawArc({ radius: r, 
+  				x: 675, y: 700,
+  				// start and end angles in degrees
+  				start: (-0.475 + (row+0.5)/1000)*Math.PI, end: (0.475 - (row+0.5)/1000)*Math.PI
+			});
+			var arc_length = (0.95* Math.PI) - .3 - (1 - r / (700+ 10*row))
+			var angle_step = arc_length / (rows[row] - 1)
+			var vcStep = angle_step * 1.5
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function drawChart() {
 	$("canvas").clearCanvas();
 	var showNumbers = $('#chknumbers').attr('checked') != null;
@@ -121,7 +176,7 @@ function drawChart() {
 	readInputs();
 	updateChairLabels();
 	seatScale = Math.min(1, 7 / rows.length) * customScale;
-	var step = 300 / (rows.length - 1)
+	var step = (250 + 10 * rows.length) / (rows.length - 1)
 	var row_length = 0;
 	for(var row in rows) {
 		if(restartNumbering) {
@@ -135,6 +190,7 @@ function drawChart() {
 		var r = 350;
 		if(rows.length > 1)
 			r = 185 + step * row;
+			console.log(r + "is r");
 		if(row < rows.length - straightRows) {
 			$('canvas').drawArc({ radius: r });
 			var arc_length = Math.PI - .3 - (1 - r / 550)
