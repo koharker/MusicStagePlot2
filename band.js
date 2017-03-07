@@ -1029,6 +1029,7 @@ function encode() {
 					code += ',O';
 				}
 				code += rowval + chairval;
+			}
 		}
 	}
 	if(straightRows > 0) {
