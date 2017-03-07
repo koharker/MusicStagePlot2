@@ -176,7 +176,7 @@ function drawChart() {
 	readInputs();
 	updateChairLabels();
 	seatScale = Math.min(1, 7 / rows.length) * customScale;
-	var step = (250 + 10 * rows.length) / (rows.length - 1)
+	var step = 300 / (rows.length - 1)
 	var row_length = 0;
 	for(var row in rows) {
 		if(restartNumbering) {
