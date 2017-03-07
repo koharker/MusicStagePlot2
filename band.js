@@ -310,7 +310,7 @@ function drawChart() {
 }
 
 function drawPodium() {
-	if(chair.enabled) {
+	if(podium.enabled) {
 		$('canvas').drawRect({
 			fillStyle: '#fff',
 			strokeStyle: '#000',
@@ -680,6 +680,13 @@ function clickChart(e) {
 				break;
 			}
 		}
+		if(showPodium) {
+			if(podium.x > x - 18 && podium.x < x + 18 && podium.y > y - 18 && podium.y < y + 18 ) {
+				podium.enabled = !podium.enabled;
+				drawChart();
+				break;
+			}
+		}
 		if(!showStands)
 			continue;
 		for(var s in stands[row]) {
@@ -1007,7 +1014,9 @@ function encode() {
 				}
 				code += rowval + chairval;
 			}
-			if(chairs[row][c].shape === 'sqr') {
+			
+			// Save Chair Shapes
+/*			if(chairs[row][c].shape === 'sqr') {
 				var rowval = row.toString(10);
 				if(rowval.length == 1)
 					rowval = '0' + rowval;
@@ -1032,6 +1041,7 @@ function encode() {
 				}
 				code += rowval + chairval;
 			}
+			*/
 		}
 	}
 	if(straightRows > 0) {
@@ -1137,6 +1147,8 @@ function decode(code) {
 		}
 	}
 	
+	
+	// Chair shapes
 	var matches = code.match(/,Q([^,]*)/);
 	if(matches != null && matches.length > 1) {
 		var hidden = matches[1];
