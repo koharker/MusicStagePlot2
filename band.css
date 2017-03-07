@@ -331,7 +331,7 @@ a {
 #rows input {
 	padding: 4px 8px;
 	margin: 2px 0;
-	min-width: 1.5em;
+	width: 1.5em;
 	box-sizing: border-box;
 	border: 1px solid #CCC;
 	border-radius: 4px;
