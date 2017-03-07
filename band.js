@@ -2,7 +2,7 @@ var centerX = 525;
 var centerY = 550;
 var seatScale = 1;
 var customScale = 1;
-var maxRows = 7;
+var maxRows = 6;
 var generateCode = false;
 var showStands;
 var showPodium;
