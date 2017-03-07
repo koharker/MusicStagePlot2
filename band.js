@@ -679,6 +679,7 @@ function clickChart(e) {
 				drawChart();
 				break;
 			}
+			
 		}
 		if(!showStands)
 			continue;
@@ -689,13 +690,6 @@ function clickChart(e) {
 				drawChart();
 				break;
 			}
-		}
-	}
-	if(showPodium) {
-		if(podium.x > x - 18 && podium.x < x + 18 && podium.y > y - 18 && podium.y < y + 18 ) {
-			podium.enabled = !podium.enabled;
-			drawChart();
-			break;
 		}
 	}
 }
