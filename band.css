@@ -179,7 +179,7 @@ a {
 #input-container {
 	background: #DDD;
 	border: 1px solid #ccc;
-	border-radius: 1px;
+	border-radius: 2px;
 	padding: 6px 16px;
 	float: left;
 	width: 20%;
@@ -334,7 +334,7 @@ a {
 	min-width: 1.5em;
 	box-sizing: border-box;
 	border: 1px solid #CCC;
-	border-radius: 3px;
+	border-radius: 4px;
 	letter-spacing: .5px;
 	font-family: Roboto, sans-serif;
 	font-weight: 400;
