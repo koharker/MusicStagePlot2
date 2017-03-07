@@ -329,11 +329,11 @@ a {
 }
 
 #rows input {
-	min-width: 3em;
-	max-width: 3.5em;
+	min-width: 2.5em;
+	max-width: 3em;
 }
 
-input#rows input#title {
+#rows input, input#title{
 	padding: 3px 6px;
 	margin: 2px 0;
 	box-sizing: border-box;
@@ -342,8 +342,9 @@ input#rows input#title {
 	letter-spacing: .5px;
 	font-family: Roboto, sans-serif;
 	font-weight: 400;
+	position: relative;
+	width: 100%;
 }
-
 	
 input[type=text] {
     padding: 4px 8px;
