@@ -990,6 +990,7 @@ function encode() {
 		code = code.slice(0, -1);
 	}
 	var rowSentinal = false;
+	var chairSentinal = false;
 	for(var row in rows) {
 		for(var c in chairs[row]) {
 			if(!chairs[row][c].enabled) {
@@ -1013,7 +1014,7 @@ function encode() {
 				if(chairval.length == 1)
 					chairval = '0' + chairval;
 				if(!rowSentinal) {
-					rowSentinal = true;
+					chairSentinal = true;
 					code += ',Q';
 				}
 				code += rowval + chairval;
@@ -1025,7 +1026,7 @@ function encode() {
 				if(chairval.length == 1)
 					chairval = '0' + chairval;
 				if(!rowSentinal) {
-					rowSentinal = true;
+					chairSentinal = true;
 					code += ',O';
 				}
 				code += rowval + chairval;
