@@ -94,9 +94,16 @@ a {
 	float: right;
 }
 
+#print-button: hover {
+	background-color: #05A8AA;
+	border: 1px solid #05A8AA;
+	color: #FFF;
+}
+
 #print-icon {
 	padding-top: 0px;
 	padding-bottom: 14px;
+	padding-right: 0px;
 }
 
 .load-dropdown {
