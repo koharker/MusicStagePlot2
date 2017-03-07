@@ -680,13 +680,6 @@ function clickChart(e) {
 				break;
 			}
 		}
-		if(showPodium) {
-			if(podium.x > x - 18 && podium.x < x + 18 && podium.y > y - 18 && podium.y < y + 18 ) {
-				podium.enabled = !podium.enabled;
-				drawChart();
-				break;
-			}
-		}
 		if(!showStands)
 			continue;
 		for(var s in stands[row]) {
@@ -696,6 +689,13 @@ function clickChart(e) {
 				drawChart();
 				break;
 			}
+		}
+	}
+	if(showPodium) {
+		if(podium.x > x - 18 && podium.x < x + 18 && podium.y > y - 18 && podium.y < y + 18 ) {
+			podium.enabled = !podium.enabled;
+			drawChart();
+			break;
 		}
 	}
 }
