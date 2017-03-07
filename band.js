@@ -300,7 +300,7 @@ function drawChart() {
 	if (showPodium) {
 		drawPodium();
 		if (showStands) {
-			drawStandXY(525, 430, podium);
+			drawStandXY(525, (435 - 5 * customScale), podium);
 		}
 	}
 
