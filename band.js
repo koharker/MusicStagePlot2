@@ -2,7 +2,7 @@ var centerX = 525;
 var centerY = 550;
 var seatScale = 1;
 var customScale = 1;
-var maxRows = 8;
+var maxRows = 7;
 var generateCode = false;
 var showStands;
 var showPodium;
@@ -1005,6 +1005,30 @@ function encode() {
 				}
 				code += rowval + chairval;
 			}
+			if(chairs[row][c].shape === 'sqr') {
+				var rowval = row.toString(10);
+				if(rowval.length == 1)
+					rowval = '0' + rowval;
+				var chairval = c.toString(10);
+				if(chairval.length == 1)
+					chairval = '0' + chairval;
+				if(!rowSentinal) {
+					rowSentinal = true;
+					code += ',Q';
+				}
+				code += rowval + chairval;
+			} else if (chairs[row][c].shape === 'circ') {
+				var rowval = row.toString(10);
+				if(rowval.length == 1)
+					rowval = '0' + rowval;
+				var chairval = c.toString(10);
+				if(chairval.length == 1)
+					chairval = '0' + chairval;
+				if(!rowSentinal) {
+					rowSentinal = true;
+					code += ',O';
+				}
+				code += rowval + chairval;
 		}
 	}
 	if(straightRows > 0) {
@@ -1107,6 +1131,26 @@ function decode(code) {
 			var row   = parseInt(hidden.substring(i  , i+2), 10);
 			var chair = parseInt(hidden.substring(i+2, i+4), 10);
 			chairs[row][chair].enabled = false;
+		}
+	}
+	
+	var matches = code.match(/,Q([^,]*)/);
+	if(matches != null && matches.length > 1) {
+		var hidden = matches[1];
+		for(var i = 0; i < hidden.length; i += 4) {
+			var row   = parseInt(hidden.substring(i  , i+2), 10);
+			var chair = parseInt(hidden.substring(i+2, i+4), 10);
+			chairs[row][chair].shape = 'sqr';
+		}
+	}
+	
+	var matches = code.match(/,O([^,]*)/);
+	if(matches != null && matches.length > 1) {
+		var hidden = matches[1];
+		for(var i = 0; i < hidden.length; i += 4) {
+			var row   = parseInt(hidden.substring(i  , i+2), 10);
+			var chair = parseInt(hidden.substring(i+2, i+4), 10);
+			chairs[row][chair].shape = 'circ';
 		}
 	}
 	
