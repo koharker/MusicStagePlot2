@@ -94,12 +94,27 @@ a {
 	float: right;
 }
 
-#print-button: hover {
+#print-button:hover, #print-button:hover {
 	background-color: #05A8AA;
 	border: 1px solid #05A8AA;
 	color: #FFF;
 }
 
+#print-button {
+	border: 1px solid white;
+	border-radius: 4px;
+}
+
+#print-button a{
+	border: 0px
+}
+
+#print-button:hover a {
+	color: #FFF;
+}
+#print-text {
+	padding-left: 0px;
+}
 #print-icon {
 	padding-top: 0px;
 	padding-bottom: 14px;
