@@ -333,7 +333,7 @@ a {
 	max-width: 3.5em;
 }
 
-#rows input, #title input {
+#rows input #title input {
 	padding: 3px 6px;
 	margin: 2px 0;
 
