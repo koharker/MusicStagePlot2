@@ -329,8 +329,8 @@ a {
 }
 
 #rows input {
-	min-width: 2.5em;
-	max-width: 3em;
+	min-width: 2em;
+	max-width: 2.5em;
 }
 
 #rows input, input#title{
