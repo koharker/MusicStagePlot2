@@ -818,7 +818,7 @@ function editLabelsDone() {
 
 function addRow() {
 	maxRows++;
-	$('#rows').append("<p>Row " + maxRows + ": <input id='row" + maxRows + "' size='2' maxlength='2'></input><a class='editlabellink' href='javascript:editLabels(" + maxRows + ")'>Edit labels</a></p>");
+	$('#rows').append("<p>Row &#9;&#9;" + maxRows + ": <input id='row" + maxRows + "' size='2' maxlength='2'></input> <a class='editlabellink' href='javascript:editLabels(" + maxRows + ")'>Edit labels</a></p>");
 	$('#row' + maxRows).change(drawChart);
 }
 
