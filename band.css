@@ -329,12 +329,12 @@ a {
 }
 
 #rows input {
-	min-width: 2.1em;
+	min-width: 2em;
 	max-width: 2.5em;
 }
 
 #rows input, input#title{
-	padding: 3px 6px;
+	padding: 2px 5px;
 	margin: 2px 0;
 	box-sizing: border-box;
 	border: 1px solid #CCC;
