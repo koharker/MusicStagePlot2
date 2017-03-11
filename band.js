@@ -192,6 +192,11 @@ function drawChart() {
 			r = 185 + step * row;
 			console.log(r + "is r");
 		if(row < rows.length - straightRows) {
+			//Angled arc mode
+			/*
+			$('canvas').drawArc({ radius: r, start: - Math.acos((40 + 19 * row)/r), end: Math.acos((40 + 19 * row)/r)});
+			var arc_length = Math.PI/2 + Math.acos(((row))/r) - .3 - (1 - r / (550 + 90 * row));
+			*/
 			$('canvas').drawArc({ radius: r });
 			var arc_length = Math.PI - .3 - (1 - r / 550)
 			var angle_step = arc_length / (rows[row] - 1)
