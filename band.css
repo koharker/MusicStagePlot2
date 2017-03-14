@@ -119,6 +119,7 @@ a {
 	padding-top: 0px;
 	padding-bottom: 14px;
 	padding-right: 0px;
+	filter: white;
 }
 
 .load-dropdown {
