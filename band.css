@@ -235,8 +235,8 @@ a {
 .switch {
   position: relative;
   display: inline-block;
-  width: 30px;
-  height: 17px;
+  width: 28px;
+  height: 16px;
 }
 
 .switch input {display:none;}
@@ -258,8 +258,8 @@ a {
   content: "";
   height: 12px;
   width: 12px;
-  left: 3px;
-  bottom: 2.5px;
+  left: 2px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
