@@ -207,7 +207,7 @@ function drawChart() {
 					//adjust for cello spacing here
 					var numberOfCelloChairs = vcLoc.length;
 					console.log(numberOfCelloChairs + "numberOfCelloChairs");
-					if (numberOfCelloChairs > 0) {
+					/*if (numberOfCelloChairs > 0) {
 						for (var vcChair in vcLoc) {
 							console.log(vcLoc[vcChair] + "vcChair");
 							var nonCelloAngleStep = angle_step - ((angle_step * 0.5 * numberOfCelloChairs) / (rows[row] - numberOfCelloChairs));
@@ -227,9 +227,9 @@ function drawChart() {
 								var t = -1 * (-1 * arc_length / 2 + nonCelloAngleStep * i);
 							};
 						}
-					} else {
+					} else {*/
 						 var t = -1 * (-1 * arc_length / 2 + (angle_step) * i);
-					}
+					/*}*/
 				}
 				// Hide the arc under disabled chairs
 				if(!chairs[row][i].enabled) {
