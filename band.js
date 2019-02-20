@@ -1,3 +1,13 @@
+var canvasScale = 1;
+var spectrumInitialized = false;
+var editingColor = false;
+var defaultPalette;
+var userPalette = [];
+var podium = {};
+
+var band;
+var jsonVersion = 6;
+
 var centerX = 525;
 var centerY = 550;
 var seatScale = 1;
