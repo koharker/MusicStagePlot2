@@ -7,10 +7,10 @@
   <link rel="stylesheet" type="text/css" href="spectrum-1.8.0.min.css">
   <link rel="stylesheet" type="text/css" href="band.css?12">
   <link rel="stylesheet" type="text/css" href="bandprint.css?12" media="print" id="printcss">
+  <link rel="shortcut icon" href="seating_icon_2_0.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="favicon.png">
   <title>Band/Orchestra Seating Chart</title>
   <meta name="description" content="A free browser-based tool for generating and printing semicircular seating charts.">
-   <link rel="shortcut icon" href="seating_icon_2_0.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" href="favicon.png">
 </head>
   
 <body>
@@ -30,10 +30,10 @@
 </p>
 -->
 
-   <div class='header noprint'>
+  <div class='header noprint'>
 <!--      <div class='header-containers'> -->
-        <div class="align-left-container">
-          <p onclick="openNav()">&#9776; Hi</p>
+    <div class="align-left-container">
+      <p onclick="openNav()">&#9776; Hi</p>
           <!--
           <div role="button" tabindex="0" aria-label="Open Graph (ctrl+o)" class="msp-header-btn msp-action-opendrawer msp-tooltip" tooltip="Open Graph (ctrl+o)" original-title="">
             <i class="msp-icon-hamburger"></i>
@@ -42,55 +42,50 @@
             <div role="button" tabindex="0" class="dcg-variable-title dcg-tooltip dcg-action-savedialog" tooltip="Duplicate or Rename (ctrl+shift+s)" aria-label="Conic Sections: Circle. To duplicate or rename this graph, press ctrl+shift+s" original-title="">Conic Sections: Circle</div>
           </div>
           -->
-        </div>
-        
-        <div class='align-center-container'>
-          <div class='load-dropdown' id='load'>
-            <a href="javascript:void(0)" class="loaddropbtn" onclick="toggleLoadDropdown()">Load Chart</a>
-            <div class="load-dropdown-content" id="loadDropdown">
-              <div id='loadcontainer'>
-                <div id='loadfilecontainer'>
-                  <p style='color: green;'>Select a saved chart from your computer:</p>
-                  <p><input type="file" accept=".txt" id="fileinput"><br></p>
-                  <p style='color: #888;' id='loadcodelabel'>You may also <a href='javascript:showCodeInput()' style='color: #88f !important;'>input a code manually</a></p>
-                </div>
-                <div id='loadcodecontainer' class='hidden'><br>Chart code: <textarea id='loadcode' style='vertical-align: top;'></textarea><input type='button' value='Load' id='load'></div>
-              </div>
-              <div id='loadmessage' class='hidden' style='color: red;'>loading</div>
+    </div>
+    <div class='align-center-container'>
+      <div class='load-dropdown' id='load'>
+        <a href="javascript:void(0)" class="loaddropbtn" onclick="toggleLoadDropdown()">Load Chart</a>
+        <div class="load-dropdown-content" id="loadDropdown">
+          <div id='loadcontainer'>
+            <div id='loadfilecontainer'>
+              <p style='color: green;'>Select a saved chart from your computer:</p>
+              <p><input type="file" accept=".txt" id="fileinput"><br></p>
+              <p style='color: #888;' id='loadcodelabel'>You may also <a href='javascript:showCodeInput()' style='color: #88f !important;'>input a code manually</a></p>
             </div>
+            <div id='loadcodecontainer' class='hidden'><br>Chart code: <textarea id='loadcode' style='vertical-align: top;'></textarea><input type='button' value='Load' id='load'></div>
           </div>
-          
-          
-            <script>
+          <div id='loadmessage' class='hidden' style='color: red;'>loading</div>
+        </div>
+      </div>
+      <script>
             /* When the user clicks on the button, 
             toggle between hiding and showing the dropdown content */
-            function toggleLoadDropdown() {
-                document.getElementById("loadDropdown").classList.toggle("showLoad");
-            }
+        function toggleLoadDropdown() {
+          document.getElementById("loadDropdown").classList.toggle("showLoad");
+        }
 
             // Close the dropdown if the user clicks outside of it
-            window.onclick = function(e) {
-              if (!e.target.matches('.loaddropbtn')) {
-
-                var loaddropdowns = document.getElementsByClassName("load-dropdown-content");
-                for (var d = 0; d < loaddropdowns.length; d++) {
-                  var openDropdown = loaddropdowns[d];
-                  if (openDropdown.classList.contains('showLoad')) {
-                    openDropdown.classList.remove('showLoad');
-                  }
-                }
+        window.onclick = function(e) {
+          if (!e.target.matches('.loaddropbtn')) {
+            var loaddropdowns = document.getElementsByClassName("load-dropdown-content");
+            for (var d = 0; d < loaddropdowns.length; d++) {
+              var openDropdown = loaddropdowns[d];
+              if (openDropdown.classList.contains('showLoad')) {
+                openDropdown.classList.remove('showLoad');
               }
             }
-          </script>
-     </div>
-     
-     <div style="float:right" class='align-right-container noprint'>
-       <div id='print-button'>
-         <a href='javascript:window.print()' id='print-icon'><img src="print-icon.png" alt="prt icon" style="width: 24px;top: 8px;height: 24px;position: relative;"></a>
-         <a href='javascript:window.print()' id='print-text'>print</a>
-       </div>
-       <a href='help.html' onclick='showHelp(); return false;'>Help / About</a>
-     </div>
+          }
+        }
+      </script>
+    </div>
+    <div style="float:right" class='align-right-container noprint'>
+      <div id='print-button'>
+        <a href='javascript:window.print()' id='print-icon'><img src="print-icon.png" alt="prt icon" style="width: 24px;top: 8px;height: 24px;position: relative;"></a>
+        <a href='javascript:window.print()' id='print-text'>print</a>
+      </div>
+      <a href='help.html' onclick='showHelp(); return false;'>Help / About</a>
+    </div>
   </div>
   
   <div class='main-container noprint'>
@@ -172,7 +167,6 @@
       <textarea id='notes' title='Notes entered here will appear on the printed chart'></textarea>
     </div>
   </div>
-  <hr class='noprint'>
   
 
 
