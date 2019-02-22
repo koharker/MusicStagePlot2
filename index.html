@@ -181,33 +181,10 @@ You can also <a href='javascript:save()'>save this chart</a> to edit later, or <
   
 <body>
   
-<!--
-<div id='helplink' class='noprint'>
-  <a href='help.html' onclick='showHelp(); return false;'>Help / About</a>
-</div>
-<p class='noprint'>This is a simple browser-based tool that you can use to generate and print semicircular seating charts. Have fun!<br>
-  <span id='loadlink'><a href='#' onclick='return false;'>Load saved chart</a></span>
-<span id='loadcontainer' class='hidden'>
-<span id='loadfilecontainer'><span style='color: green;'>Select a saved chart from your computer:</span> <input type="file" accept=".txt,.pdf" id="fileinput"><br>
-<span style='color: #888;' id='loadcodelabel'>You may also <a href='javascript:showCodeInput()' style='color: #88f !important;'>input a code manually</a></span></span>
-<span id='loadcodecontainer' class='hidden'><br>Chart code: <textarea id='loadcode' style='vertical-align: top;'></textarea><input type='button' value='Load' id='load'></span>
-</span>
-<span id='loadmessage' class='hidden' style='color: red;'></span>
-</p>
--->
 
   <div class='header noprint'>
-<!--      <div class='header-containers'> -->
     <div class="align-left-container">
       <p onclick="openNav()">&#9776; Hi</p>
-          <!--
-          <div role="button" tabindex="0" aria-label="Open Graph (ctrl+o)" class="msp-header-btn msp-action-opendrawer msp-tooltip" tooltip="Open Graph (ctrl+o)" original-title="">
-            <i class="msp-icon-hamburger"></i>
-          </div>
-          <div class="title-div">
-            <div role="button" tabindex="0" class="dcg-variable-title dcg-tooltip dcg-action-savedialog" tooltip="Duplicate or Rename (ctrl+shift+s)" aria-label="Conic Sections: Circle. To duplicate or rename this graph, press ctrl+shift+s" original-title="">Conic Sections: Circle</div>
-          </div>
-          -->
     </div>
     <div class='align-center-container'>
       <div class='load-dropdown' id='load'>
@@ -303,7 +280,7 @@ You can also <a href='javascript:save()'>save this chart</a> to edit later, or <
         </div>
       </div>
       
-      <!-- Edit Label Menu -->
+      //Edit Label Menu
       <div id='input_labels' style='display: none;'>
         <p><b>Custom Chair Labels: Row <span id='lblcustomrow'></span></b><br>Enter one label per line.<br>Labels will be applied left to <br>right (as seen from the front).</p>
         <textarea id='txtlabels' style='width: 200px; height: 350px;'></textarea>
