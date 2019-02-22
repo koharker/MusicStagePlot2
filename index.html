@@ -81,68 +81,110 @@
                 }
               }
             }
-            </script>          
-          
-          
-          
-        </div>
-        
-        <div style="float:right" class='align-right-container'>
-          <div id='print-button'>
-            <a href='javascript:window.print()' id='print-icon'><img src="print-icon.png" alt="prt icon" style="width: 24px;top: 8px;height: 24px;position: relative;"></a>
-            <a href='javascript:window.print()' id='print-text'>print</a>
-          </div>
-          <a href='help.html' onclick='showHelp(); return false;'>Help / About</a>
-        </div>
-<!--      </div>
-  <hr class='noprint'>  -->
+          </script>
+     </div>
+     
+     <div style="float:right" class='align-right-container'>
+       <div id='print-button'>
+         <a href='javascript:window.print()' id='print-icon'><img src="print-icon.png" alt="prt icon" style="width: 24px;top: 8px;height: 24px;position: relative;"></a>
+         <a href='javascript:window.print()' id='print-text'>print</a>
+       </div>
+       <a href='help.html' onclick='showHelp(); return false;'>Help / About</a>
+     </div>
   </div>
   
+  <div class='main-container'>
+    <div id='input-container' class='noprint'>
+      <div id='input-main'>
+        <p style='font-size: 12px;'>This is a simple browser-based tool that you can use to generate and print semicircular seating charts. Have fun!</p>
+        <p><span style='color: #090;'>New! Partial rows / hide chairs.
+            <a href='help.html#partial' onclick='javascript:showHelp("partial"); return false;'>How?
+            </a>
+          </span>
+        </p>
+        <div class='row-container'>
+          <h2>number of chairs per row:</h2>
+          <div id='rows'>
+            <p>Row 1: &#9; &#9;<input id='row1' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(1)' tabindex='2'> Edit labels</a></p>
+            <p>Row 2: &#9;&#9;<input id='row2' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(2)' tabindex='2'> Edit labels</a></p>
+            <p>Row 3: &#9; &#9;<input id='row3' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(3)' tabindex='2'> Edit labels</a></p>
+            <p>Row 4: &#9;&#9;<input id='row4' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(4)' tabindex='2'> Edit labels</a></p>
+            <p>Row 5: &#9;&#9;<input id='row5' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(5)' tabindex='2'> Edit labels</a></p>
+            <p>Row 6: &#9; &#9;<input id='row6' size='2' maxlength='2' tabindex='1'> <a class='editlabellink' href='javascript:editLabels(6)' tabindex='2'> Edit labels</a></p>
+          </div>
+          <p><a href='javascript:addRow()'>Add Row</a></p>
+        </div>
+        <div class='chart-options-container'>
+          <h2>Chart Options</h2>
+          <div id='chart-options'>
+            <p>Straight rows: <input type='button' id='btnstraightdown'value='–'> <input type='button' id='btnstraightup' value='+'> <span id='straight'>0</span></p>
+            <p></p>
+            <div id='chknumberslabel'>
+              <label class="switch">
+                <input type='checkbox' id='chknumbers' checked='checked' style='float: left'>
+                <div class="slider round"></div>
+              </label>
+              <label for='chknumbers' style=" width: 82; position: absolute;">Show numbers on seats</label>
+            </div>
+            <p></p>
+            <input type='checkbox' id='chkrestart' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkrestart' id='lblrestart'>Restart numbers on each row</label></div>
+            <div title="Only available if 'Restart numbers on each row' is selected">
+              <input type='checkbox' id='chkletters' style='float: left' disabled='disabled'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkletters' class='disabled' id='lblletters'>Give each row a letter</label></div>
+            </div>
+            <input type='checkbox' id='chkstands' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkstands'>Show music stands</label><span id='helpstands' class='help'><br>Click the chart to toggle stands</span></div>
+            <input type='checkbox' id='chkflip' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkflip'>Flip chart</label></div>
+            <input type='checkbox' id='chkpodium' style='float: left'><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkpodium'>Show podium</label></div>
+            <p>Seat size: <input type='button' id='btnscaledown' value='–'> <input type='button' id='btnscaleup' value='+'> <span id='scale'>100</span>%</p>
+            <p><a href='javascript:editColors()'>Edit chair colors</a></p>
+          </div>
+          <p>Chart title: <input id='title'></p>
+          <p><input type='button' value='Generate' id='generate'><input type='button' value='Reset' id='reset'></p>
+        </div>
+      </div>
+      
+      <!-- Edit Label Menu -->
+      <div id='input_labels' style='display: none;'>
+        <p><b>Custom Chair Labels: Row <span id='lblcustomrow'></span></b><br>Enter one label per line.<br>Labels will be applied left to <br>right (as seen from the front).</p>
+        <textarea id='txtlabels' style='width: 200px; height: 350px;'></textarea>
+        <p>Label size: <input type='button' id='btnrowlabelscaledown' value='–'></input><input type='button' id='btnrowlabelscaleup' value='+'></input></p>
+        <p><input type='button' id='btnlabeldone' value='Done' style='font-size: 16pt;'></input></p><br><br><br><br>
+      </div>
+      <div id='input_colors' style='display: none;'>
+        <p><b>Chair Colors</b></p>
+        <p>This screen allows you to set<br>chair colors (for example, by section).</p>
+        <ol><li><b>Choose a color</b> from<br>the palette below</li>
+          <li><b>Click a chair</b> to assign<br>the selected color</li></ol><br>
+        <input type='checkbox' id='chkchaircolor' checked='checked' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkchaircolor'>Color chairs</label></div>
+        <input type='checkbox' id='chklabelcolor' checked='checked' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chklabelcolor'>Color chair labels</label></div>
+        <p><input type='text' id='colorpicker'></input></p><br><span style='font-size: smaller;'>Advanced: You can change the interior color<br>of the chairs by right-clicking them</span><br><br>
+        <p><input type='button' id='btncolordone' value='Done' style='font-size: 16pt;'></input> <input type='button' id='btncolorreset' value='Reset colors'></input></p><br><br><br><br><br><br>
+      </div>
+    </div>
+    
+    <div id='wrapper' style='text-align: center'>
+      <h1 class='title'> </h1>
+      <div class='canvas'>
+        <div id="debug" style="float: right; width: 500px; text-align: left; display: none;"><pre id="debug_json"></pre></div>
+        <canvas id='canvas' width='1050' height='510'>Sorry, your browser does not support Canvas. :(</canvas>
+        <canvas id='guide_canvas' width='1050' height='510' class='noprint'>Sorry, your browser does not support Canvas. :(</canvas>
+      </div>
+      <p id='notestitle' class='noprint' title='Notes entered here will appear on the printed chart'><strong>Notes</strong> (to appear below printed chart)</p>
+      <textarea id='notes' title='Notes entered here will appear on the printed chart'></textarea>
+    </div>
+  </div>
+  <hr class='noprint'>
   
-<hr class='noprint'>
-<div id='wrapper'>
-<h1 class='title'></h1>
-<div id="debug" style="float: right; width: 500px; text-align: left; display: none;"><pre id="debug_json"></pre></div>
-<canvas id='canvas' width='1050' height='510'>Sorry, your browser does not support Canvas. :(</canvas>
-<canvas id='guide_canvas' width='1050' height='510' class='noprint'>Sorry, your browser does not support Canvas. :(</canvas>
-<p id='notestitle' class='noprint' title='Notes entered here will appear on the printed chart'><strong>Notes</strong> (to appear below printed chart)</p>
-<textarea id='notes' title='Notes entered here will appear on the printed chart'></textarea>
-</div>
-<div id='input_container' class='noprint'>
-<div id='input_main'><p><b>Enter number of chairs per row:</b><br><span style='color: #090;'>New! Partial rows / hide chairs. <a href='help.html#partial' onclick='javascript:showHelp("partial"); return false;'>How?</a></span></p>
-<div id='rows'>
-<p>Row 1: <input id='row1' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(1)' tabindex='2'>Edit labels</a></p><p>Row 2: <input id='row2' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(2)' tabindex='2'>Edit labels</a></p><p>Row 3: <input id='row3' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(3)' tabindex='2'>Edit labels</a></p><p>Row 4: <input id='row4' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(4)' tabindex='2'>Edit labels</a></p><p>Row 5: <input id='row5' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(5)' tabindex='2'>Edit labels</a></p><p>Row 6: <input id='row6' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(6)' tabindex='2'>Edit labels</a></p><p>Row 7: <input id='row7' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(7)' tabindex='2'>Edit labels</a></p><p>Row 8: <input id='row8' size='2' maxlength='2' tabindex='1'></input><a class='editlabellink' href='javascript:editLabels(8)' tabindex='2'>Edit labels</a></p></div>
-<p><a href='javascript:addRow()'>Add Row</a></p>
-<p>Straight rows: <input type='button' id='btnstraightdown'value='-'></input> <input type='button' id='btnstraightup' value='+'></input> <span id='straight'>0</span></p>
-<input type='checkbox' id='chknumbers' checked='checked' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chknumbers'>Show numbers on seats</label></div>
-<input type='checkbox' id='chkrestart' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkrestart' id='lblrestart'>Restart numbers on each row</label></div>
-<div title="Only available if 'Restart numbers on each row' is selected">
-<input type='checkbox' id='chkletters' style='float: left' disabled='disabled'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkletters' class='disabled' id='lblletters'>Give each row a letter</label></div>
-</div>
-<input type='checkbox' id='chkstands' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkstands'>Show music stands</label><span id='helpstands' class='help'><br>Click the chart to toggle stands</span></div>
-<input type='checkbox' id='chkflip' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkflip'>Flip chart</label></div>
-Seat size: <input type='button' id='btnscaledown' value='-'></input> <input type='button' id='btnscaleup' value='+'></input> <span id='scale'>100</span>%
-<p><a href='javascript:editColors()'>Edit chair colors</a></p>
-<p>Chart title: <input id='title'></input></p>
-<p><input type='button' value='Generate' id='generate'></input>
-<input type='button' value='Reset' id='reset'></input></p>
-</div>
-<div id='input_labels' style='display: none;'>
-<p><b>Custom Chair Labels: Row <span id='lblcustomrow'></span></b><br>Enter one label per line.<br>Labels will be applied left to<br>right (as seen from the front).</p>
-<textarea id='txtlabels' style='width: 200px; height: 360px;'></textarea>
-<p>Label size: <input type='button' id='btnrowlabelscaledown' value='-'></input> <input type='button' id='btnrowlabelscaleup' value='+'></input></p>
-<p><input type='button' id='btnlabeldone' value='Done' style='font-size: 16pt;'></input></p><br><br><br><br>
-</div>
-<div id='input_colors' style='display: none;'>
-<p><b>Chair Colors</b></p>
-<p>This screen allows you to set<br>chair colors (for example, by section).</p>
-<ol><li><b>Choose a color</b> from<br>the palette below</li>
-<li><b>Click a chair</b> to assign<br>the selected color</li></ol><br>
-<input type='checkbox' id='chkchaircolor' checked='checked' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chkchaircolor'>Color chairs</label></div>
-<input type='checkbox' id='chklabelcolor' checked='checked' style='float: left'></input><div style='margin-left: 25px; margin-bottom: 7px;'><label for='chklabelcolor'>Color chair labels</label></div>
-<p><input type='text' id='colorpicker'></input></p><br><span style='font-size: smaller;'>Advanced: You can change the interior color<br>of the chairs by right-clicking them</span><br><br>
-<p><input type='button' id='btncolordone' value='Done' style='font-size: 16pt;'></input> <input type='button' id='btncolorreset' value='Reset colors'></input></p><br><br><br><br><br><br>
-</div>
+
+
+
+
+
+  <div id='input_container' class='noprint'>
+    <div id='input_main'><p><b>Enter number of chairs per row:</b><br><span style='color: #090;'>New! Partial rows / hide chairs. <a href='help.html#partial' onclick='javascript:showHelp("partial"); return false;'>How?</a></span></p>
+    </div>
+  </div>
+
+
 <div id='help'><div id='helpcontents'><style type='text/css'>
 #helpstyle { font-family: sans-serif; }
 #helpstyle h1 { font-size: 130%; text-align: center; padding-top: 10px; margin-top: 0px; }
